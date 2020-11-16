@@ -1,3 +1,6 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -40,7 +44,22 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: [IconButton(icon: Icon(Icons.cloud), onPressed: () {})],
+        actions: [
+          IconButton(
+            icon: Icon(Icons.cloud),
+            onPressed: () {
+              html.window.open(
+                  'https://s7thiago.github.io/apps/weather_web/#/', '_self');
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.check_box_outline_blank),
+            onPressed: () {
+              html.window.location
+                  .replace('https://s7thiago.github.io/apps/cards/#/');
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
