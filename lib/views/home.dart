@@ -11,11 +11,13 @@ class HomeView extends StatelessWidget {
 
     return ChangeNotifierProvider(
       create: (_) => AnonimTabBarProvider(),
-      child: Row(
-        children: [
-          LeftPanel(size: size),
-          RightPanel(size: size),
-        ],
+      child: Scaffold(
+        body: Row(
+          children: [
+            LeftPanel(size: size),
+            RightPanel(size: size),
+          ],
+        ),
       ),
     );
   }

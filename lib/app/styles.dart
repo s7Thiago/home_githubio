@@ -14,6 +14,25 @@ class AppStyles {
     fontSize: 20,
   );
 
+  //? Left Panel
+  static const description1TextStyle = TextStyle(
+    color: Colors.white,
+    fontSize: 25,
+    fontWeight: FontWeight.w100,
+  );
+
+  static final nameTextStyle = description1TextStyle.copyWith(
+    color: Colors.white,
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const description2TextStyle = TextStyle(
+    color: Colors.white,
+    fontSize: 16,
+    fontWeight: FontWeight.w100,
+  );
+
   //! Containers
   //?  AnonimTabBar
   static const normalTabItem = BoxDecoration(
