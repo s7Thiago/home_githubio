@@ -14,7 +14,7 @@ class RightPanel extends StatelessWidget {
     final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
 
     return AnimatedContainer(
-      duration: Duration(milliseconds: 400),
+      duration: Duration(milliseconds: 350),
       curve: Curves.easeInOutCubic,
       color: Colors.black,
       width: provider.selectedTab == 'Projects'

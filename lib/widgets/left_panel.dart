@@ -27,7 +27,8 @@ class LeftPanel extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'images/profile-photo-front-art-thiago.png',
+              'assets/images/profile-photo-front-art-thiago.png',
+              scale: 4,
             ),
             Column(
               children: [

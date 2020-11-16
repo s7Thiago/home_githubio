@@ -12,7 +12,7 @@ class AnonimTabBar extends StatelessWidget {
 
     return Container(
       alignment: Alignment.bottomCenter,
-      width: size.width * .5,
+      width: size.width * .5, //! Gambiarra
       color: Colors.white,
       child: ListView.builder(
         shrinkWrap: true,
