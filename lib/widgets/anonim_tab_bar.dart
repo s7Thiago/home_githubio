@@ -10,28 +10,32 @@ class AnonimTabBar extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
 
-    return Material(
+    return Container(
+      alignment: Alignment.bottomCenter,
+      width: size.width * .5,
       color: Colors.white,
-      child: Container(
-        width: double.infinity,
-        child: ListView.builder(
-          itemCount: MenuItems.anonimTabBarItems.length,
-          scrollDirection: Axis.horizontal,
-          physics: NeverScrollableScrollPhysics(),
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              onTap: () => provider.updateIndex = index,
-              child: _TabItem(
-                label: MenuItems.anonimTabBarItems[index],
-                selected: provider.currentIndex == index,
-                size: size,
-                sizeBase: MenuItems.anonimTabBarItems.length,
-                index: index,
-                provider: provider,
-              ),
-            );
-          },
-        ),
+      child: ListView.builder(
+        shrinkWrap: true,
+        itemCount: MenuItems.anonimTabBarItems.length,
+        scrollDirection: Axis.horizontal,
+        physics: NeverScrollableScrollPhysics(),
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+            onTap: () {
+              provider.updateIndex = index;
+              provider.updateSelectedTab =
+                  MenuItems.anonimTabBarItems[provider.currentIndex];
+            },
+            child: _TabItem(
+              label: MenuItems.anonimTabBarItems[index],
+              selected: provider.currentIndex == index,
+              size: size,
+              sizeBase: MenuItems.anonimTabBarItems.length,
+              index: index,
+              provider: provider,
+            ),
+          );
+        },
       ),
     );
   }

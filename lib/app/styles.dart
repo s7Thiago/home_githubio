@@ -5,7 +5,7 @@ class AppStyles {
   //! Texts
   //? AnonimTabBar
   static const normalItemLabel = TextStyle(
-    color: Colors.white,
+    color: Colors.grey,
   );
 
   static const selectItemLabel = TextStyle(

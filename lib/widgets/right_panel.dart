@@ -5,18 +5,26 @@ import 'package:home_githubio/widgets/anonim_tab_bar.dart';
 import 'package:provider/provider.dart';
 
 class RightPanel extends StatelessWidget {
+  final Size size;
+
+  const RightPanel({Key key, @required this.size}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
+
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 400),
+      curve: Curves.easeInOutCubic,
       color: Colors.black,
-      child: ChangeNotifierProvider(
-        create: (_) => AnonimTabBarProvider(),
-        child: Column(
-          children: [
-            Flexible(child: AnonimTabBar(), flex: 1),
-            Flexible(child: _BodyRight(), flex: 8),
-          ],
-        ),
+      width: provider.selectedTab == 'Projects'
+          ? size.width * .8
+          : size.width * .5,
+      child: Column(
+        children: [
+          Expanded(child: AnonimTabBar(), flex: 1),
+          Expanded(child: _BodyRight(), flex: 8),
+        ],
       ),
     );
   }
