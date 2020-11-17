@@ -28,7 +28,7 @@ class LeftPanel extends StatelessWidget {
           children: [
             Image.asset(
               'assets/images/profile-photo-front-art-thiago.png',
-              scale: 4,
+              scale: 3.3,
             ),
             Column(
               children: [

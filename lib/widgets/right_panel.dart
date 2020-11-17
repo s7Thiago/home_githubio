@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/app/styles.dart';
 import 'package:home_githubio/core/state/anonim_tab_bar_provider.dart';
+import 'package:home_githubio/model/data/menu_items.dart';
+import 'package:home_githubio/views/contact_section.dart';
 import 'package:home_githubio/widgets/anonim_tab_bar.dart';
 import 'package:provider/provider.dart';
 
@@ -45,7 +47,16 @@ class _BodyRight extends StatelessWidget {
       margin: EdgeInsets.all(0.0),
       elevation: 0.0,
       color: Colors.white,
-      child: Container(),
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        alignment: Alignment.center,
+        child: IndexedStack(
+          alignment: Alignment.center,
+          index: provider.currentIndex,
+          children: MenuItems.anonimTabBarItems.values.toList(),
+        ),
+      ),
     );
   }
 }

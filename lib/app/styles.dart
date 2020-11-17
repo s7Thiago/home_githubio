@@ -33,6 +33,11 @@ class AppStyles {
     fontWeight: FontWeight.w100,
   );
 
+  // ? Contact Section
+  static const qrCodeToolTip = TextStyle(
+    fontSize: 17,
+  );
+
   //! Containers
   //?  AnonimTabBar
   static const normalTabItem = BoxDecoration(

@@ -23,11 +23,11 @@ class AnonimTabBar extends StatelessWidget {
           return GestureDetector(
             onTap: () {
               provider.updateIndex = index;
-              provider.updateSelectedTab =
-                  MenuItems.anonimTabBarItems[provider.currentIndex];
+              provider.updateSelectedTab = MenuItems.anonimTabBarItems.keys
+                  .elementAt(provider.currentIndex);
             },
             child: _TabItem(
-              label: MenuItems.anonimTabBarItems[index],
+              label: MenuItems.anonimTabBarItems.keys.elementAt(index),
               selected: provider.currentIndex == index,
               size: size,
               sizeBase: MenuItems.anonimTabBarItems.length,
