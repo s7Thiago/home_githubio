@@ -6,7 +6,7 @@ class AboutSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      color: Colors.green,
+      color: Colors.white,
     );
   }
 }
