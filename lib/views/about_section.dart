@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Svg();
-  }
-}
-
-class Svg extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: Colors.white,
       child: Center(
-        child: SvgPicture.asset('assets/documents/resume.svg'),
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Image.asset('assets/documents/resume.png'),
+            ],
+          ),
+        ),
       ),
     );
   }

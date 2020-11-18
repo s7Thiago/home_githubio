@@ -24,8 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
-  flutter_svg: ^0.19.1
-  native_pdf_view: any
+  photo_view: ^0.10.3
   provider: ^4.3.2+2
 
 dev_dependencies:
@@ -47,6 +46,8 @@ flutter:
     - assets/images/qr-code-contact-square.png
     - assets/images/qr-code-contact.png
     - assets/documents/resume.svg
+    - assets/documents/resume.png
+    - assets/documents/resume_ai.svg
     # - assets/documents/resume2.pdf
     # - assets/documents/resume.pdf
   #   - images/a_dot_ham.jpeg
