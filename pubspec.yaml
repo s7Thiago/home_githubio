@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.0
   flutter_svg: ^0.19.1
+  native_pdf_view: any
   provider: ^4.3.2+2
 
 dev_dependencies:
@@ -43,8 +44,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/profile-photo-front-art-thiago.png
-    - assets/images/qr-code-contact.png
     - assets/images/qr-code-contact-square.png
+    - assets/images/qr-code-contact.png
+    - assets/documents/resume.svg
+    # - assets/documents/resume2.pdf
+    # - assets/documents/resume.pdf
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

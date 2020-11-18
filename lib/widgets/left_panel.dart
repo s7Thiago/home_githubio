@@ -28,9 +28,11 @@ class LeftPanel extends StatelessWidget {
           children: [
             Image.asset(
               'assets/images/profile-photo-front-art-thiago.png',
-              scale: 3.3,
+              scale: 4.3,
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text.rich(
                   TextSpan(
@@ -52,7 +54,7 @@ class LeftPanel extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
