@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:home_githubio/app/styles.dart';
 import 'package:home_githubio/core/state/anonim_tab_bar_provider.dart';
 import 'package:home_githubio/model/data/menu_items.dart';
-import 'package:home_githubio/views/contact_section.dart';
 import 'package:home_githubio/widgets/anonim_tab_bar.dart';
 import 'package:provider/provider.dart';
 
@@ -15,18 +14,20 @@ class RightPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
 
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 350),
-      curve: Curves.easeInOutCubic,
-      color: Colors.black,
-      width: provider.selectedTab == 'Projects'
-          ? size.width * .8
-          : size.width * .5,
-      child: Column(
-        children: [
-          Expanded(child: AnonimTabBar(), flex: 1),
-          Expanded(child: _BodyRight(), flex: 8),
-        ],
+    return Expanded(
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 450),
+        curve: Curves.easeInOutCirc.flipped,
+        color: Colors.black,
+        width: provider.selectedTab == 'Projects'
+            ? size.width * .8
+            : size.width * .5,
+        child: Column(
+          children: [
+            Expanded(child: AnonimTabBar(), flex: 1),
+            Expanded(child: _BodyRight(), flex: 8),
+          ],
+        ),
       ),
     );
   }

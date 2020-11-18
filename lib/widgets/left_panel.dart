@@ -14,15 +14,15 @@ class LeftPanel extends StatelessWidget {
     final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
 
     return AnimatedContainer(
-      duration: Duration(milliseconds: 350),
-      curve: Curves.easeInOutCubic,
+      duration: Duration(milliseconds: 450),
+      curve: Curves.easeInOutCirc.flipped,
       width: provider.selectedTab == 'Projects'
           ? size.width * .2
           : size.width * .5,
       color: Colors.black,
       child: AnimatedOpacity(
         opacity: provider.selectedTab == 'Projects' ? .2 : 1,
-        duration: Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 350),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

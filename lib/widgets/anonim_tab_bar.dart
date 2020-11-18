@@ -65,7 +65,8 @@ class _TabItem extends StatelessWidget {
 
     return Card(
       margin: EdgeInsets.all(0.0),
-      elevation: 0.0,
+      elevation: 0,
+      borderOnForeground: false,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: !selected

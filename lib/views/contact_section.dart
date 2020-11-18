@@ -21,6 +21,7 @@ class ContactSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Hero(
       tag: 'qr-code',
+      transitionOnUserGestures: true,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -53,6 +54,7 @@ class _SquareQrCode extends StatelessWidget {
         backgroundColor: Colors.white.withOpacity(.6),
         body: Hero(
           tag: 'qr-code',
+          transitionOnUserGestures: true,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
