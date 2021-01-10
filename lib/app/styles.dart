@@ -38,6 +38,12 @@ class AppStyles {
     fontSize: 17,
   );
 
+  // ? About Section
+  static final introTextStyle = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 22,
+  );
+
   //! Containers
   //?  AnonimTabBar
   static const normalTabItem = BoxDecoration(
