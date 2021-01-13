@@ -47,11 +47,13 @@ class AppStyles {
   //! Containers
   //?  AnonimTabBar
   static const normalTabItem = BoxDecoration(
-    color: Colors.black,
+    // color: Colors.black,
+    color: Colors.transparent,
   );
 
   static const selectedTabItem = BoxDecoration(
-    color: Colors.white,
+    // color: Colors.lime,
+    color: Colors.transparent,
   );
 
   //! Sizes & Radius

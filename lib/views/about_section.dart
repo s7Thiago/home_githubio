@@ -16,9 +16,7 @@ class AboutSection extends StatelessWidget {
 }
 
 class AboutImagePreview extends StatelessWidget {
-  const AboutImagePreview({
-    Key key,
-  }) : super(key: key);
+  const AboutImagePreview();
 
   @override
   Widget build(BuildContext context) {

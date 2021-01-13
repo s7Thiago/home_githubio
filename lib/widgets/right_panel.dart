@@ -48,15 +48,10 @@ class _BodyRight extends StatelessWidget {
       margin: EdgeInsets.all(0.0),
       elevation: 0.0,
       color: Colors.white,
-      child: Container(
-        width: double.infinity,
-        height: double.infinity,
+      child: IndexedStack(
         alignment: Alignment.center,
-        child: IndexedStack(
-          alignment: Alignment.center,
-          index: provider.currentIndex,
-          children: MenuItems.anonimTabBarItems.values.toList(),
-        ),
+        index: provider.currentIndex,
+        children: MenuItems.anonimTabBarItems.values.toList(),
       ),
     );
   }

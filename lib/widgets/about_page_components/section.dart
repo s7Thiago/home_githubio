@@ -3,22 +3,23 @@ import 'package:flutter/material.dart';
 
 import '../../app/styles.dart';
 
+// ignore: must_be_immutable
 class Section extends StatelessWidget {
   String type = 'undefined';
 
-  String introText;
-  String titleText;
-  String content;
-  String imageUrl;
+  String introText = '';
+  String titleText = '';
+  String content = '';
+  String imageUrl = '';
   Widget iconTitleLeading;
   Widget iconTitleTrailing;
-  List<Widget> representations;
-  MainAxisAlignment alignment;
-  TextAlign textAlign;
-  bool showTitleDivider;
+  List<Widget> representations = <Widget>[];
+  MainAxisAlignment alignment = MainAxisAlignment.center;
+  TextAlign textAlign = TextAlign.justify;
+  bool showTitleDivider = false;
 
   Section.intro({
-    @required this.introText,
+    this.introText = '',
     this.titleText = 'Intro',
     this.showTitleDivider = false,
   }) {
@@ -40,14 +41,14 @@ class Section extends StatelessWidget {
 
   Section.certificate(
     this.titleText, {
-    this.imageUrl,
-    this.content,
+    this.imageUrl = '',
+    this.content = '',
   }) {
     this.type = 'certificate';
   }
 
   Section.skill({
-    this.titleText,
+    this.titleText = '',
     this.iconTitleLeading,
     this.iconTitleTrailing,
   }) {

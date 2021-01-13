@@ -6,8 +6,8 @@ class Experience {
   final List<Widget> representations;
 
   Experience({
-    @required this.title,
-    @required this.description,
-    @required this.representations,
+    this.title = '',
+    this.description = '',
+    this.representations = const [],
   });
 }

@@ -13,7 +13,7 @@ class AnonimTabBar extends StatelessWidget {
     return Container(
       alignment: Alignment.bottomCenter,
       width: size.width * .5, //! Gambiarra
-      color: Colors.white,
+      color: Colors.white, // ?Impacta na cor de fundo da tab selecionada
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: MenuItems.anonimTabBarItems.length,
@@ -49,24 +49,25 @@ class _TabItem extends StatelessWidget {
   final index;
   final AnonimTabBarProvider provider;
 
-  const _TabItem({
-    Key key,
+  _TabItem({
     @required this.label,
     @required this.selected,
     @required this.size,
     @required this.sizeBase,
     @required this.index,
     @required this.provider,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     final radius = AppStyles.anonimTabBarSelectedItemRadius;
 
+    print('total: $size');
+
     return Card(
       margin: EdgeInsets.all(0.0),
-      elevation: 0,
-      borderOnForeground: false,
+      elevation: 0.0,
+      color: !selected ? Colors.black : Colors.transparent,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: !selected

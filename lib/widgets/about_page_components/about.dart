@@ -17,7 +17,7 @@ class About extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 50),
-            Section.intro(introText: Contents.texts['intro']),
+            Section.intro(introText: Contents.texts['intro'] as String),
             SizedBox(height: 35),
             IntrinsicHeight(
               child: Row(
@@ -46,7 +46,7 @@ class About extends StatelessWidget {
                             );
                           },
                         ),
-                        SizedBox(height: 50),
+                        SizedBox(height: 100),
                       ],
                     ),
                   ),
