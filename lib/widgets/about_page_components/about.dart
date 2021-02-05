@@ -80,19 +80,22 @@ class About extends StatelessWidget {
                           alignment: MainAxisAlignment.start,
                           iconTitleLeading: Icon(Icons.access_alarms),
                         ),
-                        ...List.generate(5, (index) {
-                          final innerSkill =
-                              ((Contents.texts['skills'] as List)[0]) as Skill;
+                        ...List.generate(
+                          5,
+                          (index) {
+                            final innerSkill = ((Contents.texts['skills']
+                                as List)[0]) as Skill;
 
-                          return Section.skill(
-                            titleText: innerSkill.title,
-                            iconTitleLeading: CachedNetworkImage(
-                              imageUrl: innerSkill.imageUrl,
-                              width: 40,
-                              fit: BoxFit.cover,
-                            ),
-                          );
-                        }).toList(),
+                            return Section.skill(
+                              titleText: innerSkill.title,
+                              iconTitleLeading: CachedNetworkImage(
+                                imageUrl: innerSkill.imageUrl,
+                                width: 40,
+                                fit: BoxFit.cover,
+                              ),
+                            );
+                          },
+                        ).toList(),
                       ],
                     ),
                   ),

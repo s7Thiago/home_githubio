@@ -17,6 +17,7 @@ class Section extends StatelessWidget {
   MainAxisAlignment alignment = MainAxisAlignment.center;
   TextAlign textAlign = TextAlign.justify;
   bool showTitleDivider = false;
+  double marginStart = 0.0;
 
   Section.intro({
     this.introText = '',
@@ -43,6 +44,7 @@ class Section extends StatelessWidget {
     this.titleText, {
     this.imageUrl = '',
     this.content = '',
+    this.marginStart,
   }) {
     this.type = 'certificate';
   }
@@ -51,6 +53,7 @@ class Section extends StatelessWidget {
     this.titleText = '',
     this.iconTitleLeading,
     this.iconTitleTrailing,
+    this.marginStart,
   }) {
     this.type = 'skill';
   }
@@ -188,27 +191,33 @@ class Section extends StatelessWidget {
         );
       case 'certificate':
         return Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 20,
-          ),
-          child: ListTile(
-            leading: CachedNetworkImage(
-              imageUrl: imageUrl,
-              fit: BoxFit.cover,
-              width: 40,
+          padding: EdgeInsets.only(left: marginStart ?? 20),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 20,
             ),
-            title: Text(
-              titleText,
-              overflow: TextOverflow.ellipsis,
+            child: ListTile(
+              leading: CachedNetworkImage(
+                imageUrl: imageUrl,
+                fit: BoxFit.cover,
+                width: 40,
+              ),
+              title: Text(
+                titleText,
+                overflow: TextOverflow.ellipsis,
+              ),
+              subtitle: Text(content),
             ),
-            subtitle: Text(content),
           ),
         );
       case 'skill':
-        return ListTile(
-          leading: iconTitleLeading,
-          trailing: iconTitleTrailing,
-          title: Text(titleText),
+        return Padding(
+          padding: EdgeInsets.only(left: marginStart ?? 20),
+          child: ListTile(
+            leading: ClipOval(child: iconTitleLeading),
+            trailing: iconTitleTrailing,
+            title: Text(titleText),
+          ),
         );
       default:
         return Text(

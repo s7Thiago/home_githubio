@@ -62,8 +62,6 @@ class _TabItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final radius = AppStyles.anonimTabBarSelectedItemRadius;
 
-    print('total: $size');
-
     return Card(
       margin: EdgeInsets.all(0.0),
       elevation: 0.0,
