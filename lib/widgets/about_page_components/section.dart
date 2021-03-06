@@ -191,7 +191,7 @@ class Section extends StatelessWidget {
         );
       case 'certificate':
         return Padding(
-          padding: EdgeInsets.only(left: marginStart ?? 20),
+          padding: EdgeInsets.only(left: marginStart ?? 50),
           child: Padding(
             padding: const EdgeInsets.symmetric(
               vertical: 20,
@@ -212,11 +212,15 @@ class Section extends StatelessWidget {
         );
       case 'skill':
         return Padding(
-          padding: EdgeInsets.only(left: marginStart ?? 20),
-          child: ListTile(
-            leading: ClipOval(child: iconTitleLeading),
-            trailing: iconTitleTrailing,
-            title: Text(titleText),
+          padding: EdgeInsets.only(left: marginStart ?? 75, bottom: 20),
+          child: Row(
+            children: [
+              iconTitleLeading ?? Container(),
+              SizedBox(width: 10),
+              Text(titleText),
+              SizedBox(width: iconTitleTrailing == null ? 0 : 16),
+              iconTitleTrailing ?? Container(),
+            ],
           ),
         );
       default:
