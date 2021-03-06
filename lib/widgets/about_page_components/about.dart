@@ -90,7 +90,7 @@ class About extends StatelessWidget {
                               titleText: innerSkill.title,
                               iconTitleLeading: CachedNetworkImage(
                                 imageUrl: innerSkill.imageUrl,
-                                width: 40,
+                                width: 14,
                                 fit: BoxFit.cover,
                               ),
                             );
