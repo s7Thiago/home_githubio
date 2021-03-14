@@ -5,7 +5,7 @@ import '../../app/styles.dart';
 
 // ignore: must_be_immutable
 class Section extends StatelessWidget {
-  String type = 'undefined';
+  String type = 'Unknown Element';
 
   String introText = '';
   String titleText = '';

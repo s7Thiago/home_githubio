@@ -6,8 +6,11 @@ import 'package:home_githubio/model/Skill.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/widgets/about_page_components/section.dart';
 import 'package:home_githubio/widgets/about_page_components/section_divider.dart';
+import 'package:home_githubio/widgets/expandable_section.dart';
 
 class About extends StatelessWidget {
+  Map<String, Object> data = Contents.texts;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +20,7 @@ class About extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 50),
-            Section.intro(introText: Contents.texts['intro'] as String),
+            Section.intro(introText: data['intro'] as String),
             SizedBox(height: 35),
             IntrinsicHeight(
               child: Row(
@@ -32,17 +35,35 @@ class About extends StatelessWidget {
                           ),
                           showTitleDivider: true,
                         ),
+                        // ExpandableSection(
+                        //   title: 'This is a title',
+                        //   content: 'It\'s a content for this section',
+                        // ),
+                        // ...List.generate(
+                        //   5,
+                        //   (index) {
+                        //     final innerExperience =
+                        //         (Contents.texts['experiences'] as List)[0]
+                        //             as Experience;
+                        //     return Section.experience(
+                        //       innerExperience.title,
+                        //       alignment: MainAxisAlignment.end,
+                        //       content: innerExperience.description,
+                        //       representations: innerExperience.representations,
+                        //     );
+                        //   },
+                        // ),
                         ...List.generate(
-                          5,
+                          (data['experiences'] as List<Experience>).length,
                           (index) {
                             final innerExperience =
-                                (Contents.texts['experiences'] as List)[0]
+                                (Contents.texts['experiences'] as List)[index]
                                     as Experience;
-                            return Section.experience(
-                              innerExperience.title,
-                              alignment: MainAxisAlignment.end,
+                            return ExpandableSection(
+                              title: innerExperience.title,
                               content: innerExperience.description,
                               representations: innerExperience.representations,
+                              customHeight: innerExperience.customHeight,
                             );
                           },
                         ),
