@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:home_githubio/model/data/menu_items.dart';
+import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
 
-class AnonimTabBarProvider extends ChangeNotifier {
+class AnonimAppBarProvider extends ChangeNotifier {
   int _selectedIndex = 0;
   String _selectedTab = MenuItems.anonimTabBarItems.keys.elementAt(0);
 

@@ -1,12 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/widgets/about_page_components/about.dart';
+import 'package:home_githubio/pages/home/views/about/about_view.dart';
 
-class AboutSection extends StatelessWidget {
+class AboutSectionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: About(),
+      body: AboutView(),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -15,8 +15,8 @@ class AboutSection extends StatelessWidget {
   }
 }
 
-class AboutImagePreview extends StatelessWidget {
-  const AboutImagePreview();
+class AboutImageView extends StatelessWidget {
+  const AboutImageView();
 
   @override
   Widget build(BuildContext context) {
