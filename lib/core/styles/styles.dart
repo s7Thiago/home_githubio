@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:home_githubio/core/styles/app_colors.dart';
 
 class AppStyles {
   //! Texts
@@ -9,9 +10,9 @@ class AppStyles {
   );
 
   static const selectItemLabel = TextStyle(
-    color: Colors.black,
+    color: AppColors.spotlight_dark,
     fontWeight: FontWeight.bold,
-    fontSize: 20,
+    fontSize: 22,
   );
 
   //? Left Panel

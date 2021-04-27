@@ -1,95 +1,113 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/styles/styles.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/core/styles/app_colors.dart';
+import 'package:home_githubio/core/styles/styles.dart';
 import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
-import 'package:provider/provider.dart';
 
-class AnonimAppBar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
-
-    return Container(
-      alignment: Alignment.bottomCenter,
-      width: size.width * .5, //! Gambiarra
-      color: Colors.white, // ?Impacta na cor de fundo da tab selecionada
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: AppBarItems.anonimTabBarItems.length,
-        scrollDirection: Axis.horizontal,
-        physics: NeverScrollableScrollPhysics(),
-        itemBuilder: (BuildContext context, int index) {
-          return GestureDetector(
-            onTap: () {
-              provider.updateIndex = index;
-              provider.updateSelectedTab = AppBarItems.anonimTabBarItems.keys
-                  .elementAt(provider.currentIndex);
-            },
-            child: _TabItem(
-              label: AppBarItems.anonimTabBarItems.keys.elementAt(index),
-              selected: provider.currentIndex == index,
-              size: size,
-              sizeBase: AppBarItems.anonimTabBarItems.length,
-              index: index,
-              provider: provider,
+class AnonimAppBar extends PreferredSize {
+  AnonimAppBar({@required AnonimAppBarProvider provider})
+      : super(
+          preferredSize: Size.fromHeight(100),
+          child: Container(
+            decoration: BoxDecoration(
+              color: AppColors.black,
             ),
-          );
-        },
-      ),
-    );
-  }
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    physics: BouncingScrollPhysics(),
+                    reverse: true,
+                    itemCount: AppBarItems.anonimAppBarItems.length,
+                    itemBuilder: (context, index) => _TabItem(
+                      label:
+                          AppBarItems.anonimAppBarItems.keys.elementAt(index),
+                      selected: provider.currentIndex == index,
+                      index: index,
+                      provider: provider,
+                      onTap: () {
+                        provider.updateIndex = index;
+                        provider.updateSelectedTab = AppBarItems
+                            .anonimAppBarItems.keys
+                            .elementAt(provider.currentIndex);
+                        print('index: $index');
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
 }
 
 class _TabItem extends StatelessWidget {
   final String label;
   final bool selected;
-  final Size size;
-  final int sizeBase;
   final index;
+  final VoidCallback onTap;
   final AnonimAppBarProvider provider;
 
-  _TabItem({
-    @required this.label,
-    @required this.selected,
-    @required this.size,
-    @required this.sizeBase,
-    @required this.index,
-    @required this.provider,
-  });
-
+  _TabItem(
+      {@required this.label,
+      @required this.selected,
+      @required this.index,
+      @required this.provider,
+      @required this.onTap});
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    int itemsCountBaseSize = AppBarItems.anonimAppBarItems.length;
     final radius = AppStyles.anonimTabBarSelectedItemRadius;
 
-    return Card(
-      margin: EdgeInsets.all(0.0),
-      elevation: 0.0,
-      color: !selected ? Colors.black : Colors.transparent,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          bottomLeft: !selected
-              ? (index == provider.currentIndex + 1
-                  ? Radius.circular(radius)
-                  : Radius.circular(0))
-              : Radius.circular(0.0),
-          bottomRight: !selected
-              ? (index == provider.currentIndex - 1
-                  ? Radius.circular(radius)
-                  : Radius.circular(0))
-              : Radius.circular(0.0),
-        ),
-      ),
+    return GestureDetector(
+      onTap: this.onTap,
       child: Container(
-        alignment: Alignment.center,
-        width: (size.width / 2) / sizeBase,
-        child: Text(
-          label,
-          style:
-              selected ? AppStyles.selectItemLabel : AppStyles.normalItemLabel,
+        // * Cor que causa a impressão de continuidade com a borda arredondada do container lateral não selecionado
+        color: Colors.white,
+        child: Card(
+          margin: EdgeInsets.all(0.0),
+          elevation: 0.0,
+          color: !selected ? AppColors.black : AppColors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: !selected
+                  ? (index == provider.currentIndex - 1
+                      ? Radius.circular(radius)
+                      : Radius.circular(0))
+                  : Radius.circular(0.0),
+              bottomRight: !selected
+                  ? (index == provider.currentIndex + 1
+                      ? Radius.circular(radius)
+                      : Radius.circular(0))
+                  : Radius.circular(0.0),
+            ),
+          ),
+          child: Container(
+            // the width adapts automatically based on quantity of itens on anonimTabBarItems map
+            width: ((size.width * .5) / itemsCountBaseSize),
+            height: 30,
+            // margin: const EdgeInsets.only(right: 15),
+
+            child: Center(
+              child: AnimatedDefaultTextStyle(
+                style: selected
+                    ? AppStyles.selectItemLabel
+                    : AppStyles.normalItemLabel.copyWith(fontSize: 14),
+                duration: Duration(milliseconds: 350),
+                curve: Curves.easeInOutQuad,
+                child: Text(
+                  label,
+                ),
+              ),
+            ),
+            decoration:
+                selected ? AppStyles.selectedTabItem : AppStyles.normalTabItem,
+          ),
         ),
-        decoration:
-            selected ? AppStyles.selectedTabItem : AppStyles.normalTabItem,
       ),
     );
   }

@@ -11,13 +11,11 @@ class HomePage extends StatelessWidget {
 
     return ChangeNotifierProvider(
       create: (_) => AnonimAppBarProvider(),
-      child: Scaffold(
-        body: Row(
-          children: [
-            LeftPanel(size: size),
-            RightPanel(size: size),
-          ],
-        ),
+      child: Row(
+        children: [
+          LeftPanel(size: size),
+          RightPanel(size: size),
+        ],
       ),
     );
   }
