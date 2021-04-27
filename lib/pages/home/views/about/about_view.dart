@@ -4,11 +4,11 @@ import 'package:home_githubio/model/Certification.dart';
 import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
 import 'package:home_githubio/model/data/contents.dart';
-import 'package:home_githubio/widgets/about_page_components/section.dart';
-import 'package:home_githubio/widgets/about_page_components/section_divider.dart';
-import 'package:home_githubio/widgets/expandable_section.dart';
+import 'package:home_githubio/pages/home/views/about/widgets/section.dart';
+import 'package:home_githubio/pages/home/views/about/widgets/section_divider.dart';
+import 'package:home_githubio/pages/home/views/about/widgets/expandable_section.dart';
 
-class About extends StatelessWidget {
+class AboutView extends StatelessWidget {
   Map<String, Object> data = Contents.texts;
 
   @override

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/app/styles.dart';
-import 'package:home_githubio/core/state/anonim_tab_bar_provider.dart';
-import 'package:home_githubio/model/data/menu_items.dart';
+import 'package:home_githubio/core/styles/styles.dart';
+import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
 import 'package:provider/provider.dart';
 
-class AnonimTabBar extends StatelessWidget {
+class AnonimAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
+    final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
 
     return Container(
       alignment: Alignment.bottomCenter,
@@ -16,21 +16,21 @@ class AnonimTabBar extends StatelessWidget {
       color: Colors.white, // ?Impacta na cor de fundo da tab selecionada
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: MenuItems.anonimTabBarItems.length,
+        itemCount: AppBarItems.anonimTabBarItems.length,
         scrollDirection: Axis.horizontal,
         physics: NeverScrollableScrollPhysics(),
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             onTap: () {
               provider.updateIndex = index;
-              provider.updateSelectedTab = MenuItems.anonimTabBarItems.keys
+              provider.updateSelectedTab = AppBarItems.anonimTabBarItems.keys
                   .elementAt(provider.currentIndex);
             },
             child: _TabItem(
-              label: MenuItems.anonimTabBarItems.keys.elementAt(index),
+              label: AppBarItems.anonimTabBarItems.keys.elementAt(index),
               selected: provider.currentIndex == index,
               size: size,
-              sizeBase: MenuItems.anonimTabBarItems.length,
+              sizeBase: AppBarItems.anonimTabBarItems.length,
               index: index,
               provider: provider,
             ),
@@ -47,7 +47,7 @@ class _TabItem extends StatelessWidget {
   final Size size;
   final int sizeBase;
   final index;
-  final AnonimTabBarProvider provider;
+  final AnonimAppBarProvider provider;
 
   _TabItem({
     @required this.label,

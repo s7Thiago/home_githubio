@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/app/styles.dart';
-import 'package:home_githubio/app/values.dart';
-import 'package:home_githubio/core/state/anonim_tab_bar_provider.dart';
+import 'package:home_githubio/core/styles/styles.dart';
+import 'package:home_githubio/core/values.dart';
+import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
 import 'package:provider/provider.dart';
 
 class LeftPanel extends StatelessWidget {
@@ -11,7 +11,7 @@ class LeftPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
+    final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
 
     return AnimatedContainer(
       duration: Duration(milliseconds: 450),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/app/styles.dart';
+import 'package:home_githubio/core/styles/styles.dart';
 
-class ContactSection extends StatelessWidget {
+class ContactView extends StatelessWidget {
   _openSquareQrCode(BuildContext context) {
     Navigator.of(context).push(PageRouteBuilder(
         opaque: false,

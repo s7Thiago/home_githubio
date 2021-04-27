@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/app/styles.dart';
-import 'package:home_githubio/core/state/anonim_tab_bar_provider.dart';
-import 'package:home_githubio/model/data/menu_items.dart';
-import 'package:home_githubio/widgets/anonim_tab_bar.dart';
+import 'package:home_githubio/core/styles/styles.dart';
+import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
+import 'package:home_githubio/pages/home/widgets/anonim_app_bar/anonim_app_bar.dart';
 import 'package:provider/provider.dart';
 
 class RightPanel extends StatelessWidget {
@@ -12,7 +12,8 @@ class RightPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
+    // * Usando o provider da barra customizada aqui
+    final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
 
     return Expanded(
       child: AnimatedContainer(
@@ -24,7 +25,7 @@ class RightPanel extends StatelessWidget {
             : size.width * .5,
         child: Column(
           children: [
-            Expanded(child: AnonimTabBar(), flex: 1),
+            Expanded(child: AnonimAppBar(), flex: 1),
             Expanded(child: _BodyRight(), flex: 8),
           ],
         ),
@@ -36,7 +37,8 @@ class RightPanel extends StatelessWidget {
 class _BodyRight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<AnonimTabBarProvider>(context, listen: true);
+    // * Usando o provider da barra customizada aqui
+    final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
@@ -51,7 +53,7 @@ class _BodyRight extends StatelessWidget {
       child: IndexedStack(
         alignment: Alignment.center,
         index: provider.currentIndex,
-        children: MenuItems.anonimTabBarItems.values.toList(),
+        children: AppBarItems.anonimTabBarItems.values.toList(),
       ),
     );
   }

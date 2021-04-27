@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ProjectsSection extends StatelessWidget {
+class ProjectsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
