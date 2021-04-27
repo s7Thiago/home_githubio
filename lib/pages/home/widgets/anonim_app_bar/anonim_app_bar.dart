@@ -6,10 +6,13 @@ import 'package:home_githubio/core/styles/styles.dart';
 import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
 
 class AnonimAppBar extends PreferredSize {
-  AnonimAppBar({@required AnonimAppBarProvider provider})
+  AnonimAppBar(
+      {@required AnonimAppBarProvider provider,
+      @required Map<String, Widget> items})
       : super(
           preferredSize: Size.fromHeight(100),
           child: Container(
+            width: double.infinity,
             decoration: BoxDecoration(
               color: AppColors.black,
             ),
@@ -21,19 +24,18 @@ class AnonimAppBar extends PreferredSize {
                     scrollDirection: Axis.horizontal,
                     physics: BouncingScrollPhysics(),
                     reverse: true,
-                    itemCount: AppBarItems.anonimAppBarItems.length,
+                    itemCount: items.length,
                     itemBuilder: (context, index) => _TabItem(
-                      label:
-                          AppBarItems.anonimAppBarItems.keys.elementAt(index),
+                      label: items.keys.elementAt(index),
                       selected: provider.currentIndex == index,
                       index: index,
                       provider: provider,
+                      itemsCountBaseSize: items.length,
                       onTap: () {
                         provider.updateIndex = index;
                         provider.updateSelectedTab = AppBarItems
                             .anonimAppBarItems.keys
                             .elementAt(provider.currentIndex);
-                        print('index: $index');
                       },
                     ),
                   ),
@@ -50,17 +52,19 @@ class _TabItem extends StatelessWidget {
   final index;
   final VoidCallback onTap;
   final AnonimAppBarProvider provider;
+  final itemsCountBaseSize;
 
-  _TabItem(
-      {@required this.label,
-      @required this.selected,
-      @required this.index,
-      @required this.provider,
-      @required this.onTap});
+  _TabItem({
+    @required this.label,
+    @required this.selected,
+    @required this.index,
+    @required this.provider,
+    @required this.onTap,
+    @required this.itemsCountBaseSize,
+  });
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    int itemsCountBaseSize = AppBarItems.anonimAppBarItems.length;
     final radius = AppStyles.anonimTabBarSelectedItemRadius;
 
     return GestureDetector(

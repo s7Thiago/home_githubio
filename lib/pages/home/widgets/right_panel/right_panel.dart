@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/styles/styles.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/core/styles/app_colors.dart';
+import 'package:home_githubio/core/styles/styles.dart';
 import 'package:home_githubio/pages/home/widgets/anonim_app_bar/anonim_app_bar.dart';
 import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
-import 'package:home_githubio/pages/home/widgets/anonim_app_bar/anonim_app_bar_older.dart';
 import 'package:provider/provider.dart';
+
+Map<String, Widget> _appBarItems = AppBarItems.anonimAppBarItems;
 
 class RightPanel extends StatelessWidget {
   final Size size;
@@ -18,7 +20,13 @@ class RightPanel extends StatelessWidget {
 
     return Expanded(
       child: Scaffold(
-        appBar: AnonimAppBar(provider: provider),
+        ///* Impede que uma fina linha vertical apareça no lado esquerdo da AnonimAppBar
+        ///* durante a animação do AnimatedContainer() que contém os projetos
+        backgroundColor: AppColors.black,
+        appBar: AnonimAppBar(
+          provider: provider,
+          items: _appBarItems,
+        ),
         body: AnimatedContainer(
           duration: Duration(milliseconds: 450),
           curve: Curves.easeInOutCirc.flipped,
@@ -26,12 +34,7 @@ class RightPanel extends StatelessWidget {
           width: provider.selectedTab == 'Projects'
               ? size.width * .8
               : size.width * .5,
-          child: Column(
-            children: [
-              // Expanded(child: AnonimAppBarOlder(), flex: 1),
-              Expanded(child: _BodyRight(), flex: 8),
-            ],
-          ),
+          child: _BodyRight(),
         ),
       ),
     );
@@ -46,8 +49,9 @@ class _BodyRight extends StatelessWidget {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          topLeft: provider.selectedTab == 'Projects'
-              ? Radius.circular(AppStyles.anonimTabBarSelectedItemRadius)
+          topLeft: provider.selectedTab == 'Projects' ||
+                  provider.currentIndex != _appBarItems.length
+              ? Radius.circular(40.0)
               : Radius.circular(0.0),
         ),
       ),
