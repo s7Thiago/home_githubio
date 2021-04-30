@@ -6,7 +6,7 @@ import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/expandable_section.dart';
-import 'package:home_githubio/pages/home/views/about/widgets/section.dart';
+import 'package:home_githubio/pages/home/views/about/widgets/section/section.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section_divider.dart';
 
 class AboutView extends StatelessWidget {
@@ -18,7 +18,7 @@ class AboutView extends StatelessWidget {
       child: Container(
         color: AppColors.white,
         width: double.maxFinite,
-        height: 5000,
+        height: 1500,
         child: Column(
           children: [
             SizedBox(height: 50),
