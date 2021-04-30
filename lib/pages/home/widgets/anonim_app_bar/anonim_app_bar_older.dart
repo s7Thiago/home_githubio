@@ -50,12 +50,12 @@ class _TabItem extends StatelessWidget {
   final AnonimAppBarProvider provider;
 
   _TabItem({
-    @required this.label,
-    @required this.selected,
-    @required this.size,
-    @required this.sizeBase,
-    @required this.index,
-    @required this.provider,
+    required this.label,
+    required this.selected,
+    required this.size,
+    required this.sizeBase,
+    required this.index,
+    required this.provider,
   });
 
   @override

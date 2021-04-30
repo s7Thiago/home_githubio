@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 class LeftPanel extends StatelessWidget {
   final Size size;
 
-  const LeftPanel({key, @required this.size}) : super(key: key);
+  const LeftPanel({key, required this.size}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

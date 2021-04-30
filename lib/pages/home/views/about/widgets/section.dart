@@ -7,17 +7,17 @@ import '../../../../../core/styles/styles.dart';
 class Section extends StatelessWidget {
   String type = 'Unknown Element';
 
-  String introText = '';
+  String? introText = '';
   String titleText = '';
   String content = '';
   String imageUrl = '';
-  Widget iconTitleLeading;
-  Widget iconTitleTrailing;
+  Widget? iconTitleLeading;
+  Widget? iconTitleTrailing;
   List<Widget> representations = <Widget>[];
   MainAxisAlignment alignment = MainAxisAlignment.center;
   TextAlign textAlign = TextAlign.justify;
   bool showTitleDivider = false;
-  double marginStart = 0.0;
+  double? marginStart = 0.0;
 
   Section.intro({
     this.introText = '',
@@ -90,7 +90,7 @@ class Section extends StatelessWidget {
                 showTitleDivider: showTitleDivider,
               ),
               SelectableText(
-                introText,
+                introText!,
                 textAlign: TextAlign.center,
                 showCursor: false,
               ),

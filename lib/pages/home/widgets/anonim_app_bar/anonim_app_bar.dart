@@ -7,8 +7,8 @@ import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.da
 
 class AnonimAppBar extends PreferredSize {
   AnonimAppBar(
-      {@required AnonimAppBarProvider provider,
-      @required Map<String, Widget> items})
+      {required AnonimAppBarProvider provider,
+      required Map<String, Widget> items})
       : super(
           preferredSize: Size.fromHeight(100),
           child: Container(
@@ -55,12 +55,12 @@ class _TabItem extends StatelessWidget {
   final itemsCountBaseSize;
 
   _TabItem({
-    @required this.label,
-    @required this.selected,
-    @required this.index,
-    @required this.provider,
-    @required this.onTap,
-    @required this.itemsCountBaseSize,
+    required this.label,
+    required this.selected,
+    required this.index,
+    required this.provider,
+    required this.onTap,
+    required this.itemsCountBaseSize,
   });
   @override
   Widget build(BuildContext context) {

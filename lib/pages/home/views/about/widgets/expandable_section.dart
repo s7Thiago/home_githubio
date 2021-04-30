@@ -6,13 +6,13 @@ import 'package:flutter_html/style.dart';
 import '../../../../../core/styles/styles.dart' as styles;
 
 class ExpandableSection extends StatefulWidget {
-  final String title;
-  final String content;
+  final String? title;
+  final String? content;
   final double customHeight;
-  final List<Widget> representations;
+  final List<Widget>? representations;
 
   const ExpandableSection({
-    Key key,
+    Key? key,
     this.title,
     this.content,
     this.representations,
@@ -27,9 +27,9 @@ class _ExpandableSectionState extends State<ExpandableSection>
     with SingleTickerProviderStateMixin {
   final _duration = Duration(milliseconds: 400);
   bool selected = false;
-  Color _containerColor = Colors.white;
-  Color _titleColor = styles.AppStyles.introTextStyle.color;
-  double _titleSize = styles.AppStyles.introTextStyle.fontSize;
+  Color? _containerColor = Colors.white;
+  Color? _titleColor = styles.AppStyles.introTextStyle.color;
+  double? _titleSize = styles.AppStyles.introTextStyle.fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
           selected = !selected;
           _containerColor = Colors.white;
           _titleSize =
-              styles.AppStyles.introTextStyle.fontSize + (selected ? 7 : -7);
+              styles.AppStyles.introTextStyle.fontSize! + (selected ? 7 : -7);
         });
       },
       onTapDown: (TapDownDetails details) {
@@ -105,9 +105,9 @@ class _ExpandableSectionState extends State<ExpandableSection>
                     child: FittedBox(
                       fit: BoxFit.fitHeight,
                       child: Text(
-                        widget.title,
+                        widget.title!,
                         style: styles.AppStyles.introTextStyle.copyWith(
-                            fontSize: _titleSize - 3, color: _titleColor),
+                            fontSize: _titleSize! - 3, color: _titleColor),
                         textAlign: TextAlign.right,
                       ),
                     ),
@@ -134,7 +134,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
                           },
                         ),
                       ),
-                      widget.representations.length > 0
+                      widget.representations!.length > 0
                           ? Expanded(
                               flex: 1,
                               child: IconTheme(
@@ -148,7 +148,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
                                   spacing: 25,
                                   runSpacing: 100,
                                   direction: Axis.horizontal,
-                                  children: widget.representations,
+                                  children: widget.representations!,
                                 ),
                               ),
                             )

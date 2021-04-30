@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
-import 'package:home_githubio/core/styles/styles.dart';
 import 'package:home_githubio/pages/home/widgets/anonim_app_bar/anonim_app_bar.dart';
 import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +10,7 @@ Map<String, Widget> _appBarItems = AppBarItems.anonimAppBarItems;
 class RightPanel extends StatelessWidget {
   final Size size;
 
-  const RightPanel({Key key, @required this.size}) : super(key: key);
+  const RightPanel({Key? key, required this.size}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
