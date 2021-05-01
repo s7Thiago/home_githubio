@@ -2,19 +2,21 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html/style.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:home_githubio/core/styles/app_colors.dart';
 
 import '../../../../../core/styles/styles.dart' as styles;
 
 class ExpandableSection extends StatefulWidget {
   final String? title;
-  final String? content;
+  final String content;
   final double customHeight;
   final List<Widget>? representations;
 
   const ExpandableSection({
     Key? key,
     this.title,
-    this.content,
+    required this.content,
     this.representations,
     this.customHeight = 520,
   }) : super(key: key);
@@ -120,18 +122,13 @@ class _ExpandableSectionState extends State<ExpandableSection>
                     children: [
                       Expanded(
                         flex: 6,
-                        child: Html(
+                        child: Markdown(
                           data: widget.content,
-                          style: {
-                            'div': Style(
-                              direction: TextDirection.rtl,
-                            ),
-                            'li': Style(
-                              alignment: Alignment.centerRight,
-                              listStylePosition: ListStylePosition.INSIDE,
-                            ),
-                            'p': Style(textAlign: TextAlign.right)
-                          },
+                          styleSheet: MarkdownStyleSheet(
+                              textAlign: WrapAlignment.spaceBetween,
+                              strong: TextStyle(
+                                color: AppColors.spotlight,
+                              )),
                         ),
                       ),
                       widget.representations!.length > 0

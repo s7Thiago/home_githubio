@@ -18,7 +18,7 @@ class AboutView extends StatelessWidget {
       child: Container(
         color: AppColors.white,
         width: double.maxFinite,
-        height: 1500,
+        height: double.maxFinite,
         child: Column(
           children: [
             SizedBox(height: 50),
