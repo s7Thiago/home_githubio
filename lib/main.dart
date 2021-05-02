@@ -11,6 +11,7 @@ class AnonimApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      color: Colors.black,
       routes: {AppRoutes.HOME: (_) => HomePage()},
     );
   }

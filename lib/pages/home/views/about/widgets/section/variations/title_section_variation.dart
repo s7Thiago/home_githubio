@@ -6,10 +6,9 @@ class TitleSectionVariation extends StatelessWidget {
   final bool showTitleDivider;
 
   const TitleSectionVariation({
-    Key? key,
     required this.titleText,
-     this.showTitleDivider = false,
-  }) : super(key: key);
+    this.showTitleDivider = false,
+  });
 
   @override
   Widget build(BuildContext context) {

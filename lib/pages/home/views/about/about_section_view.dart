@@ -8,9 +8,6 @@ class AboutSectionView extends StatelessWidget {
     return Scaffold(
       body: AboutView(),
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-      ),
     );
   }
 }

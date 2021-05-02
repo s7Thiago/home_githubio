@@ -8,12 +8,11 @@ class CertificateSectionVariation extends StatelessWidget {
   final String content;
 
   const CertificateSectionVariation({
-    Key? key,
     required this.imageUrl,
     this.marginStart,
     required this.titleText,
     required this.content,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:home_githubio/model/Certification.dart';
 import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
 import 'package:home_githubio/model/data/contents.dart';
-import 'package:home_githubio/pages/home/views/about/widgets/expandable_section.dart';
+import 'package:home_githubio/pages/home/views/about/widgets/section/expandable_section.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/section.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section_divider.dart';
 
@@ -35,7 +35,7 @@ class AboutView extends StatelessWidget {
                       child: Column(
                         children: [
                           Section.iconTitle(
-                            'Certificados',
+                            'Trajetória',
                             iconTitleTrailing: Icon(
                               Icons.keyboard_arrow_left_sharp,
                             ),

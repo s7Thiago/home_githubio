@@ -7,11 +7,10 @@ class IntroSectionVariation extends StatelessWidget {
   final showTitleDivider;
 
   const IntroSectionVariation({
-    Key? key,
     required this.titleText,
     required this.introText,
     this.showTitleDivider = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
-import 'package:home_githubio/pages/home/widgets/anonim_app_bar/anonim_app_bar.dart';
-import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
 import 'package:provider/provider.dart';
+
+import 'widgets/anonim_app_bar/anonim_app_bar.dart';
+import 'widgets/anonim_app_bar/app_bar_items.dart';
 
 Map<String, Widget> _appBarItems = AppBarItems.anonimAppBarItems;
 

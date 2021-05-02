@@ -7,12 +7,11 @@ class SkillSectionVariation extends StatelessWidget {
   final double? marginStart;
 
   const SkillSectionVariation({
-    Key? key,
     this.iconTitleLeading,
     this.iconTitleTrailing,
     required this.titleText,
     this.marginStart,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

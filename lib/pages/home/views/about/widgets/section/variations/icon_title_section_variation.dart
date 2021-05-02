@@ -6,9 +6,9 @@ class IconTitleSectionVariation extends StatelessWidget {
   final String titleText;
   final String? introText;
   final showTitleDivider;
-  Widget? iconTitleLeading;
-  Widget? iconTitleTrailing;
-  MainAxisAlignment alignment;
+  final Widget? iconTitleLeading;
+  final Widget? iconTitleTrailing;
+  final MainAxisAlignment alignment;
 
   IconTitleSectionVariation({
     required this.titleText,

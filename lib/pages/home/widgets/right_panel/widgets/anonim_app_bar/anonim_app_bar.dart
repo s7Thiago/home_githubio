@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
 import 'package:home_githubio/core/styles/styles.dart';
-import 'package:home_githubio/pages/home/widgets/anonim_app_bar/app_bar_items.dart';
+
+import 'app_bar_items.dart';
 
 class AnonimAppBar extends PreferredSize {
   AnonimAppBar(

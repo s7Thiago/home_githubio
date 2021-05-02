@@ -106,7 +106,7 @@ Também contribuo periodicamente com divisão de marketing.
           Icon(Icons.crop_square_rounded),
         ],
         customHeight: 530,
-      )
+      ),
     ],
     'certifications': <Certification>[
       Certification(

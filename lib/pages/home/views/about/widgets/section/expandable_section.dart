@@ -1,11 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/style.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
 
-import '../../../../../core/styles/styles.dart' as styles;
+import '../../../../../../core/styles/styles.dart' as styles;
 
 class ExpandableSection extends StatefulWidget {
   final String? title;
@@ -29,7 +27,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
     with SingleTickerProviderStateMixin {
   final _duration = Duration(milliseconds: 400);
   bool selected = false;
-  Color? _containerColor = Colors.white;
+  Color? _containerColor = AppColors.white;
   Color? _titleColor = styles.AppStyles.introTextStyle.color;
   double? _titleSize = styles.AppStyles.introTextStyle.fontSize;
 
@@ -41,19 +39,20 @@ class _ExpandableSectionState extends State<ExpandableSection>
           selected = !selected;
           _containerColor = Colors.white;
           _titleSize =
-              styles.AppStyles.introTextStyle.fontSize! + (selected ? 7 : -7);
+              styles.AppStyles.introTextStyle.fontSize! + (selected ? 7 : 0);
+          _titleColor = AppColors.spotlight_dark;
         });
       },
       onTapDown: (TapDownDetails details) {
         setState(() {
-          _containerColor = Colors.grey[400];
+          _containerColor = Colors.grey[100];
         });
       },
       child: MouseRegion(
         onHover: (PointerHoverEvent phe) {
           setState(() {
-            _containerColor = selected ? Colors.white : Colors.grey[100];
-            _titleColor = Colors.pink;
+            _containerColor = selected ? Colors.white : Colors.purple[50];
+            _titleColor = AppColors.spotlight_dark;
 
             if (!selected) _titleSize = 25;
           });
@@ -61,7 +60,8 @@ class _ExpandableSectionState extends State<ExpandableSection>
         onExit: (PointerExitEvent pee) {
           setState(() {
             _containerColor = Colors.white;
-            _titleColor = styles.AppStyles.introTextStyle.color;
+
+            if (!selected) _titleColor = styles.AppStyles.introTextStyle.color;
 
             if (!selected)
               _titleSize = styles.AppStyles.introTextStyle.fontSize;
@@ -107,11 +107,17 @@ class _ExpandableSectionState extends State<ExpandableSection>
                     vsync: this,
                     child: FittedBox(
                       fit: BoxFit.fitHeight,
-                      child: Text(
-                        widget.title!,
+                      child: AnimatedDefaultTextStyle(
+                        duration: Duration(milliseconds: 250),
+                        curve: Curves.easeInOutQuad,
                         style: styles.AppStyles.introTextStyle.copyWith(
-                            fontSize: _titleSize! - 3, color: _titleColor),
-                        textAlign: TextAlign.right,
+                          fontSize: _titleSize! - 3,
+                          color: _titleColor,
+                        ),
+                        child: Text(
+                          widget.title!,
+                          textAlign: TextAlign.right,
+                        ),
                       ),
                     ),
                   ),
