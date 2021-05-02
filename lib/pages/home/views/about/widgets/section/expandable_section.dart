@@ -71,9 +71,10 @@ class _ExpandableSectionState extends State<ExpandableSection>
           duration: _duration,
           curve: Curves.easeInOutQuad,
           width: !selected ? 380 : 450,
-          height: !selected ? 50 : widget.customHeight,
+          alignment: Alignment.center,
+          height: !selected ? 65 : widget.customHeight,
           padding: EdgeInsets.only(
-            top: selected ? 10 : 15,
+            top: selected ? 10 : 20,
             bottom: selected ? 16 : 0,
             left: 16,
           ),
@@ -89,7 +90,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
                       ),
                     ]
                   : [],
-              borderRadius: BorderRadius.circular(!selected ? 20 : 8)),
+              borderRadius: BorderRadius.circular(!selected ? 10 : 8)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
