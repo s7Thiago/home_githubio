@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="928.003" height="2975.5" viewBox="0 0 928.003 2975.5">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 193 194">
+      <image width="193" height="194" xlink:href="resume-image7.png"/>
+    </pattern>
+    <pattern id="pattern-2" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 100 102">
+      <image width="100" height="102" xlink:href="resume-image13.png"/>
+    </pattern>
+    <pattern id="pattern-3" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 155 180">
+      <image width="155" height="180" xlink:href="resume-image15.png"/>
+    </pattern>
+    <pattern id="pattern-4" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 157 180">
+      <image width="157" height="180" xlink:href="resume-image17.png"/>
+    </pattern>
+    <pattern id="pattern-5" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 2400 2340">
+      <image width="2400" height="2340" xlink:href="resume-image19.png"/>
+    </pattern>
+    <pattern id="pattern-6" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1200 1024">
+      <image width="1200" height="1024" xlink:href="resume-image21.png"/>
+    </pattern>
+    <pattern id="pattern-7" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1085 1082">
+      <image width="1085" height="1082" xlink:href="resume-image22.png"/>
+    </pattern>
+    <pattern id="pattern-8" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1200 1048">
+      <image width="1200" height="1048" xlink:href="resume-image23.png"/>
+    </pattern>
+    <pattern id="pattern-9" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 474 248">
+      <image width="474" height="248" xlink:href="resume-image25.png"/>
+    </pattern>
+    <pattern id="pattern-10" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 250 196">
+      <image width="250" height="196" xlink:href="resume-image26.png"/>
+    </pattern>
+    <pattern id="pattern-11" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 448 368">
+      <image width="448" height="368" xlink:href="resume-image28.png"/>
+    </pattern>
+    <pattern id="pattern-12" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 245 309">
+      <image width="245" height="309" xlink:href="resume-image29.png"/>
+    </pattern>
+    <pattern id="pattern-13" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 613 539">
+      <image width="613" height="539" xlink:href="resume-image31.png"/>
+    </pattern>
+    <pattern id="pattern-14" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 319 294">
+      <image width="319" height="294" xlink:href="resume-image32.png"/>
+    </pattern>
+    <pattern id="pattern-15" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 327 233">
+      <image width="327" height="233" xlink:href="resume-image34.png"/>
+    </pattern>
+    <pattern id="pattern-16" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 965 713">
+      <image width="965" height="713" xlink:href="resume-image35.png"/>
+    </pattern>
+    <pattern id="pattern-17" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 908 981">
+      <image width="908" height="981" xlink:href="resume-image36.png"/>
+    </pattern>
+    <image id="image" width="37" height="37" xlink:href="resume-image.png"/>
+    <image id="image-2" width="37" height="37" xlink:href="resume-image5.png"/>
+    <image id="image-3" width="36" height="36" xlink:href="resume-image8.png"/>
+    <image id="image-4" width="37" height="37" xlink:href="resume-image3.png"/>
+    <image id="image-5" width="37" height="37" xlink:href="resume-image2.png"/>
+  </defs>
+  <g id="resume" transform="translate(-38 -81)">
+    <line id="Linha_1" data-name="Linha 1" y2="227" transform="translate(542.5 344.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7" stroke-dasharray="15"/>
+    <path id="Caminho_5" data-name="Caminho 5" d="M0,0V328" transform="translate(542.5 662.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7" stroke-dasharray="15"/>
+    <path id="Caminho_6" data-name="Caminho 6" d="M0,0V685" transform="translate(542.5 1006.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7" stroke-dasharray="15"/>
+    <path id="Caminho_7" data-name="Caminho 7" d="M0,0V793.5" transform="translate(542.5 1711.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7" stroke-dasharray="15"/>
+    <path id="Caminho_8" data-name="Caminho 8" d="M0,0V508.5" transform="translate(540.5 2544.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="7" stroke-dasharray="15"/>
+    <text id="Intro" transform="translate(513 101)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="0">Intro</tspan></text>
+    <text id="Trajetória" transform="translate(390 388)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="0">Trajetória</tspan></text>
+    <text id="Certificados" transform="translate(607 388)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="0">Certificados</tspan></text>
+    <text id="Habilidades" transform="translate(625 1042)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="0">Habilidades</tspan></text>
+    <text id="Sou_um_futuro_cientista_da_computação_que_além_de_apaixonado_por_desenvolver_soluções_que_resolvem_problemas_especialmente_para_plataformas_móveis_tenho_uma_ambição_especial_em_construir_aplicações_com_visual_de_alto_nível_perfeitamente_alinhados_em_cada" data-name="Sou um futuro cientista da computação que além de apaixonado por desenvolver soluções que resolvem problemas especialmente para plataformas móveis, tenho uma ambição especial em construir aplicações com visual de alto nível, perfeitamente alinhados em cada" transform="translate(266 106)" fill="#707070" font-size="14" font-family="Ebrima"><tspan x="23.047" y="15">Sou um futuro cientista da computação que além de apaixonado por desenvolver </tspan><tspan x="8.739" y="34">soluções que resolvem problemas especialmente para plataformas móveis, tenho uma </tspan><tspan x="26.383" y="53">ambição especial em construir aplicações com visual de alto nível, perfeitamente </tspan><tspan x="5.448" y="72">alinhados em cada pixel de modo a entregar uma experiência fluida tanto no UX Front-</tspan><tspan x="7.044" y="91">End como no desempenho do Back-End. Aprender coisas novas definitivamente é algo </tspan><tspan x="1.292" y="110">que eu amo, então, creio que a melhor forma de potencializar isso é me integrando num </tspan><tspan x="3.045" y="129">ambiente que me exponha a desafios, pois sou convicto de que eles possibilitam não só </tspan><tspan x="12.284" y="148">o desenvolvimento profissional e intelectual, mas principalmente expõem a situações </tspan><tspan x="158.997" y="167">que aguçam o senso de humanidade. </tspan></text>
+    <g id="Grupo_3" data-name="Grupo 3" transform="translate(14.72 32.769)">
+      <g id="Retângulo_1" data-name="Retângulo 1" transform="translate(512.28 260.231)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="26" height="32" stroke="none"/>
+        <rect x="0.5" y="0.5" width="25" height="31" fill="none"/>
+      </g>
+      <g id="Grupo_1" data-name="Grupo 1" transform="translate(512 283.608)">
+        <g id="Retângulo_2" data-name="Retângulo 2" transform="translate(0.28 -0.378)" fill="none" stroke="#000" stroke-width="1">
+          <rect width="9" height="9" stroke="none"/>
+          <rect x="0.5" y="0.5" width="8" height="8" fill="none"/>
+        </g>
+        <line id="Linha_2" data-name="Linha 2" x2="7.378" y2="7.378" transform="translate(0.738 0.738)" fill="none" stroke="#000" stroke-width="1"/>
+      </g>
+      <g id="Grupo_2" data-name="Grupo 2" transform="translate(529.706 260)">
+        <g id="Retângulo_2-2" data-name="Retângulo 2" transform="translate(-0.427 0.231)" fill="none" stroke="#000" stroke-width="1">
+          <rect width="9" height="9" stroke="none"/>
+          <rect x="0.5" y="0.5" width="8" height="8" fill="none"/>
+        </g>
+        <line id="Linha_2-2" data-name="Linha 2" x2="7.378" y2="7.378" transform="translate(0.738 0.738)" fill="none" stroke="#000" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Grupo_4" data-name="Grupo 4" transform="translate(-1.528 52.274)">
+      <path id="Caminho_1" data-name="Caminho 1" d="M-528.718,856.5l21.156-4.006-4.99,12.581h-32.261l-5.271-11.105Z" transform="translate(1072.809 -291.997)" fill="#fff" stroke="#000" stroke-width="1"/>
+      <path id="Caminho_2" data-name="Caminho 2" d="M-542.545,866.992l16.166-8.5,16.025,8.5" transform="translate(1070.4 -293.911)" fill="#fff" stroke="#000" stroke-width="1"/>
+      <path id="Caminho_3" data-name="Caminho 3" d="M-532.113,851.588l8.926-11.176,9.137,10.543" transform="translate(1067.068 -288.136)" fill="#fff" stroke="#000" stroke-width="1"/>
+      <path id="Caminho_4" data-name="Caminho 4" d="M-518.893,840.413v12.441" transform="translate(1062.844 -288.136)" fill="#fff" stroke="#000" stroke-width="1"/>
+    </g>
+    <g id="Grupo_16" data-name="Grupo 16" transform="translate(37 -384)">
+      <use id="Imagem_6" data-name="Imagem 6" transform="translate(551 810)" xlink:href="#image"/>
+      <text id="Dart_Lang_completa_Api_Rest_Flutter_Aqueduct_e_Angular" data-name="Dart Lang completa + Api Rest, Flutter, Aqueduct e Angular" transform="translate(595 810)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">Dart Lang completa + Api Rest, Flutter, Aqueduct e Angular</tspan></text>
+      <text id="https:_qrgo.page.link_7z9h9" data-name="https://qrgo.page.link/7z9h9" transform="translate(653 829)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">https://qrgo.page.link/7z9h9</tspan></text>
+      <text id="Credencial" transform="translate(595 830)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Credencial</tspan></text>
+    </g>
+    <g id="Grupo_19" data-name="Grupo 19" transform="translate(37 -135)">
+      <use id="Imagem_6-2" data-name="Imagem 6" transform="translate(551 810)" xlink:href="#image"/>
+      <text id="Dart_Lang_completa_Api_Rest_Flutter_Aqueduct_e_Angular-2" data-name="Dart Lang completa + Api Rest, Flutter, Aqueduct e Angular" transform="translate(595 810)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">Dart Lang completa + Api Rest, Flutter, Aqueduct e Angular</tspan></text>
+      <text id="Sem_credencial" data-name="Sem credencial" transform="translate(653 829)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">Sem credencial</tspan></text>
+      <text id="Credencial-2" data-name="Credencial" transform="translate(595 830)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Credencial</tspan></text>
+    </g>
+    <g id="Grupo_17" data-name="Grupo 17" transform="translate(9 -419)">
+      <use id="Imagem_7" data-name="Imagem 7" transform="translate(579 929)" xlink:href="#image-5"/>
+      <text id="HackaGr1D_Pocket" data-name="HackaGr1D Pocket" transform="translate(623 930)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">HackaGr1D Pocket</tspan></text>
+      <text id="https:_qrgo.page.link_ac9jV" data-name="https://qrgo.page.link/ac9jV" transform="translate(681 947)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">https://qrgo.page.link/ac9jV</tspan></text>
+      <text id="Credencial-3" data-name="Credencial" transform="translate(623 948)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Credencial</tspan></text>
+    </g>
+    <g id="Grupo_18" data-name="Grupo 18" transform="translate(9 -455)">
+      <text id="Brasa_Hacks:_Desafio_Nubank" data-name="Brasa Hacks: Desafio Nubank" transform="translate(623 1047)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">Brasa Hacks: Desafio Nubank</tspan></text>
+      <text id="https:_qrgo.page.link_Yy9jW" data-name="https://qrgo.page.link/Yy9jW" transform="translate(681 1064)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">https://qrgo.page.link/Yy9jW</tspan></text>
+      <text id="Credencial-4" data-name="Credencial" transform="translate(623 1065)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Credencial</tspan></text>
+      <use id="Imagem_8" data-name="Imagem 8" transform="translate(579 1047)" xlink:href="#image-4"/>
+    </g>
+    <g id="Grupo_20" data-name="Grupo 20" transform="translate(9 -482)">
+      <text id="Semana_OmniStack_11.0" data-name="Semana OmniStack 11.0" transform="translate(623 1241)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">Semana OmniStack 11.0</tspan></text>
+      <text id="https:_qrgo.page.link_MZ6sz" data-name="https://qrgo.page.link/MZ6sz" transform="translate(681 1260)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">https://qrgo.page.link/MZ6sz</tspan></text>
+      <text id="Credencial-5" data-name="Credencial" transform="translate(623 1261)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Credencial</tspan></text>
+      <image id="Imagem_9" data-name="Imagem 9" width="37" height="37" transform="translate(579 1243)" xlink:href="resume-image4.png"/>
+    </g>
+    <g id="Grupo_21" data-name="Grupo 21" transform="translate(9 -507)">
+      <text id="ConectaIF_2019" data-name="ConectaIF 2019" transform="translate(623 1350)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">ConectaIF 2019</tspan></text>
+      <text id="https:_qrgo.page.link_Ru79D" data-name="https://qrgo.page.link/Ru79D" transform="translate(681 1369)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">https://qrgo.page.link/Ru79D</tspan></text>
+      <text id="Credencial-6" data-name="Credencial" transform="translate(623 1370)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Credencial</tspan></text>
+      <use id="Imagem_10" data-name="Imagem 10" transform="translate(579 1351)" xlink:href="#image-2"/>
+    </g>
+    <g id="Grupo_22" data-name="Grupo 22" transform="translate(9 -423)">
+      <text id="ConectaIF_2018" data-name="ConectaIF 2018" transform="translate(623 1350)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">ConectaIF 2018</tspan></text>
+      <text id="https:_qrgo.page.link_aPVDF" data-name="https://qrgo.page.link/aPVDF" transform="translate(681 1369)" fill="#707070" font-size="11" font-family="Ebrima"><tspan x="0" y="12">https://qrgo.page.link/aPVDF</tspan></text>
+      <text id="Credencial-7" data-name="Credencial" transform="translate(623 1370)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Credencial</tspan></text>
+      <use id="Imagem_10-2" data-name="Imagem 10" transform="translate(579 1351)" xlink:href="#image-2"/>
+    </g>
+    <image id="Imagem_25" data-name="Imagem 25" width="21" height="21" transform="translate(571 372)" xlink:href="resume-image6.png"/>
+    <rect id="Imagem_26" data-name="Imagem 26" width="20" height="20" transform="translate(588 1023)" fill="url(#pattern)"/>
+    <line id="Linha_7" data-name="Linha 7" y1="2" x2="395" transform="translate(119 395.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    <line id="Linha_16" data-name="Linha 16" y1="2" x2="395" transform="translate(571 394.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    <g id="Grupo_24" data-name="Grupo 24">
+      <g id="Grupo_10" data-name="Grupo 10" transform="translate(95.145 431)">
+        <text id="Atuo_como_voluntário_ao_Instituto_dos_Engenheiros_Elétricos_e_Eletrônicos_IEEE_._Inicialmente_eu_era_integrante_da_divisão_de_cursos_e_membresias_e_ajudava_a_produzir_os_editais_de_cursos_e_workshops_organizados_pelos_alunos_com_o_objetivo_final_de_atr" data-name="Atuo como voluntário ao Instituto dos Engenheiros Elétricos e Eletrônicos (IEEE).   Inicialmente eu era integrante da divisão de cursos e membresias, e ajudava a produzir os editais de cursos e workshops organizados pelos alunos com o objetivo final de atr" transform="translate(-0.145 19)" fill="#707070" font-size="14" font-family="Ebrima"><tspan x="0.253" y="15">Atuo como voluntário ao Instituto dos Engenheiros Elétricos </tspan><tspan x="35.055" y="34">e Eletrônicos (</tspan><tspan y="34" font-family="Ebrima-Bold, Ebrima" font-weight="700">IEEE</tspan><tspan y="34" xml:space="preserve">).   Inicialmente eu era integrante da </tspan><tspan x="25.696" y="53">divisão de cursos e membresias, e ajudava a produzir os </tspan><tspan x="26.209" y="72">editais de cursos e workshops organizados pelos alunos </tspan><tspan x="3.432" y="91">com o objetivo final de atrair mais estudantes. o IEEE é uma </tspan><tspan x="9.14" y="110">instituição mundial </tspan><tspan y="110" font-family="Ebrima-Bold, Ebrima" font-weight="700">sem fins lucrativos </tspan><tspan y="110">que visa promover </tspan><tspan x="44.693" y="129">a integração entre os cursos através de </tspan><tspan y="129" font-family="Ebrima-Bold, Ebrima" font-weight="700">projetos </tspan><tspan y="129">que </tspan><tspan x="25.942" y="148">estimulam a </tspan><tspan y="148" font-family="Ebrima-Bold, Ebrima" font-weight="700">aprendizagem </tspan><tspan y="148">e fusão dos conhecimentos </tspan><tspan x="64.825" y="167">entre o pessoal dos cursos de Computação, física, </tspan><tspan x="45.944" y="186">automação industrial e do </tspan><tspan y="186" font-family="Ebrima-Bold, Ebrima" font-weight="700">ensino médio integrado</tspan><tspan y="186">, </tspan><tspan x="13.426" y="205">sempre tendo como alvo final o </tspan><tspan y="205" font-family="Ebrima-Bold, Ebrima" font-weight="700">benefício à comunidade </tspan><tspan x="244.781" y="224">que cerca o campus.</tspan><tspan x="371" y="243"></tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="165.84" y="262">Alguns projetos desenvolvidos:</tspan><tspan y="262" font-family="Ebrima" font-weight="400"> </tspan></tspan><tspan x="232.613" y="281">Lab Kids(Ramo do IFB)</tspan><tspan x="261.639" y="300">Cofre inteligente</tspan><tspan y="300" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="371" y="318"></tspan></tspan><tspan x="203.007" y="336">Impressora 3d com sucata</tspan><tspan y="336" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan x="371" y="355"></tspan><tspan x="155.805" y="374">Ponto de entrega voluntária (PEV)</tspan><tspan y="374" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan x="371" y="393"></tspan><tspan x="5.264" y="412">Mosqueteiras (visa incentivar a permanência e a entrada de </tspan><tspan x="287.048" y="431">meninas nos</tspan><tspan y="431" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan x="261.687" y="450" xml:space="preserve"> cursos de exatas)</tspan><tspan x="371" y="469"></tspan><tspan x="4.279" y="488">RePlante (visa devolver pra natureza, os recursos gastos em </tspan><tspan x="253.271" y="507">nossas</tspan><tspan y="507" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan y="507" xml:space="preserve"> atividades)</tspan></text>
+        <text id="De_2018_até_Atualmente" data-name="De 2018  até Atualmente" transform="translate(127.855 -8)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="9.748" y="20" xml:space="preserve">De 2018  até Atualmente</tspan></text>
+      </g>
+      <use id="Imagem_11" data-name="Imagem 11" transform="translate(478 419)" xlink:href="#image-3"/>
+      <line id="Linha_8" data-name="Linha 8" y1="2" x2="395" transform="translate(119 992.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    </g>
+    <g id="Grupo_25" data-name="Grupo 25">
+      <g id="Grupo_11" data-name="Grupo 11" transform="translate(94.145 1216)">
+        <text id="Me_associei_ao_Capítulo_de_Computação_Computer_Chapter_onde_atuo_na_divisão_de_projetos_geralmente_como_desenvolvedor_designer._Atualmente_temos_dois_projetos:_Planty_-_Um_aplicativo_idealizado_em_parceria_os_alunos_do_curso_de_automação_industrial_q" data-name="Me associei ao Capítulo de Computação (Computer Chapter), onde atuo na divisão de projetos geralmente como desenvolvedor/designer. Atualmente temos dois projetos: 
+
+Planty - Um aplicativo idealizado em parceria os alunos do curso de automação industrial, q" transform="translate(-47.145 20)" fill="#707070" font-size="14" font-family="Ebrima"><tspan x="4.275" y="15">Me associei ao Capítulo de Computação (Computer Chapter), onde </tspan><tspan x="37.56" y="34">atuo na divisão de projetos geralmente como desenvolvedor/</tspan><tspan x="156.813" y="53">designer. Atualmente temos dois projetos: </tspan><tspan x="418" y="72"></tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="15.965" y="91">Planty </tspan><tspan y="91" font-family="Ebrima" font-weight="400">-</tspan><tspan y="91"> </tspan><tspan y="91" font-family="Ebrima" font-weight="400">Um aplicativo idealizado em parceria os alunos do curso </tspan><tspan x="30.108" y="110" font-family="Ebrima" font-weight="400">de </tspan><tspan y="110">automação industrial</tspan><tspan y="110" font-family="Ebrima" font-weight="400">, que visa </tspan><tspan y="110">incentivar </tspan><tspan y="110" font-family="Ebrima" font-weight="400">a comunidade a </tspan><tspan x="3.257" y="129" font-family="Ebrima" font-weight="400">cuidar da área verde de Brasília em troca de recompensas (estamos </tspan><tspan x="78.801" y="148" font-family="Ebrima" font-weight="400">desenvolvendo um </tspan><tspan y="148">dispositivo</tspan><tspan y="148" xml:space="preserve" font-family="Ebrima" font-weight="400"> especial onde pode ser </tspan><tspan x="77.003" y="167" font-family="Ebrima" font-weight="400">armazenada </tspan><tspan y="167">água</tspan><tspan y="167" font-family="Ebrima" font-weight="400">, e o mesmo mede o volume restante </tspan><tspan x="1.794" y="186" font-family="Ebrima" font-weight="400">compartilhando esse dado com o app. o projeto ainda está em fase </tspan><tspan x="153.094" y="205" font-family="Ebrima" font-weight="400">de </tspan><tspan y="205">estudo</tspan><tspan y="205" font-family="Ebrima" font-weight="400">, e estamos buscando </tspan><tspan y="205">parcerias</tspan><tspan y="205" font-family="Ebrima" font-weight="400">)</tspan></tspan><tspan x="418" y="224"></tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="7.03" y="243">LiveBus</tspan><tspan y="243" xml:space="preserve" font-family="Ebrima" font-weight="400"> - Este projeto visa implantar um aplicativo eficiente e com </tspan><tspan x="3.387" y="262" font-family="Ebrima" font-weight="400">um </tspan><tspan y="262">design amigável </tspan><tspan y="262" font-family="Ebrima" font-weight="400">que cumpra o desafio de </tspan><tspan y="262">rastrear em tempo </tspan><tspan x="12.8" y="281">real </tspan><tspan y="281" font-family="Ebrima" font-weight="400">o </tspan><tspan y="281">transporte público </tspan><tspan y="281" font-family="Ebrima" font-weight="400">do Distrito Federal. Com alguns alunos </tspan><tspan x="14.242" y="300" font-family="Ebrima" font-weight="400">envolvidos, temos também o apoio do Akira Toyama (Engenheiro </tspan><tspan x="12.26" y="319" font-family="Ebrima" font-weight="400">da Caixa Econômica Federal, e presidente do IEEE Centro - Norte). </tspan><tspan x="27.292" y="338" xml:space="preserve" font-family="Ebrima" font-weight="400">Optamos por  desenvolver esse app usando </tspan><tspan y="338">Flutter</tspan><tspan y="338" font-family="Ebrima" font-weight="400">, e eu estive </tspan><tspan x="23.095" y="357" font-family="Ebrima" font-weight="400">responsável por </tspan><tspan y="357">treinar </tspan><tspan y="357" font-family="Ebrima" font-weight="400">a equipe de desenvolvimento durante a </tspan><tspan x="96.943" y="376" font-family="Ebrima" font-weight="400">pandemia até termos condições de iniciar o projeto.</tspan><tspan y="376"></tspan></tspan><tspan x="418" y="395"></tspan><tspan x="32.549" y="414" xml:space="preserve">Também contribuo periodicamente com  divisão de marketing </tspan></text>
+        <text id="_2019_-_Atualmente" data-name="2019 - Atualmente" transform="translate(191.855 -5)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="3.629" y="20">2019 - Atualmente</tspan></text>
+      </g>
+      <g id="Grupo_13" data-name="Grupo 13" transform="translate(95.145 1015)">
+        <text id="Atuei_como_estagiário_na_Nova_Técnica_Virtual._Uma_empresa_da_região_de_Brasília_que_possui_um_e-commerce_voltado_para_o_mercado_de_materiais_elétricos._Lá_eu_era_responsável_por_gerenciar_todo_o_sistema_de_e-commerce_garantindo_que_as_informações_sempr" data-name="Atuei como estagiário na Nova Técnica Virtual.  Uma empresa da região  de Brasília que possui um e-commerce voltado para o mercado de materiais elétricos. Lá eu era responsável por gerenciar todo o sistema de e-commerce, garantindo que as informações sempr" transform="translate(-22.145 20)" fill="#707070" font-size="14" font-family="Ebrima"><tspan x="2.743" y="15">Atuei como estagiário na </tspan><tspan y="15" font-family="Ebrima-Bold, Ebrima" font-weight="700">Nova Técnica Virtual</tspan><tspan y="15" xml:space="preserve">.  Uma empresa </tspan><tspan x="6.578" y="34" xml:space="preserve">da região  de Brasília que possui um e-commerce voltado para </tspan><tspan x="27.257" y="53">o mercado de materiais elétricos. Lá eu era responsável por </tspan><tspan x="20.059" y="72">gerenciar todo o sistema de e-commerce, garantindo que as </tspan><tspan x="57.813" y="91">informações sempre estivessem atualizadas, buscando </tspan><tspan x="7.084" y="110">maneiras de aumentar a eficiência dos processos internos com </tspan><tspan x="59.092" y="129">a plataforma da loja integrada entre outras atividades. </tspan></text>
+        <text id="_2019_" data-name="2019 " transform="translate(321.855 -2)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="2.984" y="20">2019 </tspan></text>
+      </g>
+      <use id="Imagem_12" data-name="Imagem 12" transform="translate(477 1402)" opacity="0.5" xlink:href="#image-3"/>
+      <image id="Imagem_13" data-name="Imagem 13" width="36" height="36" transform="translate(477 1220)" xlink:href="resume-image9.png"/>
+      <image id="LogoCS" width="72" height="36" transform="translate(513 1584) rotate(90)" opacity="0.5" xlink:href="resume-image10.png"/>
+      <image id="Imagem_17" data-name="Imagem 17" width="36" height="36" transform="translate(478 1015)" xlink:href="resume-image11.png"/>
+      <line id="Linha_9" data-name="Linha 9" y1="2" x2="395" transform="translate(118 1190.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+      <line id="Linha_10" data-name="Linha 10" y1="2" x2="395" transform="translate(114 1693.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    </g>
+    <g id="Grupo_26" data-name="Grupo 26">
+      <g id="Grupo_12" data-name="Grupo 12" transform="translate(90.145 1720)">
+        <text id="Atuo_na_CASSI_como_estagiário_na_divisão_de_relacionamento_com_participantes_DRP_onde_basicamente_sou_responsável_por:_Criar_ferramentas_de_consulta_gerência_e_análise_para_a_divisão_de_relacionamento_com_participantes_utilizando_Excel_e_Access_" data-name="Atuo na CASSI como estagiário na divisão de relacionamento com participantes (DRP), onde basicamente sou responsável por:
+
+*Criar  ferramentas de consulta, gerência e análise para a divisão de relacionamento com participantes utilizando Excel e Access; 
+
+*" transform="translate(-52.145 20)" fill="#707070" font-size="14" font-family="Ebrima"><tspan x="3.232" y="15">Atuo na CASSI como estagiário na </tspan><tspan y="15" font-family="Ebrima-Bold, Ebrima" font-weight="700">divisão de relacionamento com </tspan><tspan x="47.967" y="34" font-family="Ebrima-Bold, Ebrima" font-weight="700">participantes </tspan><tspan y="34">(DRP), onde basicamente sou responsável por:</tspan><tspan x="423" y="53"></tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="6.322" y="72">*</tspan><tspan y="72" xml:space="preserve" font-family="Ebrima" font-weight="400">Criar  ferramentas de consulta, gerência e análise para a divisão de </tspan><tspan x="54.837" y="91" font-family="Ebrima" font-weight="400">relacionamento com participantes utilizando Excel e Access; </tspan></tspan><tspan x="423" y="110"></tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="5.174" y="129">*</tspan><tspan y="129" font-family="Ebrima" font-weight="400">Responsável por organizar e tratar todas as devoluções de cartões, </tspan><tspan x="25.176" y="148" font-family="Ebrima" font-weight="400">reenviando os mesmos, quando possível, ou destruindo-os, caso </tspan><tspan x="372.544" y="167" font-family="Ebrima" font-weight="400">inativos;</tspan></tspan><tspan x="423" y="186"></tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="12.461" y="205">*</tspan><tspan y="205" font-family="Ebrima" font-weight="400">Mediar algumas tarefas entre os funcionários do DRP e as demais </tspan><tspan x="294.929" y="224" font-family="Ebrima" font-weight="400">divisões da empresa.</tspan></tspan></text>
+        <text id="_2019_-_Atualmente-2" data-name="2019 - Atualmente" transform="translate(191.855 -6)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="3.629" y="20">2019 - Atualmente</tspan></text>
+      </g>
+      <g id="Grupo_14" data-name="Grupo 14" transform="translate(43.145 2051)">
+        <text id="No_Brasa_Hacks_Organizado_pela_Shawee_idealizei_junto_a_alguns_amigos_o_que_chamamos_de_NuGasto_que_se_trata_de_uma_feature_para_auxiliar_os_clientes_do_Nubank_a_organizarem_suas_finanças._A_feature_agrupa_todos_os_gastos_e_ganhos_do_usuário_aqueles" data-name="No Brasa Hacks (Organizado pela Shawee), idealizei junto a alguns amigos o que chamamos de  NuGasto!, que se trata de uma feature para auxiliar os clientes do Nubank a organizarem suas finanças. A feature agrupa todos os gastos e ganhos do usuário (aqueles" transform="translate(-0.145 20)" fill="#707070" font-size="14" font-family="Ebrima"><tspan x="5.875" y="15">No Brasa Hacks (Organizado pela </tspan><tspan y="15" font-family="Ebrima-Bold, Ebrima" font-weight="700">Shawee</tspan><tspan y="15">), idealizei junto a alguns </tspan><tspan x="44.484" y="34" xml:space="preserve">amigos o que chamamos de  </tspan><tspan y="34" font-family="Ebrima-Bold, Ebrima" font-weight="700">NuGasto</tspan><tspan y="34">!, que se trata de uma </tspan><tspan x="28.167" y="53">feature para auxiliar os clientes do </tspan><tspan y="53" font-family="Ebrima-Bold, Ebrima" font-weight="700">Nubank </tspan><tspan y="53">a organizarem suas </tspan><tspan x="22.979" y="72">finanças. A feature </tspan><tspan y="72" font-family="Ebrima-Bold, Ebrima" font-weight="700">agrupa </tspan><tspan y="72">todos os gastos e ganhos do usuário </tspan><tspan x="31.619" y="91">(aqueles lançados pelo cartão de crédito e também aqueles da </tspan><tspan x="38.838" y="110">função débito) e traz </tspan><tspan y="110" font-family="Ebrima-Bold, Ebrima" font-weight="700">análises </tspan><tspan y="110">das transações em questão. Ela </tspan><tspan x="23.484" y="129">permite que o usuário defina </tspan><tspan y="129" font-family="Ebrima-Bold, Ebrima" font-weight="700">metas financeiras </tspan><tspan y="129">que podem ser </tspan><tspan x="5.308" y="148">acompanhadas através de análises automáticas da feature. Um dos </tspan><tspan x="14.974" y="167">principais objetivos do NuGasto! é auxiliar o usuário a visualizar e </tspan><tspan x="20.114" y="186">analisar todos os seus gastos e ganhos em um lugar só. Por isso, </tspan><tspan x="8.322" y="205">criamos uma função onde ele pode </tspan><tspan y="205" font-family="Ebrima-Bold, Ebrima" font-weight="700">escanear o QR Code </tspan><tspan y="205">de notas </tspan><tspan x="36.548" y="224">fiscais para lançá-las automaticamente como uma despesa no </tspan><tspan x="12.54" y="243">banco de dados do Nubank. Além disso, o usuário teria acesso ao </tspan><tspan x="22.199" y="262">conteúdo do blog do Nubank diretamente no app, por onde ele </tspan><tspan x="26.226" y="281">ganharia pontos seja realizando </tspan><tspan y="281" font-family="Ebrima-Bold, Ebrima" font-weight="700">testes dinâmicos </tspan><tspan y="281">ou ao atingir </tspan><tspan x="16.689" y="300">metas de controle financeiro. Toda a feature foi pensada para ser </tspan><tspan x="45.94" y="319">baseada nas atividades do usuário, e também gerenciada ao </tspan><tspan x="19.615" y="338">máximo por ele, que por sinal teria o </tspan><tspan y="338" font-family="Ebrima-Bold, Ebrima" font-weight="700">poder </tspan><tspan y="338">de lançar e editar os </tspan><tspan x="22.09" y="357">seus gastos podendo também definir as suas próprias </tspan><tspan y="357" font-family="Ebrima-Bold, Ebrima" font-weight="700">metas de </tspan><tspan x="9.396" y="376" font-family="Ebrima-Bold, Ebrima" font-weight="700">controle financeiro</tspan><tspan y="376">. A nossa missão era oferecer uma experiência </tspan><tspan x="32.884" y="395" xml:space="preserve">personalizável, e ao mesmo tempo   automatizada, tornando a </tspan><tspan x="21.851" y="414" xml:space="preserve">tomada de decisões mais embasada através de dados essenciais  </tspan><tspan x="255.804" y="433">para o controle financeiro.</tspan></text>
+        <text id="_2020" data-name="2020" transform="translate(366.855 -2)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="4.984" y="20">2020</tspan></text>
+      </g>
+      <g id="Grupo_15" data-name="Grupo 15" transform="translate(43.145 2550)">
+        <text id="Ajudei_a_idealizar_o_SafeBot_um_projeto_no_Hacka_Gr1D_Pocket_-_também_organizado_pela_Shawee._Ele_se_trata_de_um_recurso_que_auxilia_as_seguradoras_no_processo_de_modernização_do_fluxo_de_trabalho_dos_seus_corretores._A_ideia_era_oferecer_uma_solução_des" data-name="Ajudei a idealizar o SafeBot, um projeto no Hacka Gr1D Pocket  - também organizado pela Shawee. Ele se trata de um recurso que auxilia as seguradoras no processo de modernização do fluxo de trabalho dos seus corretores. A ideia era oferecer uma solução des" transform="translate(-0.145 20)" fill="#707070" font-size="14" font-family="Ebrima"><tspan x="13.429" y="15">Ajudei a idealizar o </tspan><tspan y="15" font-family="Ebrima-Bold, Ebrima" font-weight="700">SafeBot,</tspan><tspan y="15" xml:space="preserve"> um projeto no Hacka Gr1D Pocket  - </tspan><tspan x="17.838" y="34">também organizado pela Shawee. Ele se trata de um recurso que </tspan><tspan x="19.403" y="53">auxilia as seguradoras no processo de modernização do fluxo de </tspan><tspan x="33.615" y="72">trabalho dos seus corretores. A ideia era oferecer uma solução </tspan><tspan x="3.154" y="91" font-family="Ebrima-Bold, Ebrima" font-weight="700">desburocratizada</tspan><tspan y="91">, segura e disruptiva focada em tornar o trabalho </tspan><tspan x="48.039" y="110" xml:space="preserve">do corretor mais cômodo. Informações  pessoais de clientes </tspan><tspan x="22.732" y="129">sempre são necessárias e por se tratarem dados sensíveis (ainda </tspan><tspan x="10.271" y="148">mais em tempos de LGPD), quase sempre há um processo penoso </tspan><tspan x="33.602" y="167">e/ou burocrático a cumprir para acessá-las. Nesse projeto, nós </tspan><tspan x="22.685" y="186">defendemos que para uma solução ser </tspan><tspan y="186" font-family="Ebrima-Bold, Ebrima" font-weight="700">segura </tspan><tspan y="186">e tratar os dados </tspan><tspan x="16.99" y="205">pessoais dentro dos limites legais, ela </tspan><tspan y="205" font-family="Ebrima-Bold, Ebrima" font-weight="700">não precisa oferecer uma </tspan><tspan x="257.068" y="224" xml:space="preserve" font-family="Ebrima-Bold, Ebrima" font-weight="700">experiência  burocrática</tspan><tspan y="224">.</tspan><tspan x="39.091" y="243">A proposta do SafeBot é ser um local </tspan><tspan y="243" font-family="Ebrima-Bold, Ebrima" font-weight="700">seguro </tspan><tspan y="243">onde o corretor </tspan><tspan x="20.053" y="262">possa obter dados inerentes a suas relações com os clientes, tais </tspan><tspan x="380.033" y="281">como:</tspan><tspan x="265.839" y="300">Sua carteira de clientes </tspan><tspan y="300" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan x="20.654" y="319">Ver informações como o histórico de sinistros acionados por um </tspan><tspan x="312.494" y="338">cliente específico</tspan><tspan y="338" font-family="Ebrima-Bold, Ebrima" font-weight="700"></tspan><tspan x="44.662" y="357">E consultar dados comuns a todos os clientes (como data de </tspan><tspan x="277.357" y="376">nascimento,</tspan><tspan y="376" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan y="376" xml:space="preserve"> CPF etc)</tspan><tspan y="376" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan x="60.31" y="395">Consultar o status de algumas documentações específicas </tspan><tspan x="263.139" y="414">inerentes aos corretores</tspan><tspan y="414" font-family="Ebrima-Bold, Ebrima" font-weight="700">*</tspan><tspan font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="90.251" y="432">Link com mais detalhes do projeto: bit.ly/3bp0d9l</tspan></tspan></text>
+        <text id="_2020-2" data-name="2020" transform="translate(366.855 -6)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="4.984" y="20">2020</tspan></text>
+      </g>
+      <use id="Imagem_8-2" data-name="Imagem 8" transform="translate(474 2470) scale(0.946)" opacity="0.5" xlink:href="#image-4"/>
+      <image id="Imagem_14" data-name="Imagem 14" width="35" height="35" transform="translate(474 2056)" xlink:href="resume-image12.png"/>
+      <rect id="Imagem_15" data-name="Imagem 15" width="35" height="36" transform="translate(474 2263)" opacity="0.5" fill="url(#pattern-2)"/>
+      <use id="Imagem_7-2" data-name="Imagem 7" transform="translate(472 2570)" xlink:href="#image-5"/>
+      <image id="Imagem_16" data-name="Imagem 16" width="35" height="35" transform="translate(474 1723)" xlink:href="resume-image14.png"/>
+      <line id="Linha_11" data-name="Linha 11" y1="2" x2="395" transform="translate(114 2013.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+      <line id="Linha_12" data-name="Linha 12" y1="2" x2="395" transform="translate(114 2530.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    </g>
+    <line id="Linha_5" data-name="Linha 5" y1="2" x2="395" transform="translate(571 990.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    <line id="Linha_13" data-name="Linha 13" y1="2" x2="395" transform="translate(571 1691.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    <g id="Grupo_42" data-name="Grupo 42">
+      <text id="Flutter" transform="translate(625 1085)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Flutter</tspan></text>
+      <rect id="Imagem_27" data-name="Imagem 27" width="11" height="12" transform="translate(609 1075)" fill="url(#pattern-3)"/>
+    </g>
+    <g id="Grupo_41" data-name="Grupo 41">
+      <text id="Dart" transform="translate(625 1120)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Dart</tspan></text>
+      <image id="Dart-logo" width="11" height="11" transform="translate(609 1110)" xlink:href="resume-image16.png"/>
+    </g>
+    <g id="Grupo_40" data-name="Grupo 40">
+      <text id="Java" transform="translate(625 1156)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Java</tspan></text>
+      <rect id="Imagem_28" data-name="Imagem 28" width="11" height="13" transform="translate(609 1145)" fill="url(#pattern-4)"/>
+    </g>
+    <g id="Grupo_39" data-name="Grupo 39">
+      <text id="Adobe_XD" data-name="Adobe XD" transform="translate(625 1191)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Adobe XD</tspan></text>
+      <image id="Imagem_29" data-name="Imagem 29" width="11" height="11" transform="translate(609 1181)" xlink:href="resume-image18.png"/>
+    </g>
+    <g id="Grupo_38" data-name="Grupo 38">
+      <text id="Adobe_Illustrator" data-name="Adobe Illustrator" transform="translate(625 1227)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Adobe Illustrator</tspan></text>
+      <rect id="Imagem_30" data-name="Imagem 30" width="11" height="11" transform="translate(609 1216)" fill="url(#pattern-5)"/>
+    </g>
+    <g id="Grupo_37" data-name="Grupo 37">
+      <text id="Figma" transform="translate(625 1262)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Figma</tspan></text>
+      <image id="Figma-logo" width="11" height="11" transform="translate(609 1253)" xlink:href="resume-image20.png"/>
+    </g>
+    <g id="Grupo_36" data-name="Grupo 36">
+      <text id="Linux" transform="translate(625 1297)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Linux</tspan></text>
+      <rect id="Imagem_31" data-name="Imagem 31" width="11" height="9" transform="translate(609 1289)" fill="url(#pattern-6)"/>
+    </g>
+    <g id="Grupo_35" data-name="Grupo 35">
+      <text id="Git" transform="translate(625 1333)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Git</tspan></text>
+      <rect id="Imagem_32" data-name="Imagem 32" width="11" height="11" transform="translate(609 1323)" fill="url(#pattern-7)"/>
+    </g>
+    <g id="Grupo_34" data-name="Grupo 34">
+      <text id="Android" transform="translate(625 1368)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Android</tspan></text>
+      <rect id="_1200px-Android_logo_2019.svg" data-name="1200px-Android_logo_2019.svg" width="11" height="10" transform="translate(609 1358)" fill="url(#pattern-8)"/>
+    </g>
+    <g id="Grupo_33" data-name="Grupo 33">
+      <text id="JavaScript" transform="translate(625 1404)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">JavaScript</tspan></text>
+      <image id="Imagem_33" data-name="Imagem 33" width="11" height="11" transform="translate(609 1394)" xlink:href="resume-image24.png"/>
+    </g>
+    <g id="Grupo_32" data-name="Grupo 32">
+      <text id="SQL" transform="translate(625 1439)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">SQL</tspan></text>
+      <rect id="Imagem_34" data-name="Imagem 34" width="21" height="11" transform="translate(604 1429)" fill="url(#pattern-9)"/>
+    </g>
+    <g id="Grupo_31" data-name="Grupo 31">
+      <text id="Firebase" transform="translate(625 1474)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Firebase</tspan></text>
+      <rect id="Imagem_35" data-name="Imagem 35" width="22" height="18" transform="translate(604 1458)" fill="url(#pattern-10)"/>
+    </g>
+    <g id="Grupo_30" data-name="Grupo 30">
+      <text id="SpringBoot" transform="translate(625 1510)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">SpringBoot</tspan></text>
+      <image id="Imagem_36" data-name="Imagem 36" width="12" height="12" transform="translate(609 1499)" xlink:href="resume-image27.png"/>
+    </g>
+    <g id="Grupo_29" data-name="Grupo 29">
+      <text id="NodeJs" transform="translate(625 1545)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">NodeJs</tspan></text>
+      <rect id="Node-e1443953851722" width="14" height="12" transform="translate(608 1535)" fill="url(#pattern-11)"/>
+    </g>
+    <g id="Grupo_28" data-name="Grupo 28">
+      <text id="Aqueduct" transform="translate(625 1581)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Aqueduct</tspan></text>
+      <rect id="Imagem_37" data-name="Imagem 37" width="9" height="11" transform="translate(611 1572)" fill="url(#pattern-12)"/>
+    </g>
+    <g id="Grupo_27" data-name="Grupo 27">
+      <text id="React_Js" data-name="React Js" transform="translate(625 1616)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">React Js</tspan></text>
+      <image id="react-logo-1000-transparent" width="12" height="12" transform="translate(610 1606)" xlink:href="resume-image30.png"/>
+    </g>
+    <g id="Grupo_49" data-name="Grupo 49">
+      <g id="Grupo_47" data-name="Grupo 47">
+        <text id="UI_Design" data-name="UI Design" transform="translate(629 2029)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">UI Design</tspan></text>
+        <rect id="Imagem_38" data-name="Imagem 38" width="12" height="10" transform="translate(611 2020)" fill="url(#pattern-13)"/>
+      </g>
+      <g id="Grupo_46" data-name="Grupo 46">
+        <text id="Desenvolvimento_mobile" data-name="Desenvolvimento mobile" transform="translate(629 1994)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">Desenvolvimento mobile</tspan></text>
+        <rect id="Imagem_39" data-name="Imagem 39" width="10" height="9" transform="translate(612 1985)" fill="url(#pattern-14)"/>
+      </g>
+      <g id="Grupo_45" data-name="Grupo 45">
+        <text id="Interesses" transform="translate(629 1951)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="0">Interesses</tspan></text>
+        <image id="interest_hobby_like_choice_favourite_inclination-512" width="20" height="20" transform="translate(588 1932)" xlink:href="resume-image33.png"/>
+      </g>
+      <g id="Grupo_48" data-name="Grupo 48">
+        <text id="IA" transform="translate(629 2068)" fill="#707070" font-size="13" font-family="Ebrima"><tspan x="0" y="0">IA</tspan></text>
+        <rect id="Imagem_41" data-name="Imagem 41" width="15" height="11" transform="translate(610 2058)" fill="url(#pattern-15)"/>
+      </g>
+    </g>
+    <g id="Grupo_43" data-name="Grupo 43">
+      <text id="Educação" transform="translate(625 1763)" fill="#707070" font-size="20" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="0">Educação</tspan></text>
+      <rect id="Imagem_23" data-name="Imagem 23" width="29" height="21" transform="translate(588 1747)" fill="url(#pattern-16)"/>
+    </g>
+    <line id="Linha_6" data-name="Linha 6" y1="2" x2="395" transform="translate(571 1893.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.25"/>
+    <g id="Grupo_44" data-name="Grupo 44">
+      <text id="Instituto_Federal_de_Educação_Ciência_e_Tecnologia_de_Brasília_IFB_-_Bacharelado_em_Ciência_da_Computação_Previsão_de_formação_-_Início_de_2023" data-name="Instituto Federal de Educação, Ciência e Tecnologia de Brasília (IFB)- Bacharelado em Ciência da Computação
+
+Previsão de formação - Início de 2023" transform="translate(625 1789)" fill="#707070" font-size="11" font-family="Ebrima-Bold, Ebrima" font-weight="700"><tspan x="0" y="11">Instituto Federal de Educação, Ciência e Tecnologia de </tspan><tspan x="0" y="26">Brasília (IFB)</tspan><tspan y="26" font-family="Ebrima" font-weight="400">- Bacharelado em Ciência da Computação</tspan><tspan font-family="Ebrima" font-weight="400"><tspan x="0" y="41"></tspan></tspan><tspan x="0" y="56">Previsão de formação </tspan><tspan y="56" font-family="Ebrima" font-weight="400">- Início de 2023</tspan></text>
+      <use id="Imagem_10-3" data-name="Imagem 10" transform="translate(588 1789)" xlink:href="#image-2"/>
+    </g>
+    <rect id="img_310106" width="18" height="19" transform="translate(496 371)" fill="url(#pattern-17)"/>
+  </g>
+</svg>
