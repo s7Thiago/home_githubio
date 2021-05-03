@@ -11,7 +11,7 @@ class AnonimAppBar extends PreferredSize {
       {required AnonimAppBarProvider provider,
       required Map<String, Widget> items})
       : super(
-          preferredSize: Size.fromHeight(110),
+          preferredSize: Size.fromHeight(95),
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
