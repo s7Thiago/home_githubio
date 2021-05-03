@@ -46,23 +46,46 @@ class _BodyRight extends StatelessWidget {
   Widget build(BuildContext context) {
     // * Usando o provider da barra customizada aqui
     final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: provider.selectedTab == 'Projects' ||
-                  provider.currentIndex != _appBarItems.length
-              ? Radius.circular(40.0)
-              : Radius.circular(0.0),
+    final Color topShadowColor = AppColors.white;
+
+    return Stack(
+      children: [
+        // Body content
+        Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: provider.selectedTab == 'Projects' ||
+                      provider.currentIndex != _appBarItems.length
+                  ? Radius.circular(40.0)
+                  : Radius.circular(0.0),
+            ),
+          ),
+          margin: EdgeInsets.all(0.0),
+          elevation: 0.0,
+          color: Colors.white,
+          child: IndexedStack(
+            alignment: Alignment.center,
+            index: provider.currentIndex,
+            children: AppBarItems.anonimAppBarItems.values.toList(),
+          ),
         ),
-      ),
-      margin: EdgeInsets.all(0.0),
-      elevation: 0.0,
-      color: Colors.white,
-      child: IndexedStack(
-        alignment: Alignment.center,
-        index: provider.currentIndex,
-        children: AppBarItems.anonimAppBarItems.values.toList(),
-      ),
+        // Gradient
+        if (provider.selectedTab == 'About')
+          Container(
+            height: 60,
+            decoration: BoxDecoration(
+              color: AppColors.spotlight,
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  topShadowColor,
+                  topShadowColor.withOpacity(0),
+                ],
+              ),
+            ),
+          ),
+      ],
     );
   }
 }

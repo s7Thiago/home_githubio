@@ -78,7 +78,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
             bottom: selected ? 16 : 0,
             left: 16,
           ),
-          margin: const EdgeInsets.only(top: 50),
+          margin: const EdgeInsets.only(bottom: 30, top: 20),
           decoration: BoxDecoration(
               color: _containerColor,
               boxShadow: selected

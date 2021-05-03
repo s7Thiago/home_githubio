@@ -3,7 +3,7 @@ import 'package:home_githubio/pages/home/widgets/right_panel/widgets/anonim_app_
 
 class AnonimAppBarProvider extends ChangeNotifier {
   int _selectedIndex = 2;
-  String _selectedTab = AppBarItems.anonimAppBarItems.keys.elementAt(0);
+  String _selectedTab = AppBarItems.anonimAppBarItems.keys.elementAt(2);
 
   int get currentIndex => _selectedIndex;
   String get selectedTab => _selectedTab;
