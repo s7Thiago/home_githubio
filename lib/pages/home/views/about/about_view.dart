@@ -56,7 +56,7 @@ class AboutView extends StatelessWidget {
                                 customHeight: innerExperience.customHeight,
                               );
                             },
-                          )
+                          ).reversed
                         ],
                       ),
                     ),
