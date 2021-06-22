@@ -4,6 +4,10 @@ import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
 
 class Contents {
+  static final path_img_skills = 'assets/images/skills';
+  static final path_img_cursos = 'assets/images/cursos';
+  static final path_img_trajetoria = 'assets/images/trajetoria';
+
   static final texts = {
     'intro': 'Sou um futuro cientista da computação que além de apaixonado '
         'por desenvolver soluções que resolvem problemas especialmente '
@@ -33,7 +37,7 @@ Atuo como voluntário ao Instituto dos Engenheiros Elétricos e Eletrônicos (**
 - RePlante (visa devolver pra natureza, os recursos gastos em nossas* atividades)
 """,
         representations: [
-          Icon(Icons.ac_unit),
+          Image.asset('$path_img_trajetoria/ieee.png'),
         ],
       ),
       Experience(
@@ -42,7 +46,7 @@ Atuo como voluntário ao Instituto dos Engenheiros Elétricos e Eletrônicos (**
             """Atuei como estagiário na Nova **Técnica Virtual**. Uma empresa da região de Brasília que possui um e-commerce voltado para o mercado de materiais elétricos. Lá eu era responsável por gerenciar todo o sistema de e-commerce, garantindo que as informações sempre estivessem atualizadas, buscando maneiras de aumentar a eficiência dos processos internos com a plataforma da loja integrada entre outras atividades.
 """,
         representations: [
-          Icon(Icons.ac_unit),
+          Image.asset('$path_img_trajetoria/nt_virtual.png'),
         ],
         customHeight: 230,
       ),
@@ -58,9 +62,9 @@ Atuo como voluntário ao Instituto dos Engenheiros Elétricos e Eletrônicos (**
 Também contribuo periodicamente com divisão de marketing.
         """,
         representations: [
-          Icon(Icons.account_circle_sharp),
-          Icon(Icons.account_tree_rounded),
-          Icon(Icons.wrong_location),
+          Image.asset('$path_img_trajetoria/ieee_cs.png'),
+          Image.asset('$path_img_trajetoria/ieee.png'),
+          Image.asset('$path_img_trajetoria/ieee_ifb_cs.png'),
         ],
       ),
       Experience(
@@ -74,9 +78,7 @@ Também contribuo periodicamente com divisão de marketing.
 
 """,
         representations: [
-          Icon(
-            Icons.add_road_sharp,
-          )
+          Image.asset('$path_img_trajetoria/cassi.png'),
         ],
         customHeight: 300,
       ),
@@ -86,9 +88,9 @@ Também contribuo periodicamente com divisão de marketing.
             """No Brasa Hacks (Organizado pela **Shawee**), idealizei junto a alguns amigos o que chamamos de **NuGasto!**, que se trata de uma feature para auxiliar os clientes do **Nubank** a organizarem suas finanças. A feature **agrupa** todos os gastos e ganhos do usuário (aqueles lançados pelo cartão de crédito e também aqueles da função débito) e traz **análises** das transações em questão. Ela permite que o usuário defina **metas financeiras** que podem ser acompanhadas através de análises automáticas da feature. Um dos principais objetivos do NuGasto! é auxiliar o usuário a visualizar e analisar todos os seus gastos e ganhos em um lugar só. Por isso, criamos uma função onde ele pode **escanear o QR Code** de notas fiscais para lançá-las automaticamente como uma despesa no banco de dados do Nubank. Além disso, o usuário teria acesso ao conteúdo do blog do Nubank diretamente no app, por onde ele ganharia pontos seja realizando **testes dinâmicos** ou ao atingir metas de controle financeiro. Toda a feature foi pensada para ser baseada nas atividades do usuário, e também gerenciada ao máximo por ele, que por sinal teria o **poder** de lançar e editar os seus gastos podendo também definir as suas próprias **metas de controle financeiro**. A nossa missão era oferecer uma experiência personalizável, e ao mesmo tempo automatizada, tornando a tomada de decisões mais embasada através de dados essenciais para o controle financeiro.
 """,
         representations: [
-          Icon(Icons.accessible_forward_rounded),
-          Icon(Icons.add_location_alt_outlined),
-          Icon(Icons.addchart_sharp),
+          Image.asset('$path_img_trajetoria/shawee.png'),
+          Image.asset('$path_img_trajetoria/nubank_old.png'),
+          Image.asset('$path_img_trajetoria/brasa.png'),
         ],
         customHeight: 550,
       ),
@@ -103,7 +105,7 @@ Também contribuo periodicamente com divisão de marketing.
 
 [Link com mais detalhes do projeto](bit.ly/3bp0d9l)""",
         representations: [
-          Icon(Icons.crop_square_rounded),
+          Image.asset('$path_img_trajetoria/gr1d.png'),
         ],
         customHeight: 530,
       ),
@@ -111,17 +113,122 @@ Também contribuo periodicamente com divisão de marketing.
     'certifications': <Certification>[
       Certification(
         image:
-            'https://images.ctfassets.net/q33z48p65a6w/1ciJXQwQjfgRWGcpyI1Oqp/21259688e6e67a17b93383bfa0e9bd0f/4._Partner_Icons_-_Udemy.png',
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/cursos/udemy.png',
         title:
             'Curso de Dartlang completo do básico ao avançado (Completo de verdade)',
         credentialUrl: 'Acessar credencial',
       ),
+      Certification(
+        image:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/trajetoria/gr1d.png',
+        title: 'HackaGr1D Pocket',
+        credentialUrl: 'nada',
+      ),
+      Certification(
+        image:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/trajetoria/brasa.png',
+        title: 'Brasa Hacks - Desafio Nubank',
+        credentialUrl: 'nada',
+      ),
+      Certification(
+        image:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/cursos/rocketseat.png',
+        title: 'Semana OmniStack 11.0',
+        credentialUrl: 'nada',
+      ),
+      Certification(
+        image:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/cursos/ifb.png',
+        title: 'ConectaIF 2019',
+        credentialUrl: 'nada',
+      ),
+      Certification(
+        image:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/cursos/ifb.png',
+        title: 'ConectaIF 2019',
+        credentialUrl: 'nada',
+      ),
     ],
     'skills': <Skill>[
       Skill(
+        title: 'Flutter',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/flutter.png',
+      ),
+      Skill(
+        title: 'Dart',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/dart.png',
+      ),
+      Skill(
         title: 'Java',
         imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/568px-Duke_%28Java_mascot%29_waving.svg.png',
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/java.png',
+      ),
+      Skill(
+        title: 'Adobe XD',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/xd.png',
+      ),
+      Skill(
+        title: 'Adobe Illustrator',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/illustrator.png',
+      ),
+      Skill(
+        title: 'Figma',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/figma.png',
+      ),
+      Skill(
+        title: 'Linux',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/linux.png',
+      ),
+      Skill(
+        title: 'Git',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/git.png',
+      ),
+      Skill(
+        title: 'Android',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/android.png',
+      ),
+      Skill(
+        title: 'Javascript',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/js.png',
+      ),
+      Skill(
+        title: 'SQL',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/sql.png',
+      ),
+      Skill(
+        title: 'Firebase',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/firebase.png',
+      ),
+      Skill(
+        title: 'SpringBoot',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/springboot.png',
+      ),
+      Skill(
+        title: 'NodeJs',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/node.png',
+      ),
+      Skill(
+        title: 'Aqueduct',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/aqueduct.png',
+      ),
+      Skill(
+        title: 'React',
+        imageUrl:
+            'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images/skills/react.png',
       ),
     ],
   };
