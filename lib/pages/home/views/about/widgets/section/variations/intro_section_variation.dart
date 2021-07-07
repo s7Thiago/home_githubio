@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_githubio/core/styles/app_colors.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/title_section_variation.dart';
 
 class IntroSectionVariation extends StatelessWidget {
@@ -15,7 +16,7 @@ class IntroSectionVariation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * .27,
+      width: MediaQuery.of(context).size.width * .33,
       child: Column(
         children: [
           TitleSectionVariation(

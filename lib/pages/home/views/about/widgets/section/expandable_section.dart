@@ -27,6 +27,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
     with SingleTickerProviderStateMixin {
   final _duration = Duration(milliseconds: 400);
   bool selected = false;
+  bool isAnimating = false;
   Color? _containerColor = AppColors.white;
   Color? _titleColor = styles.AppStyles.introTextStyle.color;
   double? _titleSize = styles.AppStyles.introTextStyle.fontSize;
@@ -36,6 +37,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
     return GestureDetector(
       onTap: () {
         setState(() {
+          isAnimating = true;
           selected = !selected;
           _containerColor = Colors.white;
           _titleSize =
@@ -50,12 +52,16 @@ class _ExpandableSectionState extends State<ExpandableSection>
       },
       child: MouseRegion(
         onHover: (PointerHoverEvent phe) {
-          setState(() {
-            _containerColor = selected ? Colors.white : Colors.purple[50];
-            _titleColor = AppColors.spotlight_dark;
+          if (!isAnimating) {
+            if (!selected) {
+              setState(() {
+                _containerColor = selected ? Colors.white : Colors.purple[50];
+                _titleColor = AppColors.spotlight_dark;
 
-            if (!selected) _titleSize = 25;
-          });
+                if (!selected) _titleSize = 25;
+              });
+            }
+          }
         },
         onExit: (PointerExitEvent pee) {
           setState(() {
@@ -70,6 +76,13 @@ class _ExpandableSectionState extends State<ExpandableSection>
         child: AnimatedContainer(
           duration: _duration,
           curve: Curves.easeInOutQuad,
+          onEnd: () async {
+            await Future.delayed(Duration(milliseconds: 1500)).then((value) {
+              setState(() {
+                isAnimating = false;
+              });
+            });
+          },
           width: !selected ? 380 : 450,
           alignment: Alignment.center,
           height: !selected ? 65 : widget.customHeight,
@@ -147,8 +160,8 @@ class _ExpandableSectionState extends State<ExpandableSection>
                                   size: 25,
                                 ),
                                 child: Wrap(
-                                  runAlignment: WrapAlignment.spaceAround,
-                                  alignment: WrapAlignment.start,
+                                  runAlignment: WrapAlignment.start,
+                                  alignment: WrapAlignment.spaceAround,
                                   spacing: 25,
                                   runSpacing: 100,
                                   direction: Axis.horizontal,
