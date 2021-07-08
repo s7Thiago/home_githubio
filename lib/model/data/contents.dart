@@ -97,7 +97,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
         representations: [
           Image.asset('$pathImgTrajetoria/nt_virtual.png'),
         ],
-        customHeight: 230,
+        customHeight: 250,
       ),
       Experience(
         title: "CASSI (07/2019 - 11/2020)",
@@ -105,7 +105,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
             """Atuei na Caixa de Assistência dos Funcionários do Banco do Brasil como estagiário na **divisão de relacionamento com participantes (DRP)**, onde fui responsável por
 
 - Criar ferramentas de consulta, gerência e análise para a divisão de relacionamento com participantes utilizando Excel Access e Java;
--  Organizar e tratar todas as devoluções de cartões;
+-  Organizar e tratar as devoluções de cartões;
 - Mediar algumas tarefas entre os funcionários do DRP e as demais divisões da empresa.
 
 """,
@@ -116,16 +116,16 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
       ),
       Experience(
         title: "STJ (11/2020 - Hoje)",
-        description: """
-            Atuo como desenvolvedor Web em um projeto da Coordenadoria de
-Auditoria (CAUC) onde estou tendo a oportunidade de trabalhar com
-tecnologias como Angular, Springboot, Gitlab, Typescript, CI/CD,
-Rancher e SQL Server. Uma verdadeira experiência Full Stack Web.
+        description:
+            """Atuo como desenvolvedor Web em um projeto da Coordenadoria de Auditoria (CAUC) onde estou tendo a oportunidade de trabalhar com tecnologias como **Angular**, **Springboot**, **Gitlab**, **Typescript**, **CI/CD**, **Rancher** e **SQL Server**. Uma verdadeira experiência *Full Stack Web*.
 """,
         representations: [
-          Image.asset('$pathImgTrajetoria/stj.png'),
+          Image.asset(
+            '$pathImgTrajetoria/stj.png',
+            width: 50,
+          ),
         ],
-        customHeight: 300,
+        customHeight: 200,
       ),
     ],
     'certifications': <Certification>[
@@ -155,8 +155,13 @@ Rancher e SQL Server. Uma verdadeira experiência Full Stack Web.
         credentialUrl: 'nada',
       ),
       Certification(
+        image: '$pathGithubAssets/cursos/dio.png',
+        title: 'Introdução ao Git e ao GitHub',
+        credentialUrl: 'nada',
+      ),
+      Certification(
         image: '$pathGithubAssets/cursos/ifb.png',
-        title: 'ConectaIF 2019',
+        title: 'ConectaIF 2018',
         credentialUrl: 'nada',
       ),
     ],

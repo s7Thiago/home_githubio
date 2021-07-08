@@ -105,7 +105,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
                   : [],
               borderRadius: BorderRadius.circular(!selected ? 10 : 8)),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
                 padding: const EdgeInsets.only(right: 10),
@@ -153,19 +153,22 @@ class _ExpandableSectionState extends State<ExpandableSection>
                       ),
                       widget.representations!.length > 0
                           ? Expanded(
-                              flex: 1,
                               child: IconTheme(
                                 data: IconThemeData(
                                   color: Colors.grey.withOpacity(.5),
                                   size: 25,
                                 ),
-                                child: Wrap(
-                                  runAlignment: WrapAlignment.start,
-                                  alignment: WrapAlignment.spaceAround,
-                                  spacing: 25,
-                                  runSpacing: 100,
-                                  direction: Axis.horizontal,
-                                  children: widget.representations!,
+                                child: Align(
+                                  alignment: widget.representations!.length == 1
+                                      ? Alignment.topCenter
+                                      : Alignment.center,
+                                  child: Wrap(
+                                    direction: Axis.vertical,
+                                    spacing: widget.representations!.length == 1
+                                        ? 0
+                                        : 85,
+                                    children: widget.representations!,
+                                  ),
                                 ),
                               ),
                             )
