@@ -137,7 +137,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
       Certification(
         image: '$pathGithubAssets/trajetoria/gr1d.png',
         title: 'HackaGr1D Pocket',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
       Certification(
         image: '$pathGithubAssets/cursos/udemy.png',
@@ -147,7 +147,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
       Certification(
         image: '$pathGithubAssets/trajetoria/brasa.png',
         title: 'Brasa Hacks - Desafio Nubank',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
       Certification(
         image: '$pathGithubAssets/cursos/udemy.png',
@@ -157,7 +157,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
       Certification(
         image: '$pathGithubAssets/cursos/dio.png',
         title: 'Trabalhando com Variáveis e Condicionais no Dart',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
       Certification(
         image: '$pathGithubAssets/cursos/udemy.png',
@@ -173,27 +173,27 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
       Certification(
         image: '$pathGithubAssets/cursos/dio.png',
         title: 'Trabalhando com Branches no Github',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
       Certification(
         image: '$pathGithubAssets/cursos/rocketseat.png',
         title: 'Semana OmniStack 11.0',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
       Certification(
         image: '$pathGithubAssets/cursos/ifb.png',
         title: 'ConectaIF 2019',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
       Certification(
         image: '$pathGithubAssets/cursos/dio.png',
         title: 'Introdução ao Git e ao GitHub',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
       Certification(
         image: '$pathGithubAssets/cursos/ifb.png',
         title: 'ConectaIF 2018',
-        credentialUrl: 'nada',
+        credentialUrl: 'Acessar credencial',
       ),
     ],
     'skills': <Skill>[
