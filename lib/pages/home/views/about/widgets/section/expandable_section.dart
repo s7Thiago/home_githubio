@@ -27,6 +27,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
     with SingleTickerProviderStateMixin {
   final _duration = Duration(milliseconds: 400);
   bool selected = false;
+  bool isAnimating = false;
   Color? _containerColor = AppColors.white;
   Color? _titleColor = styles.AppStyles.introTextStyle.color;
   double? _titleSize = styles.AppStyles.introTextStyle.fontSize;
@@ -36,6 +37,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
     return GestureDetector(
       onTap: () {
         setState(() {
+          isAnimating = true;
           selected = !selected;
           _containerColor = Colors.white;
           _titleSize =
@@ -50,12 +52,16 @@ class _ExpandableSectionState extends State<ExpandableSection>
       },
       child: MouseRegion(
         onHover: (PointerHoverEvent phe) {
-          setState(() {
-            _containerColor = selected ? Colors.white : Colors.purple[50];
-            _titleColor = AppColors.spotlight_dark;
+          if (!isAnimating) {
+            if (!selected) {
+              setState(() {
+                _containerColor = selected ? Colors.white : Colors.purple[50];
+                _titleColor = AppColors.spotlight_dark;
 
-            if (!selected) _titleSize = 25;
-          });
+                if (!selected) _titleSize = 25;
+              });
+            }
+          }
         },
         onExit: (PointerExitEvent pee) {
           setState(() {
@@ -70,6 +76,13 @@ class _ExpandableSectionState extends State<ExpandableSection>
         child: AnimatedContainer(
           duration: _duration,
           curve: Curves.easeInOutQuad,
+          onEnd: () async {
+            await Future.delayed(Duration(milliseconds: 1500)).then((value) {
+              setState(() {
+                isAnimating = false;
+              });
+            });
+          },
           width: !selected ? 380 : 450,
           alignment: Alignment.center,
           height: !selected ? 65 : widget.customHeight,
@@ -92,7 +105,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
                   : [],
               borderRadius: BorderRadius.circular(!selected ? 10 : 8)),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
                 padding: const EdgeInsets.only(right: 10),
@@ -140,19 +153,22 @@ class _ExpandableSectionState extends State<ExpandableSection>
                       ),
                       widget.representations!.length > 0
                           ? Expanded(
-                              flex: 1,
                               child: IconTheme(
                                 data: IconThemeData(
                                   color: Colors.grey.withOpacity(.5),
                                   size: 25,
                                 ),
-                                child: Wrap(
-                                  runAlignment: WrapAlignment.spaceAround,
-                                  alignment: WrapAlignment.start,
-                                  spacing: 25,
-                                  runSpacing: 100,
-                                  direction: Axis.horizontal,
-                                  children: widget.representations!,
+                                child: Align(
+                                  alignment: widget.representations!.length == 1
+                                      ? Alignment.topCenter
+                                      : Alignment.center,
+                                  child: Wrap(
+                                    direction: Axis.vertical,
+                                    spacing: widget.representations!.length == 1
+                                        ? 0
+                                        : 85,
+                                    children: widget.representations!,
+                                  ),
                                 ),
                               ),
                             )

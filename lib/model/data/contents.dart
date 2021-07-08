@@ -4,47 +4,37 @@ import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
 
 class Contents {
+  static final pathImgSkills = 'assets/images/skills';
+  static final pathImgCursos = 'assets/images/cursos';
+  static final pathImgTrajetoria = 'assets/images/trajetoria';
+  static final pathGithubAssets =
+      'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images';
+
   static final texts = {
-    'intro': 'Sou um futuro cientista da computação que além de apaixonado '
-        'por desenvolver soluções que resolvem problemas especialmente '
-        'para plataformas móveis, tenho uma ambição especial em construir '
-        'aplicações com visual de alto nível, perfeitamente alinhados em '
-        'cada pixel de modo a entregar uma experiência fluida tanto no UX '
-        'Front-End como no desempenho do Back-End. Aprender coisas novas '
-        'definitivamente é algo que eu amo, então, creio que a melhor forma '
-        'de potencializar isso é me integrando num ambiente que me exponha a '
-        'desafios, pois sou convicto de que eles possibilitam não só o '
-        'desenvolvimento profissional e intelectual, mas principalmente expõem '
-        'a situações que aguçam o senso de humanidade.',
+    'intro':
+        """Futuro cientista da computação que além de apaixonado por desenvolver soluções que resolvem problemas especialmente para plataformas móveis, tenho uma certa ambição por construir aplicações com visual de alto nível, perfeitamente alinhados a nível de pixel. É satisfatório entregar experiências fluidas tanto no Front-End como no Back-End. Aprender coisas novas definitivamente é algo que eu amo, então, creio que a melhor forma de potencializar isso é me integrando num ambiente que me exponha a desafios, pois sou convicto de que eles possibilitam não só o desenvolvimento profissional e intelectual, mas principalmente expõem a situações que aguçam o senso de humanidade.""",
     'experiences': <Experience>[
       Experience(
         title: 'IEEE (05/2018 - agora)',
         description: """
 
-Atuo como voluntário ao Instituto dos Engenheiros Elétricos e Eletrônicos (**IEEE**). Inicialmente eu era integrante da divisão de cursos e membresias, e ajudava a produzir os editais de cursos e workshops organizados pelos alunos com o objetivo final de atrair mais estudantes. o IEEE é uma instituição mundial **sem fins lucrativos** que visa promover a integração entre os cursos através de **projetos** que estimulam a **aprendizagem** e fusão dos conhecimentos entre o pessoal dos cursos de Computação, física, automação industrial e do ensino médio integrado, sempre tendo como alvo final o **benefício à comunidade** que cerca o campus.
+Sou voluntário no Instituto dos Engenheiros Elétricos e Eletrônicos (**IEEE**). Minha jornada aqui começou na divisão de cursos e membresias, onde eu ajudava a produzir os editais de cursos e workshops que seriam organizados pelos demais alunos com o objetivo final de atrair mais estudantes para as atividades da organização. o IEEE é uma instituição mundial **sem fins lucrativos** que visa promover a integração entre os cursos através de **projetos** que estimulam a **aprendizagem**, no IFB isso se dá através da fusão de conhecimentos entre os alunos dos cursos de Computação, Física, Automação Industrial e do Ensino Médio Integrado.
 
-**:Alguns projetos desenvolvidos**
+**Alguns projetos desenvolvidos**
 
 - Lab Kids(Ramo do IFB)
 - Cofre inteligente
 - Impressora 3d com sucata
 - Ponto de entrega voluntária (PEV)
 - Mosqueteiras (visa incentivar a permanência e a entrada de meninas nos cursos de exatas)
-- RePlante (visa devolver pra natureza, os recursos gastos em nossas* atividades)
+- RePlante (devolver pra natureza, os recursos gastos em nossas atividades, contribuo aqui como UI designer)
+- LiveBus (Rastreamento de ônibus em tempo real, sou responsável por
+treinar a equipe que irá desenvolver o projeto usando **Flutter**)
 """,
         representations: [
-          Icon(Icons.ac_unit),
+          Image.asset('$pathImgTrajetoria/ieee.png'),
         ],
-      ),
-      Experience(
-        title: "NT Virtual (01/2019 - 06/2019)",
-        description:
-            """Atuei como estagiário na Nova **Técnica Virtual**. Uma empresa da região de Brasília que possui um e-commerce voltado para o mercado de materiais elétricos. Lá eu era responsável por gerenciar todo o sistema de e-commerce, garantindo que as informações sempre estivessem atualizadas, buscando maneiras de aumentar a eficiência dos processos internos com a plataforma da loja integrada entre outras atividades.
-""",
-        representations: [
-          Icon(Icons.ac_unit),
-        ],
-        customHeight: 230,
+        customHeight: 575,
       ),
       Experience(
         title: 'Projetos IEEE (01/2019 - agora)',
@@ -58,44 +48,20 @@ Atuo como voluntário ao Instituto dos Engenheiros Elétricos e Eletrônicos (**
 Também contribuo periodicamente com divisão de marketing.
         """,
         representations: [
-          Icon(Icons.account_circle_sharp),
-          Icon(Icons.account_tree_rounded),
-          Icon(Icons.wrong_location),
+          Image.asset('$pathImgTrajetoria/ieee_cs.png'),
+          Image.asset('$pathImgTrajetoria/ieee.png'),
+          Image.asset('$pathImgTrajetoria/ieee_ifb_cs.png'),
         ],
       ),
       Experience(
-        title: "CASSI (07/2019 - 12/2020)",
+        title: "Hackathon Hacka GR1D Pocket 2020",
         description:
-            """Atuei na CASSI como estagiário na **divisão de relacionamento com participantes (DRP)**, onde basicamente sou responsável por:
-
-- Criar ferramentas de consulta, gerência e análise para a divisão de relacionamento com participantes utilizando Excel e Access;
-- Responsável por organizar e tratar todas as devoluções de cartões, reenviando os mesmos, quando possível, ou destruindo-os, caso inativos;
-- Mediar algumas tarefas entre os funcionários do DRP e as demais divisões da empresa.
-
-""",
-        representations: [
-          Icon(
-            Icons.add_road_sharp,
-          )
-        ],
-        customHeight: 300,
-      ),
-      Experience(
-        title: "Brasa Hacks (02/2020)",
-        description:
-            """No Brasa Hacks (Organizado pela **Shawee**), idealizei junto a alguns amigos o que chamamos de **NuGasto!**, que se trata de uma feature para auxiliar os clientes do **Nubank** a organizarem suas finanças. A feature **agrupa** todos os gastos e ganhos do usuário (aqueles lançados pelo cartão de crédito e também aqueles da função débito) e traz **análises** das transações em questão. Ela permite que o usuário defina **metas financeiras** que podem ser acompanhadas através de análises automáticas da feature. Um dos principais objetivos do NuGasto! é auxiliar o usuário a visualizar e analisar todos os seus gastos e ganhos em um lugar só. Por isso, criamos uma função onde ele pode **escanear o QR Code** de notas fiscais para lançá-las automaticamente como uma despesa no banco de dados do Nubank. Além disso, o usuário teria acesso ao conteúdo do blog do Nubank diretamente no app, por onde ele ganharia pontos seja realizando **testes dinâmicos** ou ao atingir metas de controle financeiro. Toda a feature foi pensada para ser baseada nas atividades do usuário, e também gerenciada ao máximo por ele, que por sinal teria o **poder** de lançar e editar os seus gastos podendo também definir as suas próprias **metas de controle financeiro**. A nossa missão era oferecer uma experiência personalizável, e ao mesmo tempo automatizada, tornando a tomada de decisões mais embasada através de dados essenciais para o controle financeiro.
-""",
-        representations: [
-          Icon(Icons.accessible_forward_rounded),
-          Icon(Icons.add_location_alt_outlined),
-          Icon(Icons.addchart_sharp),
-        ],
-        customHeight: 550,
-      ),
-      Experience(
-        title: "Hacka GR1D Pocket (03/2020)",
-        description:
-            """Ajudei a idealizar o **SafeBot**, um projeto no Hacka Gr1D Pocket - também organizado pela Shawee. Ele se trata de um recurso que auxilia as seguradoras no processo de modernização do fluxo de trabalho dos seus corretores. A ideia era oferecer uma solução **desburocratizada**, segura e disruptiva focada em tornar o trabalho do corretor mais cômodo. Informações pessoais de clientes sempre são necessárias e por se tratarem dados sensíveis (ainda mais em tempos de LGPD), quase sempre há um processo penoso e/ou burocrático a cumprir para acessá-las. Nesse projeto, nós defendemos que para uma solução ser **segura** e tratar os dados pessoais dentro dos limites legais, ela **não precisa oferecer uma experiência burocrática**. A proposta do SafeBot é ser um local **seguro** onde o corretor possa obter dados inerentes a suas relações com os clientes, tais como:
+            """O SafeBot foi mais outro projeto que participei durante o Hacka Gr1D
+Pocket - também organizado pela Shawee. Trata-se de uma ferramenta que
+auxilia as seguradoras no processo de modernização do fluxo de trabalho
+dos seus corretores. A ideia era oferecer uma solução desburocratizada,
+segura e disruptiva focada em tornar o trabalho dos corretores mais
+cômodo.. Informações pessoais de clientes sempre são necessárias e por se tratarem dados sensíveis (ainda mais em tempos de LGPD), quase sempre há um processo penoso e/ou burocrático a cumprir para acessá-las. Nesse projeto, nós defendemos que para uma solução ser **segura** e tratar os dados pessoais dentro dos limites legais, ela **não precisa oferecer uma experiência burocrática**. A proposta do SafeBot é ser um local **seguro** onde o corretor possa obter dados inerentes a suas relações com os clientes, tais como:
 
 - Sua carteira de clientes
 - Ver informações como o histórico de sinistros acionados por um cliente específico E consultar dados comuns a todos os clientes (como data de nascimento, CPF etc)
@@ -103,25 +69,197 @@ Também contribuo periodicamente com divisão de marketing.
 
 [Link com mais detalhes do projeto](bit.ly/3bp0d9l)""",
         representations: [
-          Icon(Icons.crop_square_rounded),
+          Image.asset('$pathImgTrajetoria/gr1d.png'),
         ],
         customHeight: 530,
+      ),
+      Experience(
+        title: "Hackathon Brasa Hacks 2020",
+        description:
+            """No Brasa Hacks (Organizado pela Shawee), Ajudei a idealizar, prototipar e
+construir o MVP em Flutter do que juntamente a alguns amigos foi
+batizado de NuGasto!. Se trata de uma feature que objetivava cumprir o
+desafio proposto de empoderar a base de clientes do Nubank no controle
+sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do usuário (aqueles lançados pelo cartão de crédito e também aqueles da função débito) e traz **análises** das transações em questão. Ela permite que o usuário defina **metas financeiras** que podem ser acompanhadas através de análises automáticas da feature. Um dos principais objetivos do NuGasto! é auxiliar o usuário a visualizar e analisar todos os seus gastos e ganhos em um lugar só. Por isso, criamos uma função onde ele pode **escanear o QR Code** de notas fiscais para lançá-las automaticamente como uma despesa no banco de dados do Nubank. Além disso, o usuário teria acesso ao conteúdo do blog do Nubank diretamente no app, por onde ele ganharia pontos seja realizando **testes dinâmicos** ou ao atingir metas de controle financeiro. Toda a feature foi pensada para ser baseada nas atividades do usuário, e também gerenciada ao máximo por ele, que por sinal teria o **poder** de lançar e editar os seus gastos podendo também definir as suas próprias **metas de controle financeiro**. A nossa missão era oferecer uma experiência personalizável, e ao mesmo tempo automatizada, tornando a tomada de decisões mais embasada através de dados essenciais para o controle financeiro.
+""",
+        representations: [
+          Image.asset('$pathImgTrajetoria/shawee.png'),
+          Image.asset('$pathImgTrajetoria/nubank_old.png'),
+          Image.asset('$pathImgTrajetoria/brasa.png'),
+        ],
+        customHeight: 600,
+      ),
+      Experience(
+        title: "NT Virtual (01/2019 - 06/2019)",
+        description:
+            """Atuei como estagiário na Nova **Técnica Virtual**. Uma empresa da região de Brasília que possui um e-commerce voltado para o mercado de materiais elétricos. Lá eu era responsável por gerenciar todo o sistema de e-commerce, garantindo que as informações sempre estivessem atualizadas, buscando maneiras de aumentar a eficiência dos processos internos com a plataforma da loja integrada entre outras atividades.
+""",
+        representations: [
+          Image.asset('$pathImgTrajetoria/nt_virtual.png'),
+        ],
+        customHeight: 250,
+      ),
+      Experience(
+        title: "CASSI (07/2019 - 11/2020)",
+        description:
+            """Atuei na Caixa de Assistência dos Funcionários do Banco do Brasil como estagiário na **divisão de relacionamento com participantes (DRP)**, onde fui responsável por
+
+- Criar ferramentas de consulta, gerência e análise para a divisão de relacionamento com participantes utilizando Excel Access e Java;
+-  Organizar e tratar as devoluções de cartões;
+- Mediar algumas tarefas entre os funcionários do DRP e as demais divisões da empresa.
+
+""",
+        representations: [
+          Image.asset('$pathImgTrajetoria/cassi.png'),
+        ],
+        customHeight: 300,
+      ),
+      Experience(
+        title: "STJ (11/2020 - Hoje)",
+        description:
+            """Atuo como desenvolvedor Web em um projeto da Coordenadoria de Auditoria (CAUC) onde estou tendo a oportunidade de trabalhar com tecnologias como **Angular**, **Springboot**, **Gitlab**, **Typescript**, **CI/CD**, **Rancher** e **SQL Server**. Uma verdadeira experiência *Full Stack Web*.
+""",
+        representations: [
+          Image.asset(
+            '$pathImgTrajetoria/stj.png',
+            width: 50,
+          ),
+        ],
+        customHeight: 200,
       ),
     ],
     'certifications': <Certification>[
       Certification(
-        image:
-            'https://images.ctfassets.net/q33z48p65a6w/1ciJXQwQjfgRWGcpyI1Oqp/21259688e6e67a17b93383bfa0e9bd0f/4._Partner_Icons_-_Udemy.png',
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title: 'Flutter - Aprendendo Tudo Sobre Design ',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/trajetoria/gr1d.png',
+        title: 'HackaGr1D Pocket',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title: 'Dartlang completo do básico ao avançado',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/trajetoria/brasa.png',
+        title: 'Brasa Hacks - Desafio Nubank',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title: 'Flutter e Dart - Curso Completo de Criação de Apps',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/dio.png',
+        title: 'Trabalhando com Variáveis e Condicionais no Dart',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title: 'Angular 5, JWT, Spring Boot,REST,Security,Data e MongoDB',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
         title:
-            'Curso de Dartlang completo do básico ao avançado (Completo de verdade)',
+            'Java e OO, UML, JDBC, JavaFX, Spring Boot, JPA, Hibernate MySQL e MongoDB',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/dio.png',
+        title: 'Trabalhando com Branches no Github',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/rocketseat.png',
+        title: 'Semana OmniStack 11.0',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/ifb.png',
+        title: 'ConectaIF 2019',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/dio.png',
+        title: 'Introdução ao Git e ao GitHub',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/ifb.png',
+        title: 'ConectaIF 2018',
         credentialUrl: 'Acessar credencial',
       ),
     ],
     'skills': <Skill>[
       Skill(
+        title: 'Flutter',
+        imageUrl: '$pathGithubAssets/skills/flutter.png',
+      ),
+      Skill(
+        title: 'Dart',
+        imageUrl: '$pathGithubAssets/skills/dart.png',
+      ),
+      Skill(
         title: 'Java',
-        imageUrl:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/568px-Duke_%28Java_mascot%29_waving.svg.png',
+        imageUrl: '$pathGithubAssets/skills/java.png',
+      ),
+      Skill(
+        title: 'Adobe XD',
+        imageUrl: '$pathGithubAssets/skills/xd.png',
+      ),
+      Skill(
+        title: 'Adobe Illustrator',
+        imageUrl: '$pathGithubAssets/skills/illustrator.png',
+      ),
+      Skill(
+        title: 'Figma',
+        imageUrl: '$pathGithubAssets/skills/figma.png',
+      ),
+      Skill(
+        title: 'Linux',
+        imageUrl: '$pathGithubAssets/skills/linux.png',
+      ),
+      Skill(
+        title: 'Git',
+        imageUrl: '$pathGithubAssets/skills/git.png',
+      ),
+      Skill(
+        title: 'Android',
+        imageUrl: '$pathGithubAssets/skills/android.png',
+      ),
+      Skill(
+        title: 'Javascript',
+        imageUrl: '$pathGithubAssets/skills/js.png',
+      ),
+      Skill(
+        title: 'SQL',
+        imageUrl: '$pathGithubAssets/skills/sql.png',
+      ),
+      Skill(
+        title: 'Firebase',
+        imageUrl: '$pathGithubAssets/skills/firebase.png',
+      ),
+      Skill(
+        title: 'SpringBoot',
+        imageUrl: '$pathGithubAssets/skills/springboot.png',
+      ),
+      Skill(
+        title: 'NodeJs',
+        imageUrl: '$pathGithubAssets/skills/node.png',
+      ),
+      Skill(
+        title: 'Aqueduct',
+        imageUrl: '$pathGithubAssets/skills/aqueduct.png',
+      ),
+      Skill(
+        title: 'React',
+        imageUrl: '$pathGithubAssets/skills/react.png',
       ),
     ],
   };

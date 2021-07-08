@@ -27,7 +27,7 @@ class AboutView extends StatelessWidget {
             Expanded(
               child: Row(
                 children: [
-                  // Trajetória
+                  // ! Trajetória
                   Expanded(
                     flex: 25,
                     child: Container(
@@ -45,9 +45,8 @@ class AboutView extends StatelessWidget {
                           ...List.generate(
                             (_data['experiences'] as List<Experience>).length,
                             (index) {
-                              final innerExperience =
-                                  (Contents.texts['experiences'] as List)[index]
-                                      as Experience;
+                              final innerExperience = (_data['experiences']
+                                  as List)[index] as Experience;
                               return ExpandableSection(
                                 title: innerExperience.title,
                                 content: innerExperience.description,
@@ -56,21 +55,21 @@ class AboutView extends StatelessWidget {
                                 customHeight: innerExperience.customHeight,
                               );
                             },
-                          )
+                          ).reversed
                         ],
                       ),
                     ),
                   ),
                   // Linha pontilhada vertical
-                  SectionDivider(dotsCount: 40),
-                  // Certificados e Habilidades
+                  SectionDivider(dotsCount: 60),
+                  // ! Certificados e Habilidades
                   Expanded(
                     flex: 25,
                     child: Container(
                       // color: Colors.blueGrey,
                       child: Column(
                         children: [
-                          // * Certificados
+                          // ! Certificados
                           Section.iconTitle(
                             'Certificados',
                             iconTitleLeading: Icon(
@@ -79,10 +78,11 @@ class AboutView extends StatelessWidget {
                             showTitleDivider: true,
                             alignment: MainAxisAlignment.start,
                           ),
-                          ...List.generate(2, (index) {
-                            final innerCertificate =
-                                (Contents.texts['certifications']
-                                    as List<Certification>)[0];
+                          ...List.generate(
+                              (_data['certifications'] as List<Certification>)
+                                  .length, (index) {
+                            final innerCertificate = (_data['certifications']
+                                as List<Certification>)[index];
 
                             return Section.certificate(
                               innerCertificate.title,
@@ -90,7 +90,7 @@ class AboutView extends StatelessWidget {
                               imageUrl: innerCertificate.image,
                             );
                           }).toList(),
-                          // * Habilidades
+                          // ! Habilidades
                           Section.iconTitle(
                             'Habilidades',
                             showTitleDivider: true,
@@ -98,10 +98,10 @@ class AboutView extends StatelessWidget {
                             iconTitleLeading: Icon(Icons.access_alarms),
                           ),
                           ...List.generate(
-                            5,
+                            (_data['skills'] as List<Skill>).length,
                             (index) {
-                              final innerSkill = ((Contents.texts['skills']
-                                  as List)[0]) as Skill;
+                              final innerSkill =
+                                  ((_data['skills'] as List)[index]) as Skill;
 
                               return Section.skill(
                                 titleText: innerSkill.title,
