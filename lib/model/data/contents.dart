@@ -131,7 +131,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
     'certifications': <Certification>[
       Certification(
         image: '$pathGithubAssets/cursos/udemy.png',
-        title: 'Dartlang completo do básico ao avançado',
+        title: 'Flutter - Aprendendo Tudo Sobre Design ',
         credentialUrl: 'Acessar credencial',
       ),
       Certification(
@@ -140,8 +140,39 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
         credentialUrl: 'nada',
       ),
       Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title: 'Dartlang completo do básico ao avançado',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
         image: '$pathGithubAssets/trajetoria/brasa.png',
         title: 'Brasa Hacks - Desafio Nubank',
+        credentialUrl: 'nada',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title: 'Flutter e Dart - Curso Completo de Criação de Apps',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/dio.png',
+        title: 'Trabalhando com Variáveis e Condicionais no Dart',
+        credentialUrl: 'nada',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title: 'Angular 5, JWT, Spring Boot,REST,Security,Data e MongoDB',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/udemy.png',
+        title:
+            'Java e OO, UML, JDBC, JavaFX, Spring Boot, JPA, Hibernate MySQL e MongoDB',
+        credentialUrl: 'Acessar credencial',
+      ),
+      Certification(
+        image: '$pathGithubAssets/cursos/dio.png',
+        title: 'Trabalhando com Branches no Github',
         credentialUrl: 'nada',
       ),
       Certification(
