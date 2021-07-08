@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/certificate_section_variation.dart';
+import 'package:home_githubio/pages/home/views/about/widgets/section/variations/education_section_variation.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/experience_section_variation.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/icon_title_section_variation.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/intro_section_variation.dart';
@@ -72,7 +73,16 @@ class Section extends StatelessWidget {
     this._sectionType = SectionType.SKILL;
   }
 
-  Section.education();
+  Section.education({
+    this.alignment = MainAxisAlignment.end,
+    this.iconTitleLeading,
+    this.iconTitleTrailing,
+    this.introText = '',
+    this.showTitleDivider = false,
+    this.titleText = 'Education',
+  }) {
+    this._sectionType = SectionType.EDUCATION;
+  }
 
   Section.title(
     this.titleText, {
@@ -141,6 +151,16 @@ class Section extends StatelessWidget {
           iconTitleLeading: this.iconTitleLeading,
           iconTitleTrailing: this.iconTitleTrailing,
           marginStart: this.marginStart,
+        );
+
+      case SectionType.EDUCATION:
+        return EducationSectionVariation(
+          alignment: this.alignment,
+          iconTitleLeading: this.iconTitleLeading,
+          iconTitleTrailing: this.iconTitleTrailing,
+          introText: this.introText!,
+          showTitleDivider: this.showTitleDivider,
+          titleText: this.titleText,
         );
       default:
         return Text(

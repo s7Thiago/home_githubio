@@ -18,7 +18,7 @@ class AboutView extends StatelessWidget {
       child: Container(
         color: AppColors.white,
         width: double.maxFinite,
-        height: double.maxFinite,
+        height: 3000,
         child: Column(
           children: [
             SizedBox(height: 50),
@@ -43,7 +43,10 @@ class AboutView extends StatelessWidget {
                             alignment: MainAxisAlignment.end,
                           ),
                           ...List.generate(
-                            (_data['experiences'] as List<Experience>).length,
+                            (_data['experiences'] as List<Experience>)
+                                .length /*  -
+                                5 */
+                            ,
                             (index) {
                               final innerExperience = (_data['experiences']
                                   as List)[index] as Experience;
@@ -55,13 +58,19 @@ class AboutView extends StatelessWidget {
                                 customHeight: innerExperience.customHeight,
                               );
                             },
-                          ).reversed
+                          ).reversed,
+                          Expanded(
+                            child: Section.education(
+                              introText:
+                                  'Instituto Federal de Educação, Ciência e Tecnologia de Brasília (IFB)- Bacharelado em Ciência da Computação',
+                            ),
+                          ),
                         ],
                       ),
                     ),
                   ),
                   // Linha pontilhada vertical
-                  SectionDivider(dotsCount: 60),
+                  SectionDivider(dotsCount: 80),
                   // ! Certificados e Habilidades
                   Expanded(
                     flex: 25,
