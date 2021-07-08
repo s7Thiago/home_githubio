@@ -14,7 +14,7 @@ class SectionDivider extends StatelessWidget {
     this.dividerType = DividerType.Vertical,
     this.dotsCount = 20,
     this.dotRadius = 2.5,
-    this.dotSize = const [5, 20],
+    this.dotSize = const [2, 12],
     this.dotDistance = 4,
     this.dotColor = Colors.black,
   }) : assert(dotSize.length == 2);
@@ -42,8 +42,8 @@ class SectionDivider extends StatelessWidget {
           children: List.generate(
             this.dotsCount,
             (index) => Container(
-              height: this.dotSize[0],
               width: this.dotSize[1],
+              height: this.dotSize[0],
               margin: EdgeInsets.symmetric(horizontal: this.dotDistance),
               decoration: BoxDecoration(
                 color: this.dotColor,

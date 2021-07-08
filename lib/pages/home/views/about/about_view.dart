@@ -23,7 +23,7 @@ class AboutView extends StatelessWidget {
 
     return SingleChildScrollView(
       child: Container(
-        color: AppColors.white,
+        // color: AppColors.white,
         width: double.maxFinite,
         height: double.maxFinite,
         child: Column(
@@ -94,12 +94,11 @@ class AboutView extends StatelessWidget {
                     ),
                   ),
                   // Linha pontilhada vertical
-                  SectionDivider(dotsCount: 80),
+                  SectionDivider(dotsCount: 120),
                   // ! Certificados e Habilidades
                   Expanded(
                     flex: 25,
-                    child: Container(
-                      // color: Colors.blueGrey,
+                    child: SizedBox(
                       child: Column(
                         children: [
                           // ! Certificados
