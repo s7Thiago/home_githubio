@@ -24,6 +24,7 @@ class Section extends StatelessWidget {
 
   String? introText = '';
   String titleText = '';
+  Widget? subtitleText;
   String content = '';
   String imageUrl = '';
   Widget? iconTitleLeading;
@@ -79,7 +80,7 @@ class Section extends StatelessWidget {
     this.iconTitleTrailing,
     this.introText = '',
     this.showTitleDivider = false,
-    this.titleText = 'Education',
+    this.subtitleText,
   }) {
     this._sectionType = SectionType.EDUCATION;
   }
@@ -160,7 +161,7 @@ class Section extends StatelessWidget {
           iconTitleTrailing: this.iconTitleTrailing,
           introText: this.introText!,
           showTitleDivider: this.showTitleDivider,
-          titleText: this.titleText,
+          subTitle: this.subtitleText,
         );
       default:
         return Text(

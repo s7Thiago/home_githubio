@@ -1,9 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
 import 'package:home_githubio/model/Certification.dart';
 import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
+import 'package:home_githubio/model/data/Education.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/expandable_section.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/section.dart';
@@ -14,11 +16,16 @@ class AboutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final experiences = _data['experiences'] as List<Experience>;
+    final education = _data['education'] as List<Education>;
+    final certifications = _data['certifications'] as List<Certification>;
+    final skills = _data['skills'] as List<Skill>;
+
     return SingleChildScrollView(
       child: Container(
         color: AppColors.white,
         width: double.maxFinite,
-        height: 3000,
+        height: double.maxFinite,
         child: Column(
           children: [
             SizedBox(height: 50),
@@ -43,28 +50,45 @@ class AboutView extends StatelessWidget {
                             alignment: MainAxisAlignment.end,
                           ),
                           ...List.generate(
-                            (_data['experiences'] as List<Experience>)
-                                .length /*  -
-                                5 */
-                            ,
+                            experiences.length,
                             (index) {
-                              final innerExperience = (_data['experiences']
-                                  as List)[index] as Experience;
                               return ExpandableSection(
-                                title: innerExperience.title,
-                                content: innerExperience.description,
+                                title: experiences[index].title,
+                                content: experiences[index].description,
                                 representations:
-                                    innerExperience.representations,
-                                customHeight: innerExperience.customHeight,
+                                    experiences[index].representations,
+                                customHeight: experiences[index].customHeight,
                               );
                             },
                           ).reversed,
-                          Expanded(
-                            child: Section.education(
-                              introText:
-                                  'Instituto Federal de Educação, Ciência e Tecnologia de Brasília (IFB)- Bacharelado em Ciência da Computação',
+                          // ! Educação
+                          Section.iconTitle(
+                            'Education',
+                            iconTitleTrailing: Icon(
+                              Icons.keyboard_arrow_left_sharp,
                             ),
+                            showTitleDivider: true,
+                            alignment: MainAxisAlignment.end,
                           ),
+                          ...List.generate(education.length, (index) {
+                            return Section.education(
+                              introText: education[index].content,
+                              iconTitleTrailing: education[index].trailing,
+                              subtitleText: RichText(
+                                text: TextSpan(
+                                  text: education[index].subContentTitle,
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  children: [
+                                    TextSpan(
+                                      text: education[index].subContentText,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          }).toList(),
                         ],
                       ),
                     ),
@@ -87,16 +111,11 @@ class AboutView extends StatelessWidget {
                             showTitleDivider: true,
                             alignment: MainAxisAlignment.start,
                           ),
-                          ...List.generate(
-                              (_data['certifications'] as List<Certification>)
-                                  .length, (index) {
-                            final innerCertificate = (_data['certifications']
-                                as List<Certification>)[index];
-
+                          ...List.generate(certifications.length, (index) {
                             return Section.certificate(
-                              innerCertificate.title,
-                              content: innerCertificate.credentialUrl,
-                              imageUrl: innerCertificate.image,
+                              certifications[index].title,
+                              content: certifications[index].credentialUrl,
+                              imageUrl: certifications[index].image,
                             );
                           }).toList(),
                           // ! Habilidades
@@ -107,15 +126,12 @@ class AboutView extends StatelessWidget {
                             iconTitleLeading: Icon(Icons.access_alarms),
                           ),
                           ...List.generate(
-                            (_data['skills'] as List<Skill>).length,
+                            skills.length,
                             (index) {
-                              final innerSkill =
-                                  ((_data['skills'] as List)[index]) as Skill;
-
                               return Section.skill(
-                                titleText: innerSkill.title,
+                                titleText: skills[index].title,
                                 iconTitleLeading: CachedNetworkImage(
-                                  imageUrl: innerSkill.imageUrl,
+                                  imageUrl: skills[index].imageUrl,
                                   width: 14,
                                   fit: BoxFit.cover,
                                 ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/icon_title_section_variation.dart';
 
 class EducationSectionVariation extends StatelessWidget {
-  final String titleText;
   final String introText;
+  final Widget? subTitle;
   final showTitleDivider;
   final Widget? iconTitleLeading;
   final Widget? iconTitleTrailing;
@@ -11,8 +11,8 @@ class EducationSectionVariation extends StatelessWidget {
 
   const EducationSectionVariation({
     Key? key,
-    required this.titleText,
     required this.introText,
+    this.subTitle,
     this.showTitleDivider = true,
     this.iconTitleLeading,
     this.iconTitleTrailing,
@@ -21,28 +21,28 @@ class EducationSectionVariation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context);
+    final size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 30),
-      width: MediaQuery.of(context).size.width * .2,
-      child: Column(
+      width: size.width * .2,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          IconTitleSectionVariation(
-            titleText: titleText,
-            showTitleDivider: true,
-            iconTitleLeading: iconTitleLeading,
-            iconTitleTrailing: iconTitleLeading,
-            alignment: alignment,
+          iconTitleLeading ?? Container(),
+          Container(
+            width: 350,
+            margin: EdgeInsets.only(
+                left: iconTitleLeading != null ? 10 : 0,
+                right: iconTitleTrailing != null ? 10 : 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(introText, textAlign: TextAlign.right),
+                SizedBox(height: 10),
+                subTitle!
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                width: 315,
-                child: Text(introText, textAlign: TextAlign.right),
-              ),
-            ],
-          )
+          Expanded(child: iconTitleTrailing ?? Container())
         ],
       ),
     );

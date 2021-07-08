@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_githubio/model/Certification.dart';
 import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
+import 'package:home_githubio/model/data/Education.dart';
 
 class Contents {
   static final pathImgSkills = 'assets/images/skills';
@@ -262,5 +263,14 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
         imageUrl: '$pathGithubAssets/skills/react.png',
       ),
     ],
+    'education': <Education>[
+      Education(
+        content:
+            'Instituto Federal de Educação, Ciência e Tecnologia de Brasília (IFB)- Bacharelado em Ciência da Computação',
+        subContentTitle: 'Previsão de formação',
+        subContentText: '12/2023',
+        trailing: Image.network('$pathGithubAssets/cursos/ifb.png'),
+      ),
+    ]
   };
 }
