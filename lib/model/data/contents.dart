@@ -10,6 +10,7 @@ class Contents {
   static final pathImgTrajetoria = 'assets/images/trajetoria';
   static final pathGithubAssets =
       'https://raw.githubusercontent.com/s7Thiago/home_githubio/master/assets/images';
+  static final defaultImageSize = 37.0;
 
   static final texts = {
     'intro':
@@ -33,7 +34,7 @@ Sou voluntário no Instituto dos Engenheiros Elétricos e Eletrônicos (**IEEE**
 treinar a equipe que irá desenvolver o projeto usando **Flutter**)
 """,
         representations: [
-          Image.asset('$pathImgTrajetoria/ieee.png'),
+          Image.asset('$pathImgTrajetoria/ieee.png', width: defaultImageSize),
         ],
         customHeight: 575,
       ),
@@ -49,9 +50,11 @@ treinar a equipe que irá desenvolver o projeto usando **Flutter**)
 Também contribuo periodicamente com divisão de marketing.
         """,
         representations: [
-          Image.asset('$pathImgTrajetoria/ieee_cs.png'),
-          Image.asset('$pathImgTrajetoria/ieee.png'),
-          Image.asset('$pathImgTrajetoria/ieee_ifb_cs.png'),
+          Image.asset('$pathImgTrajetoria/ieee_cs.png',
+              width: defaultImageSize),
+          Image.asset('$pathImgTrajetoria/ieee.png', width: defaultImageSize),
+          Image.asset('$pathImgTrajetoria/ieee_ifb_cs.png',
+              width: defaultImageSize),
         ],
       ),
       Experience(
@@ -70,7 +73,7 @@ cômodo.. Informações pessoais de clientes sempre são necessárias e por se t
 
 [Link com mais detalhes do projeto](bit.ly/3bp0d9l)""",
         representations: [
-          Image.asset('$pathImgTrajetoria/gr1d.png'),
+          Image.asset('$pathImgTrajetoria/gr1d.png', width: defaultImageSize),
         ],
         customHeight: 530,
       ),
@@ -84,9 +87,10 @@ desafio proposto de empoderar a base de clientes do Nubank no controle
 sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do usuário (aqueles lançados pelo cartão de crédito e também aqueles da função débito) e traz **análises** das transações em questão. Ela permite que o usuário defina **metas financeiras** que podem ser acompanhadas através de análises automáticas da feature. Um dos principais objetivos do NuGasto! é auxiliar o usuário a visualizar e analisar todos os seus gastos e ganhos em um lugar só. Por isso, criamos uma função onde ele pode **escanear o QR Code** de notas fiscais para lançá-las automaticamente como uma despesa no banco de dados do Nubank. Além disso, o usuário teria acesso ao conteúdo do blog do Nubank diretamente no app, por onde ele ganharia pontos seja realizando **testes dinâmicos** ou ao atingir metas de controle financeiro. Toda a feature foi pensada para ser baseada nas atividades do usuário, e também gerenciada ao máximo por ele, que por sinal teria o **poder** de lançar e editar os seus gastos podendo também definir as suas próprias **metas de controle financeiro**. A nossa missão era oferecer uma experiência personalizável, e ao mesmo tempo automatizada, tornando a tomada de decisões mais embasada através de dados essenciais para o controle financeiro.
 """,
         representations: [
-          Image.asset('$pathImgTrajetoria/shawee.png'),
-          Image.asset('$pathImgTrajetoria/nubank_old.png'),
-          Image.asset('$pathImgTrajetoria/brasa.png'),
+          Image.asset('$pathImgTrajetoria/shawee.png', width: defaultImageSize),
+          Image.asset('$pathImgTrajetoria/nubank_old.png',
+              width: defaultImageSize),
+          Image.asset('$pathImgTrajetoria/brasa.png', width: defaultImageSize),
         ],
         customHeight: 600,
       ),
@@ -96,7 +100,8 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
             """Atuei como estagiário na Nova **Técnica Virtual**. Uma empresa da região de Brasília que possui um e-commerce voltado para o mercado de materiais elétricos. Lá eu era responsável por gerenciar todo o sistema de e-commerce, garantindo que as informações sempre estivessem atualizadas, buscando maneiras de aumentar a eficiência dos processos internos com a plataforma da loja integrada entre outras atividades.
 """,
         representations: [
-          Image.asset('$pathImgTrajetoria/nt_virtual.png'),
+          Image.asset('$pathImgTrajetoria/nt_virtual.png',
+              width: defaultImageSize),
         ],
         customHeight: 250,
       ),
@@ -111,7 +116,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
 
 """,
         representations: [
-          Image.asset('$pathImgTrajetoria/cassi.png'),
+          Image.asset('$pathImgTrajetoria/cassi.png', width: defaultImageSize),
         ],
         customHeight: 300,
       ),
@@ -121,10 +126,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
             """Atuo como desenvolvedor Web em um projeto da Coordenadoria de Auditoria (CAUC) onde estou tendo a oportunidade de trabalhar com tecnologias como **Angular**, **Springboot**, **Gitlab**, **Typescript**, **CI/CD**, **Rancher** e **SQL Server**. Uma verdadeira experiência *Full Stack Web*.
 """,
         representations: [
-          Image.asset(
-            '$pathImgTrajetoria/stj.png',
-            width: 50,
-          ),
+          Image.asset('$pathImgTrajetoria/stj.png', width: defaultImageSize),
         ],
         customHeight: 200,
       ),
