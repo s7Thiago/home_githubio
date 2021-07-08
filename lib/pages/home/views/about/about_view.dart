@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/styles/app_colors.dart';
 import 'package:home_githubio/model/Certification.dart';
 import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
