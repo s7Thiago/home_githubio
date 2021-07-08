@@ -192,7 +192,8 @@ class _ExpandableSectionState extends State<ExpandableSection>
                                                   ),
                                                   child: AnimatedCard(
                                                     child: e,
-                                                    curve: Curves.easeInOutQuad,
+                                                    curve:
+                                                        Curves.easeInOutQuint,
                                                     duration: Duration(
                                                       milliseconds: Random()
                                                           .nextInt(1200)
