@@ -30,6 +30,7 @@ dependencies:
   provider: ^5.0.0
   dotted_decoration: ^2.0.0
   smooth_scroll_web: ^0.0.4
+  animated_card: ^2.0.0
 
 dev_dependencies:
   flutter_test:

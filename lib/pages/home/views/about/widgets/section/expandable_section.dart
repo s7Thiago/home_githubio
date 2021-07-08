@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:animated_card/animated_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
@@ -31,6 +34,11 @@ class _ExpandableSectionState extends State<ExpandableSection>
   Color? _containerColor = AppColors.white;
   Color? _titleColor = styles.AppStyles.introTextStyle.color;
   double? _titleSize = styles.AppStyles.introTextStyle.fontSize;
+
+  // waits a determined time before get the Section representation
+  Future<List<Widget>> _getSectionRepresentation() async =>
+      Future.delayed(Duration(milliseconds: 150))
+          .then((value) => widget.representations!);
 
   @override
   Widget build(BuildContext context) {
@@ -162,12 +170,48 @@ class _ExpandableSectionState extends State<ExpandableSection>
                                   alignment: widget.representations!.length == 1
                                       ? Alignment.topCenter
                                       : Alignment.center,
-                                  child: Wrap(
-                                    direction: Axis.vertical,
-                                    spacing: widget.representations!.length == 1
-                                        ? 0
-                                        : 85,
-                                    children: widget.representations!,
+                                  child: FutureBuilder(
+                                    future: _getSectionRepresentation(),
+                                    builder: (context,
+                                        AsyncSnapshot<List<Widget>> snapshot) {
+                                      if (snapshot.hasData) {
+                                        return Wrap(
+                                          direction: Axis.horizontal,
+                                          spacing:
+                                              widget.representations!.length ==
+                                                      1
+                                                  ? 0
+                                                  : 85,
+                                          children: snapshot.data!
+                                              .map(
+                                                (e) => Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    bottom: 80,
+                                                    top: 20,
+                                                  ),
+                                                  child: AnimatedCard(
+                                                    child: e,
+                                                    curve:
+                                                        Curves.easeInOutQuint,
+                                                    duration: Duration(
+                                                      milliseconds: Random()
+                                                          .nextInt(1200)
+                                                          .clamp(500, 1200),
+                                                    ),
+                                                  ),
+                                                ),
+                                              )
+                                              .toList(),
+                                        );
+                                      }
+
+                                      return SizedBox(
+                                          /*      child: CircularProgressIndicator(),
+                                        width: 16,
+                                        height: 16, */
+                                          );
+                                    },
                                   ),
                                 ),
                               ),
