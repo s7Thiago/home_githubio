@@ -34,6 +34,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
           child: PageView.builder(
             itemCount: 4,
             controller: pageController,
+            physics: BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(

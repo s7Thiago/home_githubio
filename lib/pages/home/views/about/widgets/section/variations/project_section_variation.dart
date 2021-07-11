@@ -19,7 +19,7 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
         color: Colors.grey,
         offset: Offset(0, 10),
         blurRadius: 35,
-        spreadRadius: 20),
+        spreadRadius: 10),
   ];
 
   // set the size of the element to normal
@@ -49,8 +49,8 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
           alignment: Alignment.bottomCenter,
           children: [
             AnimatedContainer(
-              width: 150,
-              height: 60,
+              width: 220,
+              height: 20,
               duration: duration,
               decoration: BoxDecoration(
                 color: Colors.black,
