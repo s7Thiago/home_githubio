@@ -31,7 +31,7 @@ class RightPanel extends StatelessWidget {
           duration: Duration(milliseconds: 450),
           curve: Curves.easeInOutCirc.flipped,
           color: Colors.black,
-          width: provider.selectedTab == 'Projects'
+          width: provider.selectedTab == AppBarItems.PROJECT
               ? size.width * .8
               : size.width * .5,
           child: _BodyRight(),

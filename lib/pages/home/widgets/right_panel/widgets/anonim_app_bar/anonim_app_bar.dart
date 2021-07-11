@@ -27,7 +27,7 @@ class AnonimAppBar extends PreferredSize {
                     reverse: true,
                     itemCount: items.length,
                     itemBuilder: (context, index) => _TabItem(
-                      label: items.keys.elementAt(index),
+                      label: items.keys.elementAt(index).toString(),
                       selected: provider.currentIndex == index,
                       index: index,
                       provider: provider,
@@ -36,7 +36,8 @@ class AnonimAppBar extends PreferredSize {
                         provider.updateIndex = index;
                         provider.updateSelectedTab = AppBarItems
                             .anonimAppBarItems.keys
-                            .elementAt(provider.currentIndex);
+                            .elementAt(provider.currentIndex)
+                            .toString();
                       },
                     ),
                   ),
