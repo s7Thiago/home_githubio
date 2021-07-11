@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_githubio/model/Certification.dart';
 import 'package:home_githubio/model/Experience.dart';
 import 'package:home_githubio/model/Skill.dart';
-import 'package:home_githubio/model/data/Education.dart';
+import 'package:home_githubio/model/Education.dart';
 
 class Contents {
   static final pathImgSkills = 'assets/images/skills';

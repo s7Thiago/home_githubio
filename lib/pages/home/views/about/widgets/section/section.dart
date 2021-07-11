@@ -15,6 +15,7 @@ enum SectionType {
   EDUCATION,
   TITLE,
   ICON_TITLE,
+  PROJECT,
   UNKNOWN,
 }
 
@@ -100,6 +101,16 @@ class Section extends StatelessWidget {
     this.alignment = MainAxisAlignment.end,
   }) {
     this._sectionType = SectionType.ICON_TITLE;
+  }
+
+  Section.project(
+    this.titleText, {
+    this.iconTitleLeading,
+    this.iconTitleTrailing,
+    this.showTitleDivider = false,
+    this.alignment = MainAxisAlignment.end,
+  }) {
+    this._sectionType = SectionType.PROJECT;
   }
 
   @override
