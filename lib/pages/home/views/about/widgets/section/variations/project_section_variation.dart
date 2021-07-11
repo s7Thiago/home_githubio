@@ -8,7 +8,10 @@ class ProjectSectionView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: AnimatedContainer(
-        color: AppColors.spotlight,
+        decoration: BoxDecoration(
+          color: AppColors.spotlight,
+          borderRadius: BorderRadius.circular(10),
+        ),
         width: 500,
         height: 650,
         duration: Duration(milliseconds: 800),
