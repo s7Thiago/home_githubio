@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/project_section_variation.dart';
 
-class ProjectsSectionView extends StatelessWidget {
+class ProjectsSectionView extends StatefulWidget {
+  @override
+  State<ProjectsSectionView> createState() => _ProjectsSectionViewState();
+}
+
+class _ProjectsSectionViewState extends State<ProjectsSectionView> {
   final pageController = new PageController(
     initialPage: 1,
-    keepPage: false,
-    viewportFraction: .4,
+    viewportFraction: .25,
   );
 
   int currentPage = 1;
@@ -17,17 +21,23 @@ class ProjectsSectionView extends StatelessWidget {
       children: [
         Expanded(
           flex: 1,
-          child: Text('Explore my projects'),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 50, left: 18),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text('Explore my projects'),
+            ),
+          ),
         ),
         Expanded(
-          flex: 3,
+          flex: 4,
           child: PageView.builder(
             itemCount: 4,
             controller: pageController,
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 100,
+                  horizontal: 25,
                   vertical: 30,
                 ),
                 child: ProjectSectionView(),
