@@ -16,38 +16,44 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Stack(
+      alignment: Alignment.center,
       children: [
-        Expanded(
-          flex: 1,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 50, left: 18),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text('Explore my projects'),
-            ),
-          ),
-        ),
-        Expanded(
-          flex: 4,
-          child: PageView.builder(
-            itemCount: 4,
-            controller: pageController,
-            physics: BouncingScrollPhysics(),
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 25,
-                  vertical: 30,
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 50, left: 18),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Explore my projects'),
                 ),
-                child: ProjectSectionView(),
-              );
-            },
-          ),
+              ),
+            ),
+            Expanded(
+              flex: 4,
+              child: PageView.builder(
+                itemCount: 4,
+                controller: pageController,
+                physics: BouncingScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 25,
+                      vertical: 30,
+                    ),
+                    child: ProjectSectionView(),
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 120),
+          ],
         ),
-        Expanded(
-          flex: 1,
+        Positioned(
+          bottom: 50,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -75,7 +81,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                   child: Text('Next')),
             ],
           ),
-        )
+        ),
       ],
     );
   }
