@@ -59,18 +59,21 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(
-                  onPressed: () {
-                    pageController.animateToPage(
-                      currentPage > 0
-                          ? currentPage = currentPage - 1
-                          : currentPage,
-                      duration: Duration(milliseconds: 500),
-                      curve: Curves.easeInOutQuad,
-                    );
-                  },
-                  child: Text('Previous')),
-              TextButton(
+              Padding(
+                padding: const EdgeInsets.only(right: 25),
+                child: FloatingActionButton(
+                    onPressed: () {
+                      pageController.animateToPage(
+                        currentPage > 0
+                            ? currentPage = currentPage - 1
+                            : currentPage,
+                        duration: Duration(milliseconds: 500),
+                        curve: Curves.easeInOutQuad,
+                      );
+                    },
+                    child: Icon(Icons.keyboard_arrow_left_outlined)),
+              ),
+              FloatingActionButton(
                   onPressed: () {
                     pageController.animateToPage(
                       currentPage < 3
@@ -80,7 +83,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                       curve: Curves.easeInOutQuad,
                     );
                   },
-                  child: Text('Next')),
+                  child: Icon(Icons.keyboard_arrow_right_outlined)),
             ],
           ),
         ),

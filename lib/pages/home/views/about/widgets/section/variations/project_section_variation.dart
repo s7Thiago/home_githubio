@@ -47,8 +47,8 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
         onHover: (PointerHoverEvent phe) {
           elementColor = Color(0xFF2f3e46);
           // elementColor = Colors.white;
-          elementWidth = 325.0;
-          elementHeight = 455.0;
+          elementWidth = 315.0;
+          elementHeight = 410.0;
           isHovered = true;
           setState(() {});
         },
