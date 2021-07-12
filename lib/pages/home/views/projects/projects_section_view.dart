@@ -17,7 +17,8 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center,
+      alignment: Alignment.topCenter,
+      fit: StackFit.expand,
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -11,7 +11,7 @@ class ProjectSectionView extends StatefulWidget {
 
 class _ProjectSectionViewState extends State<ProjectSectionView> {
   double elementWidth = 300;
-  double elementHeight = 455;
+  double elementHeight = 400;
   bool isHovered = false;
   Color elementColor = Colors.white;
 
@@ -34,7 +34,7 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
   // set the size of the element to normal
   _resetElementSize() {
     elementWidth = 300;
-    elementHeight = 455;
+    elementHeight = 400;
     setState(() {});
   }
 
@@ -48,7 +48,7 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
           elementColor = Color(0xFF2f3e46);
           // elementColor = Colors.white;
           elementWidth = 325.0;
-          elementHeight = 470.0;
+          elementHeight = 455.0;
           isHovered = true;
           setState(() {});
         },
@@ -65,7 +65,7 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
               top: 25,
               child: AnimatedContainer(
                 width: 230,
-                height: 390,
+                height: 340,
                 margin: const EdgeInsets.only(bottom: 2),
                 duration: duration,
                 decoration: BoxDecoration(
