@@ -12,14 +12,23 @@ class ProjectSectionView extends StatefulWidget {
 class _ProjectSectionViewState extends State<ProjectSectionView> {
   double elementWidth = 300;
   double elementHeight = 455;
-  bool isHovered = !!false; // ! Change to false
+  bool isHovered = false;
+  Color elementColor = Colors.white;
 
   final elementShadows = <BoxShadow>[
     BoxShadow(
-        color: Colors.grey,
+        color: Color(0xFF2f3e46),
         offset: Offset(0, 10),
         blurRadius: 35,
         spreadRadius: 10),
+  ];
+
+  final elementBackgroundCenterShadow = <BoxShadow>[
+    BoxShadow(
+        color: Colors.grey,
+        offset: Offset(0, 10),
+        blurRadius: 65,
+        spreadRadius: 8),
   ];
 
   // set the size of the element to normal
@@ -31,26 +40,46 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
 
   @override
   Widget build(BuildContext context) {
-    final duration = Duration(milliseconds: 400);
+    final duration = Duration(milliseconds: 300);
 
     return Center(
       child: MouseRegion(
         onHover: (PointerHoverEvent phe) {
+          elementColor = Color(0xFF2f3e46);
+          // elementColor = Colors.white;
           elementWidth = 325.0;
           elementHeight = 470.0;
           isHovered = true;
           setState(() {});
         },
         onExit: (PointerExitEvent pee) {
-          isHovered = !!false; //! Change to false
+          elementColor = Colors.white;
+          isHovered = false;
           _resetElementSize();
         },
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
+            // Center Shadow
+            Positioned(
+              top: 25,
+              child: AnimatedContainer(
+                width: 230,
+                height: 390,
+                margin: const EdgeInsets.only(bottom: 2),
+                duration: duration,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  boxShadow: !isHovered ? elementBackgroundCenterShadow : [],
+                ),
+              ),
+            ),
+            // Top Shadow
+            // Bottom Shadow
             AnimatedContainer(
               width: 220,
               height: 20,
+              margin: const EdgeInsets.only(bottom: 2),
               duration: duration,
               decoration: BoxDecoration(
                 color: Colors.black,
@@ -59,8 +88,11 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
             ),
             AnimatedContainer(
               decoration: BoxDecoration(
-                color: AppColors.spotlight,
+                color: elementColor,
                 borderRadius: BorderRadius.circular(10),
+                border: isHovered
+                    ? Border.all(color: Colors.grey, width: .06)
+                    : null,
               ),
               width: elementWidth,
               height: elementHeight,
