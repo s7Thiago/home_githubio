@@ -43,66 +43,72 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
     final duration = Duration(milliseconds: 300);
 
     return Center(
-      child: MouseRegion(
-        onHover: (PointerHoverEvent phe) {
-          elementColor = Color(0xFF2f3e46);
-          // elementColor = Colors.white;
-          elementWidth = 315.0;
-          elementHeight = 410.0;
-          isHovered = true;
-          setState(() {});
-        },
-        onExit: (PointerExitEvent pee) {
-          elementColor = Colors.white;
-          isHovered = false;
-          _resetElementSize();
-        },
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            // Center Shadow
-            Positioned(
-              top: 25,
-              child: AnimatedContainer(
-                width: 230,
-                height: 340,
+      child: InkWell(
+        mouseCursor: MaterialStateProperty.resolveAs<MouseCursor?>(
+          MaterialStateMouseCursor.clickable,
+          {},
+        ),
+        child: MouseRegion(
+          onHover: (PointerHoverEvent phe) {
+            elementColor = Color(0xFF2f3e46);
+            // elementColor = Colors.white;
+            elementWidth = 315.0;
+            elementHeight = 410.0;
+            isHovered = true;
+            setState(() {});
+          },
+          onExit: (PointerExitEvent pee) {
+            elementColor = Colors.white;
+            isHovered = false;
+            _resetElementSize();
+          },
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              // Center Shadow
+              Positioned(
+                top: 25,
+                child: AnimatedContainer(
+                  width: 230,
+                  height: 340,
+                  margin: const EdgeInsets.only(bottom: 2),
+                  duration: duration,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    boxShadow: !isHovered ? elementBackgroundCenterShadow : [],
+                  ),
+                ),
+              ),
+              // Top Shadow
+              // Bottom Shadow
+              AnimatedContainer(
+                width: 220,
+                height: 20,
                 margin: const EdgeInsets.only(bottom: 2),
                 duration: duration,
                 decoration: BoxDecoration(
-                  color: Colors.green,
-                  boxShadow: !isHovered ? elementBackgroundCenterShadow : [],
+                  color: Colors.black,
+                  boxShadow: isHovered ? elementShadows : [],
                 ),
               ),
-            ),
-            // Top Shadow
-            // Bottom Shadow
-            AnimatedContainer(
-              width: 220,
-              height: 20,
-              margin: const EdgeInsets.only(bottom: 2),
-              duration: duration,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                boxShadow: isHovered ? elementShadows : [],
+              AnimatedContainer(
+                decoration: BoxDecoration(
+                  color: elementColor,
+                  borderRadius: BorderRadius.circular(10),
+                  border: isHovered
+                      ? Border.all(color: Colors.grey, width: .06)
+                      : null,
+                ),
+                width: elementWidth,
+                height: elementHeight,
+                duration: duration,
+                curve: Curves.easeInOutQuad,
+                child: Column(
+                  children: [],
+                ),
               ),
-            ),
-            AnimatedContainer(
-              decoration: BoxDecoration(
-                color: elementColor,
-                borderRadius: BorderRadius.circular(10),
-                border: isHovered
-                    ? Border.all(color: Colors.grey, width: .06)
-                    : null,
-              ),
-              width: elementWidth,
-              height: elementHeight,
-              duration: duration,
-              curve: Curves.easeInOutQuad,
-              child: Column(
-                children: [],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

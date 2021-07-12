@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/project_section_variation.dart';
 
 class ProjectsSectionView extends StatefulWidget {
@@ -26,10 +28,16 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(top: 50, left: 18),
+                padding: const EdgeInsets.only(top: 50, left: 150),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('Explore my projects'),
+                  child: Text(
+                    'Explore my projects',
+                    style: GoogleFonts.inter(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 45,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -62,6 +70,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
               Padding(
                 padding: const EdgeInsets.only(right: 25),
                 child: FloatingActionButton(
+                    backgroundColor: Colors.black,
                     onPressed: () {
                       pageController.animateToPage(
                         currentPage > 0
@@ -74,6 +83,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                     child: Icon(Icons.keyboard_arrow_left_outlined)),
               ),
               FloatingActionButton(
+                  backgroundColor: Colors.black,
                   onPressed: () {
                     pageController.animateToPage(
                       currentPage < 3
