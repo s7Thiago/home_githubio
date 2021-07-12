@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/styles/app_colors.dart';
 
 class ProjectSectionView extends StatefulWidget {
   const ProjectSectionView({Key? key}) : super(key: key);

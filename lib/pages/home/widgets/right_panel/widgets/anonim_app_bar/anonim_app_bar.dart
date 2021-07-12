@@ -69,8 +69,12 @@ class _TabItem extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     final radius = AppStyles.anonimTabBarSelectedItemRadius;
 
-    return GestureDetector(
+    return InkWell(
       onTap: this.onTap,
+      mouseCursor: MaterialStateProperty.resolveAs<MouseCursor?>(
+        MaterialStateMouseCursor.clickable,
+        {},
+      ),
       child: Container(
         // * Cor que causa a impressão de continuidade com a borda arredondada do container lateral não selecionado
         color: Colors.white,

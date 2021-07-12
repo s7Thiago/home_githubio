@@ -70,30 +70,32 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
               Padding(
                 padding: const EdgeInsets.only(right: 25),
                 child: FloatingActionButton(
-                    backgroundColor: Colors.black,
-                    onPressed: () {
-                      pageController.animateToPage(
-                        currentPage > 0
-                            ? currentPage = currentPage - 1
-                            : currentPage,
-                        duration: Duration(milliseconds: 500),
-                        curve: Curves.easeInOutQuad,
-                      );
-                    },
-                    child: Icon(Icons.keyboard_arrow_left_outlined)),
-              ),
-              FloatingActionButton(
                   backgroundColor: Colors.black,
                   onPressed: () {
                     pageController.animateToPage(
-                      currentPage < 3
-                          ? currentPage = currentPage + 1
+                      currentPage > 0
+                          ? currentPage = currentPage - 1
                           : currentPage,
                       duration: Duration(milliseconds: 500),
                       curve: Curves.easeInOutQuad,
                     );
                   },
-                  child: Icon(Icons.keyboard_arrow_right_outlined)),
+                  child: Icon(Icons.keyboard_arrow_left_outlined),
+                ),
+              ),
+              FloatingActionButton(
+                backgroundColor: Colors.black,
+                onPressed: () {
+                  pageController.animateToPage(
+                    currentPage < 3
+                        ? currentPage = currentPage + 1
+                        : currentPage,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.easeInOutQuad,
+                  );
+                },
+                child: Icon(Icons.keyboard_arrow_right_outlined),
+              ),
             ],
           ),
         ),
