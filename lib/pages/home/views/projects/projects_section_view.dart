@@ -49,11 +49,12 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                 },
               ),
             ),
-            SizedBox(height: 120),
+            Spacer()
           ],
         ),
         Positioned(
           bottom: 50,
+          height: 50,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
