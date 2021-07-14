@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../../../core/utils/extensions.dart';
+
 class ProjectSectionView extends StatefulWidget {
   const ProjectSectionView({Key? key}) : super(key: key);
 
@@ -49,7 +51,7 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
         ),
         child: MouseRegion(
           onHover: (PointerHoverEvent phe) {
-            elementColor = Color(0xFF2f3e46);
+            elementColor = Colors.deepPurple;
             // elementColor = Colors.white;
             elementWidth = 315.0;
             elementHeight = 410.0;
@@ -102,14 +104,98 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
                 height: elementHeight,
                 duration: duration,
                 curve: Curves.easeInOutQuad,
-                child: Column(
-                  children: [],
-                ),
+                child: _Content(isHovered: isHovered),
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class _Content extends StatelessWidget {
+  final bool isHovered;
+  final String heading;
+  final String title;
+  final String description;
+  final String footer;
+
+  // all args constructor
+  _Content({
+    this.isHovered = false,
+    this.heading = '',
+    this.title = '',
+    this.description = '',
+    this.footer = '',
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final duration = Duration(milliseconds: 275);
+
+    final _baseTextStyle = TextStyle(
+      fontWeight: FontWeight.bold,
+      color: isHovered ? Colors.white : Colors.black,
+      fontSize: 20,
+    );
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 15),
+      child: Column(
+        children: [
+          Container(
+            width: double.maxFinite,
+            child: AnimatedDefaultTextStyle(
+              style: _baseTextStyle.copyWith(
+                fontSize: isHovered ? 22 : 20,
+              ),
+              duration: duration,
+              curve: Curves.easeInOutQuad,
+              child: Text(heading),
+            ).toCenterLeft(),
+          ).expand(flex: 1),
+          Container(
+            width: double.maxFinite,
+            alignment: Alignment.bottomLeft,
+            child: AnimatedDefaultTextStyle(
+              style: _baseTextStyle.copyWith(
+                fontSize: isHovered ? 35 : 33,
+                fontWeight: FontWeight.w900,
+              ),
+              duration: duration,
+              curve: Curves.easeInOutQuad,
+              child: Text(title),
+            ).toCenterLeft(),
+          ).expand(flex: 2),
+          Container(
+            width: double.maxFinite,
+            child: AnimatedDefaultTextStyle(
+              style: _baseTextStyle.copyWith(
+                fontSize: isHovered ? 18 : 16,
+                fontWeight: FontWeight.normal,
+              ),
+              duration: duration,
+              curve: Curves.easeInOutQuad,
+              child: Text(description),
+            ).toCenterLeft(),
+          ).expand(flex: 4),
+          Container(
+            width: double.maxFinite,
+            child: AnimatedDefaultTextStyle(
+              style: _baseTextStyle.copyWith(
+                fontSize: isHovered ? 18 : 16,
+                fontWeight: FontWeight.w100,
+                color:
+                    (isHovered ? Colors.white : Colors.black).withOpacity(.4),
+              ),
+              duration: duration,
+              curve: Curves.easeInOutQuad,
+              child: Text(footer),
+            ).toCenterLeft(),
+          ).expand(flex: 3),
+        ],
+      ).defaultXCardPadding(),
     );
   }
 }
