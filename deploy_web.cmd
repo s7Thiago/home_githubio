@@ -14,3 +14,5 @@ git push origin master;
 echo ======Alterando branch para develop======\n\n;
 git checkout develop;
 echo ======          Fim!          ======\n\n;
+cls;
+
