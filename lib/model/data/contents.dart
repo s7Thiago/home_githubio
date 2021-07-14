@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/model/certification.dart';
 import 'package:home_githubio/model/experience.dart';
+import 'package:home_githubio/model/project.dart';
 import 'package:home_githubio/model/skill.dart';
 import 'package:home_githubio/model/education.dart';
 
@@ -282,6 +283,140 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
         trailing: Image.network('$pathGithubAssets/cursos/ifb.png'),
       ),
     ],
-    'projects': []
+    'projects': <Project>[
+      Project(
+        heading: 'Web',
+        title: 'Email UI design',
+        description: 'A responsive email UI inspired on Outlook',
+        url: 'https://github.com/s7Thiago/flutter-responsive-email-ui',
+      ),
+      Project(
+        heading: 'Web',
+        title: 'Voice Memo',
+        description:
+            'Voice Memo App Using HTML5, Media Recorder and getUserMedia APIs',
+        url: 'https://github.com/s7Thiago/voice-memo',
+      ),
+      Project(
+        heading: 'Cross Platform',
+        title: 'Analog Clock',
+        description: 'A Analog Clock painted with flutter custom paint',
+        url: 'https://github.com/s7Thiago/flutter-analog-clock',
+      ),
+      Project(
+        heading: 'Web',
+        title: 'Facebook Responsive UI',
+        description:
+            'An app developed aim show a Facebook inspired UI design made with Flutter',
+        url: 'https://github.com/s7Thiago/flutter-facebook-responsive-ui',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'custom page transition demo',
+        description:
+            'An app developed aim show how easy is make custom page transitions with Flutter',
+        url: 'https://github.com/s7Thiago/flutter_page_transition',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'Flutter Life cycle handling',
+        description:
+            'A showcase implementation of app life-cycles on a Flutter application',
+        url: 'https://github.com/s7Thiago/flutter-lifecycle-handling',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'PayFlow',
+        description:
+            'Helps managing the tickets of adult life, organizing them in one place.',
+        url: 'https://github.com/s7Thiago/payflow',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'Shop App',
+        description:
+            'Shop App demo using firebase as database, custom sign in with email and some basic features for a simple shopping experience',
+        url: 'https://github.com/s7Thiago/flutter-shop-app',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'Flutter UI Interactions Showcase',
+        description:
+            'A demo of some cool UI interactions built from scratch with Flutter',
+        url: 'https://github.com/s7Thiago/flutter_ui_interactions_showcase',
+      ),
+      Project(
+        heading: 'Web',
+        title: 'HelpDesk',
+        description:
+            'Web application build with Angular to manage calls between a I.T department and a other any',
+        url: 'https://github.com/s7Thiago/HelpDesk',
+      ),
+      Project(
+        heading: 'Web',
+        title: 'TSSales',
+        description:
+            'Spring Boot API and React Frontend from a dashboard application to practice some things',
+        url: 'https://github.com/s7Thiago/projeto-sds3',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'DevQuiz',
+        description:
+            'Helps programmers learn something new through questionnaires',
+        url: 'https://github.com/s7Thiago/devquiz',
+      ),
+      Project(
+        heading: 'Desktop',
+        title: 'Weather App',
+        description:
+            'A Flutter application that Consumes the HG Brazil\'s API to show weather information',
+        url: 'https://github.com/s7Thiago/flutter-weather-web',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'Contacts',
+        description: 'A simple contact UI made with Flutter',
+        url: 'https://github.com/s7Thiago/contacts',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'ToDo App',
+        description:
+            'Helps to manage tasks marking as upcoming or finished. The app uses provider as state management',
+        url: 'https://github.com/s7Thiago/flutter-todo-list-app',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'Expenses App',
+        description: 'Helps to manage weekly expenses',
+        url: 'https://github.com/s7Thiago/expenses-app',
+      ),
+      Project(
+        heading: 'Mobile',
+        title: 'Weather App',
+        description: 'A Simple weather app made with flutter',
+        url: 'https://github.com/s7Thiago/flutter-weather-app',
+      ),
+      Project(
+        heading: 'Web',
+        title: 'Weather Forecast App',
+        description:
+            'An app made with angular dart to show weather data of the various places on a table',
+        url: 'https://github.com/s7Thiago/flutter-weather-app',
+      ),
+      Project(
+        heading: 'Web',
+        title: 'Zip Code Search App',
+        description: 'App made angular dart to consulte zip code',
+        url: 'https://github.com/s7Thiago/consulta-cep',
+      ),
+      Project(
+        heading: 'Terminal',
+        title: 'Zip Code Search App',
+        description: 'Access an financial API to extract the dollar quote',
+        url: 'https://github.com/s7Thiago/Extrator-de-dados-financeiros',
+      ),
+    ]
   };
 }

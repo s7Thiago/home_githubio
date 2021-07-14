@@ -1,22 +1,15 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:home_githubio/model/project.dart';
 
 import '../../../../../../../core/utils/extensions.dart';
 
 class ProjectSectionView extends StatefulWidget {
-  final bool isHovered;
-  final String heading;
-  final String title;
-  final String description;
-  final String footer;
+  final Project data;
 
   const ProjectSectionView({
     Key? key,
-    this.isHovered = false,
-    this.heading = '',
-    this.title = '',
-    this.description = '',
-    this.footer = '',
+    required this.data,
   }) : super(key: key);
 
   @override
@@ -117,7 +110,13 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
                 height: elementHeight,
                 duration: duration,
                 curve: Curves.easeInOutQuad,
-                child: _Content(isHovered: isHovered),
+                child: _Content(
+                  isHovered: isHovered,
+                  heading: widget.data.heading,
+                  title: widget.data.title,
+                  description: widget.data.description,
+                  footer: widget.data.footer,
+                ),
               ),
             ],
           ),

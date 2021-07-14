@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:home_githubio/model/data/contents.dart';
+import 'package:home_githubio/model/project.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/project_section_variation.dart';
 
 class ProjectsSectionView extends StatefulWidget {
@@ -18,6 +20,9 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, Object> _data = Contents.texts;
+    final projects = _data['projects'] as List<Project>;
+
     return Stack(
       alignment: Alignment.topCenter,
       fit: StackFit.expand,
@@ -44,7 +49,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
             Expanded(
               flex: 4,
               child: PageView.builder(
-                itemCount: 4,
+                itemCount: projects.length,
                 controller: pageController,
                 physics: BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
@@ -53,7 +58,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                       horizontal: 25,
                       vertical: 30,
                     ),
-                    child: ProjectSectionView(),
+                    child: ProjectSectionView(data: projects[index]),
                   );
                 },
               ),
@@ -87,7 +92,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                 backgroundColor: Colors.black,
                 onPressed: () {
                   pageController.animateToPage(
-                    currentPage < 3
+                    currentPage < projects.length
                         ? currentPage = currentPage + 1
                         : currentPage,
                     duration: Duration(milliseconds: 500),
