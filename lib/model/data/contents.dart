@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/model/Certification.dart';
-import 'package:home_githubio/model/Experience.dart';
-import 'package:home_githubio/model/Skill.dart';
-import 'package:home_githubio/model/Education.dart';
+import 'package:home_githubio/model/certification.dart';
+import 'package:home_githubio/model/experience.dart';
+import 'package:home_githubio/model/skill.dart';
+import 'package:home_githubio/model/education.dart';
 
 class Contents {
   static final pathImgSkills = 'assets/images/skills';
@@ -281,6 +281,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
         subContentText: '12/2023',
         trailing: Image.network('$pathGithubAssets/cursos/ifb.png'),
       ),
-    ]
+    ],
+    'projects': []
   };
 }

@@ -4,7 +4,20 @@ import 'package:flutter/material.dart';
 import '../../../../../../../core/utils/extensions.dart';
 
 class ProjectSectionView extends StatefulWidget {
-  const ProjectSectionView({Key? key}) : super(key: key);
+  final bool isHovered;
+  final String heading;
+  final String title;
+  final String description;
+  final String footer;
+
+  const ProjectSectionView({
+    Key? key,
+    this.isHovered = false,
+    this.heading = '',
+    this.title = '',
+    this.description = '',
+    this.footer = '',
+  }) : super(key: key);
 
   @override
   State<ProjectSectionView> createState() => _ProjectSectionViewState();

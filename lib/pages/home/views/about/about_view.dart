@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/model/Certification.dart';
-import 'package:home_githubio/model/Experience.dart';
-import 'package:home_githubio/model/Skill.dart';
-import 'package:home_githubio/model/Education.dart';
+import 'package:home_githubio/model/certification.dart';
+import 'package:home_githubio/model/experience.dart';
+import 'package:home_githubio/model/skill.dart';
+import 'package:home_githubio/model/education.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/expandable_section.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/section.dart';
