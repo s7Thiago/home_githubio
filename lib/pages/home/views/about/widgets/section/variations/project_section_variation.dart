@@ -1,22 +1,24 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:home_githubio/model/project.dart';
 
 import '../../../../../../../core/utils/extensions.dart';
 
-class ProjectSectionView extends StatefulWidget {
+class ProjectSectionVariation extends StatefulWidget {
   final Project data;
 
-  const ProjectSectionView({
+  const ProjectSectionVariation({
     Key? key,
     required this.data,
   }) : super(key: key);
 
   @override
-  State<ProjectSectionView> createState() => _ProjectSectionViewState();
+  State<ProjectSectionVariation> createState() =>
+      _ProjectSectionVariationState();
 }
 
-class _ProjectSectionViewState extends State<ProjectSectionView> {
+class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
   double elementWidth = 300;
   double elementHeight = 400;
   bool isHovered = false;
@@ -82,7 +84,8 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
                   duration: duration,
                   decoration: BoxDecoration(
                     color: Colors.green,
-                    boxShadow: !isHovered ? elementBackgroundCenterShadow : [],
+                    boxShadow:
+                        !isHovered ? elementBackgroundCenterShadow : [],
                   ),
                 ),
               ),
