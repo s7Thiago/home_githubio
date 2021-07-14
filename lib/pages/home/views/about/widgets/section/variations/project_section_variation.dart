@@ -51,7 +51,7 @@ class _ProjectSectionViewState extends State<ProjectSectionView> {
         ),
         child: MouseRegion(
           onHover: (PointerHoverEvent phe) {
-            elementColor = Colors.deepPurple;
+            elementColor = Color(0xFF2f3e46);
             // elementColor = Colors.white;
             elementWidth = 315.0;
             elementHeight = 410.0;
