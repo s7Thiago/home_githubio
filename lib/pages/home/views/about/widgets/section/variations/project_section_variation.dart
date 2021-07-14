@@ -1,16 +1,20 @@
-import 'package:animated_card/animated_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:home_githubio/core/utils/functions.dart';
 import 'package:home_githubio/model/project.dart';
 
 import '../../../../../../../core/utils/extensions.dart';
 
 class ProjectSectionVariation extends StatefulWidget {
   final Project data;
+  int index;
+  Function(int)? updateCurrentPage;
 
-  const ProjectSectionVariation({
+  ProjectSectionVariation({
     Key? key,
     required this.data,
+    required this.index,
+    this.updateCurrentPage,
   }) : super(key: key);
 
   @override
@@ -57,6 +61,10 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
           MaterialStateMouseCursor.clickable,
           {},
         ),
+        onTap: () {
+          print('${widget.data.title} was pressed');
+          AppFunctions.launchInWebViewWithJavaScript(widget.data.url);
+        },
         child: MouseRegion(
           onHover: (PointerHoverEvent phe) {
             elementColor = Color(0xFF2f3e46);
@@ -64,6 +72,7 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
             elementWidth = 315.0;
             elementHeight = 410.0;
             isHovered = true;
+            widget.updateCurrentPage!(widget.index);
             setState(() {});
           },
           onExit: (PointerExitEvent pee) {
@@ -84,8 +93,7 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
                   duration: duration,
                   decoration: BoxDecoration(
                     color: Colors.green,
-                    boxShadow:
-                        !isHovered ? elementBackgroundCenterShadow : [],
+                    boxShadow: !isHovered ? elementBackgroundCenterShadow : [],
                   ),
                 ),
               ),

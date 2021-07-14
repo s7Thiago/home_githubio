@@ -4,7 +4,6 @@ import 'package:animated_card/animated_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:home_githubio/core/styles/app_colors.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/model/project.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/project_section_variation.dart';
@@ -20,7 +19,18 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
     viewportFraction: .25,
   );
 
+  final Duration duration = new Duration(milliseconds: 500);
+
   int currentPage = 1;
+
+  void updateCurrentPage(int newIndex) {
+    currentPage = newIndex;
+    pageController.animateToPage(
+      currentPage,
+      duration: duration,
+      curve: Curves.easeInOutQuad,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +55,8 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                       currentPage > 0
                           ? currentPage = currentPage - 1
                           : currentPage,
-                      duration: Duration(milliseconds: 500),
-                      curve: Curves.easeInOutQuad,
+                      duration: duration,
+                      curve: Curves.easeInOutCirc,
                     );
                   },
                   child: Icon(Icons.keyboard_arrow_left_outlined),
@@ -59,8 +69,8 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                     currentPage < projects.length
                         ? currentPage = currentPage + 1
                         : currentPage,
-                    duration: Duration(milliseconds: 500),
-                    curve: Curves.easeInOutQuad,
+                    duration: duration,
+                    curve: Curves.easeInOutCirc,
                   );
                 },
                 child: Icon(Icons.keyboard_arrow_right_outlined),
@@ -108,7 +118,11 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                           horizontal: 25,
                           vertical: 30,
                         ),
-                        child: ProjectSectionVariation(data: projects[index]),
+                        child: ProjectSectionVariation(
+                          data: projects[index],
+                          index: index,
+                          updateCurrentPage: updateCurrentPage,
+                        ),
                       ),
                     );
                   },
