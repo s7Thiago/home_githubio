@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/styles/app_colors.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/title_section_variation.dart';
 
 class IntroSectionVariation extends StatelessWidget {

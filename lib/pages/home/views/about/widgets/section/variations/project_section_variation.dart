@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:home_githubio/core/utils/functions.dart';
+import 'package:home_githubio/core/utils/responsive.dart';
 import 'package:home_githubio/model/project.dart';
 
 import '../../../../../../../core/utils/extensions.dart';
@@ -44,6 +45,14 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
         spreadRadius: 8),
   ];
 
+  final mobileElementBackgroundCenterShadow = <BoxShadow>[
+    BoxShadow(
+        color: Colors.grey,
+        offset: Offset(0, 10),
+        blurRadius: 15,
+        spreadRadius: 2),
+  ];
+
   // set the size of the element to normal
   _resetElementSize() {
     elementWidth = 300;
@@ -54,6 +63,7 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
   @override
   Widget build(BuildContext context) {
     final duration = Duration(milliseconds: 300);
+    final responsive = AppResponsively(context);
 
     return Center(
       child: InkWell(
@@ -82,25 +92,35 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
           },
           child: Stack(
             alignment: Alignment.bottomCenter,
+            fit: StackFit.loose,
             children: [
               // Center Shadow
               Positioned(
-                top: 25,
+                top: responsive.isMobile() || responsive.isTablet() ? 60 : 25,
                 child: AnimatedContainer(
-                  width: 230,
-                  height: 340,
+                  width: responsive.isMobile() || responsive.isTablet()
+                      ? 160
+                      : 230,
+                  height: responsive.isMobile() || responsive.isTablet()
+                      ? 240
+                      : 340,
                   margin: const EdgeInsets.only(bottom: 2),
                   duration: duration,
                   decoration: BoxDecoration(
                     color: Colors.green,
-                    boxShadow: !isHovered ? elementBackgroundCenterShadow : [],
+                    boxShadow: !isHovered
+                        ? (responsive.isMobile() || responsive.isTablet()
+                            ? mobileElementBackgroundCenterShadow
+                            : elementBackgroundCenterShadow)
+                        : [],
                   ),
                 ),
               ),
               // Top Shadow
               // Bottom Shadow
               AnimatedContainer(
-                width: 220,
+                width:
+                    responsive.isMobile() || responsive.isTablet() ? 115 : 220,
                 height: 20,
                 margin: const EdgeInsets.only(bottom: 2),
                 duration: duration,
@@ -111,14 +131,16 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
               ),
               AnimatedContainer(
                 decoration: BoxDecoration(
-                  color: elementColor,
+                  color: responsive.isMobile() || responsive.isTablet()
+                      ? Color(0xFFeef9fc).withOpacity(1)
+                      : elementColor,
                   borderRadius: BorderRadius.circular(10),
                   border: isHovered
                       ? Border.all(color: Colors.grey, width: .06)
                       : null,
                 ),
-                width: elementWidth,
-                height: elementHeight,
+                width: responsive.isMobile() ? 500 : elementWidth,
+                height: responsive.isMobile() ? 700 : elementHeight,
                 duration: duration,
                 curve: Curves.easeInOutQuad,
                 child: _Content(
@@ -156,6 +178,7 @@ class _Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final duration = Duration(milliseconds: 275);
+    final responsive = AppResponsively(context);
 
     final _baseTextStyle = TextStyle(
       fontWeight: FontWeight.bold,
@@ -190,7 +213,8 @@ class _Content extends StatelessWidget {
               curve: Curves.easeInOutQuad,
               child: Text(title),
             ).toCenterLeft(),
-          ).expand(flex: 2),
+          ).expand(
+              flex: responsive.isMobile() || responsive.isTablet() ? 3 : 2),
           Container(
             width: double.maxFinite,
             child: AnimatedDefaultTextStyle(

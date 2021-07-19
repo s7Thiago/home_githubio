@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/pages/home/views/about/widgets/section/variations/icon_title_section_variation.dart';
 
 class EducationSectionVariation extends StatelessWidget {
   final String introText;

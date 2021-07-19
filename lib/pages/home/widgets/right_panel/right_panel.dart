@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
+import 'package:home_githubio/core/utils/responsive.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/anonim_app_bar/anonim_app_bar.dart';
 import 'widgets/anonim_app_bar/app_bar_items.dart';
-
-Map<String, Widget> _appBarItems = AppBarItems.anonimAppBarItems;
 
 class RightPanel extends StatelessWidget {
   final Size size;
@@ -17,36 +16,56 @@ class RightPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     // * Usando o provider da barra customizada aqui
     final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
+    final responsive = AppResponsively(context);
+    final appBarItems = AppBarItems(context: context);
 
-    return Expanded(
-      child: Scaffold(
-        ///* Impede que uma fina linha vertical apareça no lado esquerdo da AnonimAppBar
-        ///* durante a animação do AnimatedContainer() que contém os projetos
-        backgroundColor: AppColors.black,
-        appBar: AnonimAppBar(
-          provider: provider,
-          items: _appBarItems,
-        ),
-        body: AnimatedContainer(
-          duration: Duration(milliseconds: 450),
-          curve: Curves.easeInOutCirc.flipped,
-          color: Colors.black,
-          width: provider.selectedTab == AppBarItems.PROJECT
-              ? size.width * .8
-              : size.width * .5,
-          child: _BodyRight(),
-        ),
+    Map<String, Widget> _appBarItems = appBarItems.items;
+
+    return Scaffold(
+      ///* Impede que uma fina linha vertical apareça no lado esquerdo da AnonimAppBar
+      ///* durante a animação do AnimatedContainer() que contém os projetos
+      backgroundColor: AppColors.black,
+      appBar: responsive.isMobile()
+          ? null
+          : AnonimAppBar(
+              provider: provider,
+              items: _appBarItems,
+            ),
+      body: AnimatedContainer(
+        duration: Duration(milliseconds: 450),
+        curve: Curves.easeInOutCirc.flipped,
+        color: Colors.black,
+        width: responsive.isMobile()
+            ? double.maxFinite
+            : (provider.selectedTab == AppBarItems.PROJECT
+                ? size.width * .8
+                : size.width * .5),
+        child: _BodyRight(_appBarItems),
       ),
+      bottomNavigationBar: responsive.isMobile()
+          ? SizedBox(
+              height: 100,
+              child: AnonimAppBar(
+                provider: provider,
+                items: _appBarItems,
+              ),
+            )
+          : null,
     );
   }
 }
 
 class _BodyRight extends StatelessWidget {
+  final Map<String, Widget> _appBarItems;
+
+  _BodyRight(this._appBarItems);
+
   @override
   Widget build(BuildContext context) {
     // * Usando o provider da barra customizada aqui
     final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
     final Color topShadowColor = AppColors.white;
+    final responsive = AppResponsively(context);
 
     return Stack(
       children: [
@@ -54,10 +73,12 @@ class _BodyRight extends StatelessWidget {
         Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
-              topLeft: provider.selectedTab == 'Projects' ||
-                      provider.currentIndex != _appBarItems.length
-                  ? Radius.circular(40.0)
-                  : Radius.circular(0.0),
+              topLeft: !responsive.isMobile()
+                  ? (provider.selectedTab == AppBarItems.PROJECT ||
+                          provider.currentIndex != _appBarItems.length
+                      ? Radius.circular(40.0)
+                      : Radius.circular(0.0))
+                  : Radius.circular(0),
             ),
           ),
           margin: EdgeInsets.all(0.0),
@@ -66,7 +87,7 @@ class _BodyRight extends StatelessWidget {
           child: IndexedStack(
             alignment: Alignment.center,
             index: provider.currentIndex,
-            children: AppBarItems.anonimAppBarItems.values.toList(),
+            children: _appBarItems.values.toList(),
           ),
         ),
         // Gradient

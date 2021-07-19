@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+import 'package:home_githubio/core/utils/responsive.dart';
 import 'package:home_githubio/pages/home/views/about/about_section_view.dart';
 import 'package:home_githubio/pages/home/views/contact/contact_section_view.dart';
 import 'package:home_githubio/pages/home/views/projects/projects_section_view.dart';
@@ -6,10 +8,20 @@ class AppBarItems {
   static const CONTACT = 'contact';
   static const PROJECT = 'Projects';
   static const ABOUT = 'About';
+  final BuildContext context;
 
-  static final anonimAppBarItems = {
-    AppBarItems.CONTACT: ContactSectionView(),
-    AppBarItems.PROJECT: ProjectsSectionView(),
-    AppBarItems.ABOUT: AboutSectionView(),
-  };
+  AppBarItems({required this.context});
+
+  Map<String, Widget> get items => {
+        AppBarItems.CONTACT: ContactSectionView(),
+        AppBarItems.PROJECT: ProjectsSectionView(
+            pageController: PageController(
+          initialPage: 1,
+          viewportFraction: AppResponsively(context).isMobile() ||
+                  AppResponsively(context).isTablet()
+              ? .6
+              : .25,
+        )),
+        AppBarItems.ABOUT: AboutSectionView(),
+      };
 }

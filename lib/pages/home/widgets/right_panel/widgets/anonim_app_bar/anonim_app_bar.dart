@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
 import 'package:home_githubio/core/styles/styles.dart';
-
-import 'app_bar_items.dart';
+import 'package:home_githubio/core/utils/responsive.dart';
 
 class AnonimAppBar extends PreferredSize {
   AnonimAppBar(
@@ -34,8 +33,7 @@ class AnonimAppBar extends PreferredSize {
                       itemsCountBaseSize: items.length,
                       onTap: () {
                         provider.updateIndex = index;
-                        provider.updateSelectedTab = AppBarItems
-                            .anonimAppBarItems.keys
+                        provider.updateSelectedTab = items.keys
                             .elementAt(provider.currentIndex)
                             .toString();
                       },
@@ -68,6 +66,7 @@ class _TabItem extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     final radius = AppStyles.anonimTabBarSelectedItemRadius;
+    final responsive = AppResponsively(context);
 
     return InkWell(
       onTap: this.onTap,
@@ -84,21 +83,40 @@ class _TabItem extends StatelessWidget {
           color: !selected ? AppColors.black : AppColors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
-              bottomLeft: !selected
-                  ? (index == provider.currentIndex - 1
-                      ? Radius.circular(radius)
-                      : Radius.circular(0))
-                  : Radius.circular(0.0),
-              bottomRight: !selected
-                  ? (index == provider.currentIndex + 1
-                      ? Radius.circular(radius)
-                      : Radius.circular(0))
-                  : Radius.circular(0.0),
+              bottomLeft: responsive.isMobile()
+                  ? Radius.circular(0)
+                  : (!selected
+                      ? (index == provider.currentIndex - 1
+                          ? Radius.circular(radius)
+                          : Radius.circular(0))
+                      : Radius.circular(0.0)),
+              bottomRight: responsive.isMobile()
+                  ? Radius.circular(0)
+                  : (!selected
+                      ? (index == provider.currentIndex + 1
+                          ? Radius.circular(radius)
+                          : Radius.circular(0))
+                      : Radius.circular(0.0)),
+              topLeft: !responsive.isMobile()
+                  ? Radius.circular(0)
+                  : (!selected
+                      ? (index == provider.currentIndex - 1
+                          ? Radius.circular(radius)
+                          : Radius.circular(0))
+                      : Radius.circular(0.0)),
+              topRight: !responsive.isMobile()
+                  ? Radius.circular(0)
+                  : (!selected
+                      ? (index == provider.currentIndex + 1
+                          ? Radius.circular(radius)
+                          : Radius.circular(0))
+                      : Radius.circular(0.0)),
             ),
           ),
           child: Container(
             // the width adapts automatically based on quantity of itens on anonimTabBarItems map
-            width: ((size.width * .5) / itemsCountBaseSize),
+            width: ((size.width * (responsive.isMobile() ? 1 : .5)) /
+                itemsCountBaseSize),
             height: 30,
             // margin: const EdgeInsets.only(right: 15),
 
