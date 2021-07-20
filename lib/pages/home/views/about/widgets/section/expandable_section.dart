@@ -5,6 +5,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:home_githubio/core/styles/app_colors.dart';
+import 'package:home_githubio/core/utils/responsive.dart';
 
 import '../../../../../../core/styles/styles.dart' as styles;
 
@@ -42,6 +43,8 @@ class _ExpandableSectionState extends State<ExpandableSection>
 
   @override
   Widget build(BuildContext context) {
+    final responsive = AppResponsively(context);
+
     return InkWell(
       mouseCursor: MaterialStateProperty.resolveAs<MouseCursor?>(
         MaterialStateMouseCursor.clickable,
@@ -119,15 +122,17 @@ class _ExpandableSectionState extends State<ExpandableSection>
                     : [],
                 borderRadius: BorderRadius.circular(!selected ? 10 : 8)),
             child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: AnimatedAlign(
                     duration: _duration,
                     curve: Curves.easeInOutQuad,
-                    alignment:
-                        selected ? Alignment.center : Alignment.centerRight,
+                    alignment: selected
+                        ? Alignment.center
+                        : (responsive.isMobile()
+                            ? Alignment.center
+                            : Alignment.centerRight),
                     child: AnimatedSize(
                       duration: _duration,
                       curve: Curves.easeInOutQuad,
@@ -143,7 +148,9 @@ class _ExpandableSectionState extends State<ExpandableSection>
                           ),
                           child: Text(
                             widget.title!,
-                            textAlign: TextAlign.right,
+                            textAlign: responsive.isMobile()
+                                ? TextAlign.center
+                                : TextAlign.right,
                           ),
                         ),
                       ),

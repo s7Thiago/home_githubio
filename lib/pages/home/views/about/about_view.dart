@@ -149,7 +149,7 @@ class AboutView extends StatelessWidget {
                   ],
                 ),
               ),
-            // ? About mobile ##############################################################
+            // ? About mobile ###############################################################
             if (responsive.isMobile())
               Expanded(
                 child: Column(
@@ -161,7 +161,7 @@ class AboutView extends StatelessWidget {
                         Icons.auto_stories,
                       ),
                       showTitleDivider: true,
-                      alignment: MainAxisAlignment.end,
+                      alignment: MainAxisAlignment.center,
                     ),
                     ...List.generate(
                       experiences.length,
@@ -174,6 +174,43 @@ class AboutView extends StatelessWidget {
                         );
                       },
                     ).reversed,
+                    // ! Certificados
+                    Section.iconTitle(
+                      'Certificados',
+                      iconTitleLeading: Icon(
+                        Icons.assignment_turned_in_rounded,
+                      ),
+                      showTitleDivider: true,
+                      alignment: MainAxisAlignment.center,
+                    ),
+                    ...List.generate(certifications.length, (index) {
+                      return Section.certificate(
+                        certifications[index].title,
+                        content: certifications[index].credentialUrl,
+                        imageUrl: certifications[index].image,
+                      );
+                    }).toList(),
+                    // ! Habilidades
+                    Section.iconTitle(
+                      'Habilidades',
+                      showTitleDivider: true,
+                      alignment: MainAxisAlignment.center,
+                      iconTitleLeading: Icon(Icons.auto_awesome),
+                    ),
+                    ...List.generate(
+                      skills.length,
+                      (index) {
+                        return Section.skill(
+                          titleText: skills[index].title,
+                          alignment: MainAxisAlignment.center,
+                          iconTitleLeading: CachedNetworkImage(
+                            imageUrl: skills[index].imageUrl,
+                            width: 14,
+                            fit: BoxFit.cover,
+                          ),
+                        );
+                      },
+                    ).toList(),
                     // ! Educação
                     Section.iconTitle(
                       'Education',
@@ -201,42 +238,6 @@ class AboutView extends StatelessWidget {
                         ),
                       );
                     }).toList(),
-                    // ! Certificados
-                    Section.iconTitle(
-                      'Certificados',
-                      iconTitleLeading: Icon(
-                        Icons.assignment_turned_in_rounded,
-                      ),
-                      showTitleDivider: true,
-                      alignment: MainAxisAlignment.start,
-                    ),
-                    ...List.generate(certifications.length, (index) {
-                      return Section.certificate(
-                        certifications[index].title,
-                        content: certifications[index].credentialUrl,
-                        imageUrl: certifications[index].image,
-                      );
-                    }).toList(),
-                    // ! Habilidades
-                    Section.iconTitle(
-                      'Habilidades',
-                      showTitleDivider: true,
-                      alignment: MainAxisAlignment.start,
-                      iconTitleLeading: Icon(Icons.auto_awesome),
-                    ),
-                    ...List.generate(
-                      skills.length,
-                      (index) {
-                        return Section.skill(
-                          titleText: skills[index].title,
-                          iconTitleLeading: CachedNetworkImage(
-                            imageUrl: skills[index].imageUrl,
-                            width: 14,
-                            fit: BoxFit.cover,
-                          ),
-                        );
-                      },
-                    ).toList(),
                   ],
                 ),
               ),
