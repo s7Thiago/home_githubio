@@ -17,10 +17,11 @@ class AppBarItems {
         AppBarItems.PROJECT: ProjectsSectionView(
             pageController: PageController(
           initialPage: 1,
-          viewportFraction: AppResponsively(context).isMobile() ||
-                  AppResponsively(context).isTablet()
+          viewportFraction: AppResponsively(context).isMobile()
               ? .6
-              : .25,
+              : AppResponsively(context).isSmallTablet()
+                  ? .7
+                  : .25,
         )),
         AppBarItems.ABOUT: AboutSectionView(),
       };

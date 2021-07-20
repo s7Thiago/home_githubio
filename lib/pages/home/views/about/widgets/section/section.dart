@@ -32,6 +32,7 @@ class Section extends StatelessWidget {
   Widget? iconTitleTrailing;
   List<Widget> representations = <Widget>[];
   MainAxisAlignment alignment = MainAxisAlignment.center;
+  CrossAxisAlignment crossAlignment = CrossAxisAlignment.end;
   TextAlign textAlign = TextAlign.justify;
   bool showTitleDivider = false;
   double? marginStart = 0.0;
@@ -71,6 +72,7 @@ class Section extends StatelessWidget {
     this.iconTitleLeading,
     this.iconTitleTrailing,
     this.marginStart,
+    this.alignment = MainAxisAlignment.start,
   }) {
     this._sectionType = SectionType.SKILL;
   }
@@ -82,6 +84,8 @@ class Section extends StatelessWidget {
     this.introText = '',
     this.showTitleDivider = false,
     this.subtitleText,
+    this.crossAlignment = CrossAxisAlignment.end,
+    this.textAlign = TextAlign.justify,
   }) {
     this._sectionType = SectionType.EDUCATION;
   }
@@ -163,6 +167,7 @@ class Section extends StatelessWidget {
           iconTitleLeading: this.iconTitleLeading,
           iconTitleTrailing: this.iconTitleTrailing,
           marginStart: this.marginStart,
+          mainAxisAlignment: this.alignment,
         );
 
       case SectionType.EDUCATION:
@@ -173,12 +178,14 @@ class Section extends StatelessWidget {
           introText: this.introText!,
           showTitleDivider: this.showTitleDivider,
           subTitle: this.subtitleText,
+          crossAlignment: this.crossAlignment,
+          textAlign: this.textAlign,
         );
       default:
         return Text(
           _sectionType.toString(),
           style: TextStyle(
-            color: Colors.red,
+            color: Colors.black,
             fontSize: 40,
           ),
         );

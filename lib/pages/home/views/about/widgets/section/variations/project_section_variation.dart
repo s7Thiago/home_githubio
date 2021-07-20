@@ -129,26 +129,32 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
                   boxShadow: isHovered ? elementShadows : [],
                 ),
               ),
-              AnimatedContainer(
-                decoration: BoxDecoration(
-                  color: responsive.isMobile() || responsive.isTablet()
-                      ? Color(0xFFeef9fc).withOpacity(1)
-                      : elementColor,
-                  borderRadius: BorderRadius.circular(10),
-                  border: isHovered
-                      ? Border.all(color: Colors.grey, width: .06)
-                      : null,
-                ),
-                width: responsive.isMobile() ? 500 : elementWidth,
-                height: responsive.isMobile() ? 700 : elementHeight,
-                duration: duration,
-                curve: Curves.easeInOutQuad,
-                child: _Content(
-                  isHovered: isHovered,
-                  heading: widget.data.heading,
-                  title: widget.data.title,
-                  description: widget.data.description,
-                  footer: widget.data.footer,
+              Material(
+                elevation: responsive.isMobile() ||
+                        responsive.isTablet() ||
+                        responsive.isSmallTablet()
+                    ? 5
+                    : 0,
+                borderRadius: BorderRadius.circular(10),
+                child: AnimatedContainer(
+                  decoration: BoxDecoration(
+                    color: elementColor,
+                    borderRadius: BorderRadius.circular(10),
+                    border: isHovered
+                        ? Border.all(color: Colors.grey, width: .06)
+                        : null,
+                  ),
+                  width: responsive.isMobile() ? 500 : elementWidth,
+                  height: responsive.isMobile() ? 700 : elementHeight,
+                  duration: duration,
+                  curve: Curves.easeInOutQuad,
+                  child: _Content(
+                    isHovered: isHovered,
+                    heading: widget.data.heading,
+                    title: widget.data.title,
+                    description: widget.data.description,
+                    footer: widget.data.footer,
+                  ),
                 ),
               ),
             ],
@@ -206,7 +212,9 @@ class _Content extends StatelessWidget {
             alignment: Alignment.bottomLeft,
             child: AnimatedDefaultTextStyle(
               style: _baseTextStyle.copyWith(
-                fontSize: isHovered ? 35 : 33,
+                fontSize: isHovered
+                    ? (responsive.isMobileORTablet() ? 30 : 35)
+                    : (responsive.isMobileORTablet() ? 28 : 33),
                 fontWeight: FontWeight.w900,
               ),
               duration: duration,

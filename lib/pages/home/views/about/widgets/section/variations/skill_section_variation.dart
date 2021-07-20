@@ -5,12 +5,14 @@ class SkillSectionVariation extends StatelessWidget {
   final Widget? iconTitleTrailing;
   final String titleText;
   final double? marginStart;
+  final MainAxisAlignment mainAxisAlignment;
 
   const SkillSectionVariation({
     this.iconTitleLeading,
     this.iconTitleTrailing,
     required this.titleText,
     this.marginStart,
+    this.mainAxisAlignment = MainAxisAlignment.start,
   });
 
   @override
@@ -18,6 +20,7 @@ class SkillSectionVariation extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: marginStart ?? 75, bottom: 20),
       child: Row(
+        mainAxisAlignment: mainAxisAlignment,
         children: [
           iconTitleLeading ?? Container(),
           SizedBox(width: 10),

@@ -43,6 +43,7 @@ class AppStyles {
   static final introTextStyle = TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 22,
+    color: Colors.black,
   );
 
   //! Containers

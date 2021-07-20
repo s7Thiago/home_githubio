@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:home_githubio/core/styles/styles.dart';
+import 'package:home_githubio/core/utils/responsive.dart';
 import 'package:home_githubio/core/values.dart';
 import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/pages/home/widgets/right_panel/widgets/anonim_app_bar/app_bar_items.dart';
 import 'package:provider/provider.dart';
 
 class LeftPanel extends StatelessWidget {
@@ -12,17 +14,18 @@ class LeftPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
+    final responsive = AppResponsively(context);
 
     return Material(
       child: AnimatedContainer(
         duration: Duration(milliseconds: 450),
         curve: Curves.easeInOutCirc.flipped,
-        width: provider.selectedTab == 'Projects'
+        width: provider.selectedTab == AppBarItems.PROJECT
             ? size.width * .2
-            : size.width * .5,
+            : size.width * (responsive.isTablet() ? .35 : .5),
         color: Colors.black,
         child: AnimatedOpacity(
-          opacity: provider.selectedTab == 'Projects' ? .2 : 1,
+          opacity: provider.selectedTab == AppBarItems.PROJECT ? .2 : 1,
           duration: Duration(milliseconds: 350),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

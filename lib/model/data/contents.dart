@@ -278,7 +278,7 @@ sobre as próprias finanças. A feature **agrupa** todos os gastos e ganhos do u
       Education(
         content:
             'Instituto Federal de Educação, Ciência e Tecnologia de Brasília (IFB)- Bacharelado em Ciência da Computação',
-        subContentTitle: 'Previsão de formação',
+        subContentTitle: 'Previsão de formação: ',
         subContentText: '12/2023',
         trailing: Image.network('$pathGithubAssets/cursos/ifb.png'),
       ),

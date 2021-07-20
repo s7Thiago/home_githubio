@@ -41,6 +41,12 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    widget.pageController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final Map<String, Object> _data = Contents.texts;
     final projects = _data['projects'] as List<Project>;
@@ -49,45 +55,6 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        if (!responsive.isMobile())
-          Positioned(
-            bottom: 50,
-            height: 50,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 25),
-                  child: FloatingActionButton(
-                    backgroundColor: Colors.black,
-                    onPressed: () {
-                      widget.pageController.animateToPage(
-                        currentPage > 0
-                            ? currentPage = currentPage - 1
-                            : currentPage,
-                        duration: duration,
-                        curve: Curves.easeInOutCirc,
-                      );
-                    },
-                    child: Icon(Icons.keyboard_arrow_left_outlined),
-                  ),
-                ),
-                FloatingActionButton(
-                  backgroundColor: Colors.black,
-                  onPressed: () {
-                    widget.pageController.animateToPage(
-                      currentPage < projects.length
-                          ? currentPage = currentPage + 1
-                          : currentPage,
-                      duration: duration,
-                      curve: Curves.easeInOutCirc,
-                    );
-                  },
-                  child: Icon(Icons.keyboard_arrow_right_outlined),
-                ),
-              ],
-            ),
-          ),
         Positioned.fill(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -113,8 +80,9 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                 child: PageView.builder(
                   itemCount: projects.length,
                   controller: widget.pageController,
-                  scrollDirection:
-                      responsive.isMobile() || responsive.isTablet()
+                  scrollDirection: responsive.isMobile()
+                      ? Axis.vertical
+                      : responsive.isSmallTablet()
                           ? Axis.vertical
                           : Axis.horizontal,
                   physics: BouncingScrollPhysics(),
@@ -145,6 +113,55 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
             ],
           ),
         ),
+        // ! Floating navigationm buttons
+        if (!responsive.isMobile())
+          Positioned(
+            bottom: responsive.isSmallTablet() ? 30 : 50,
+            height: responsive.isSmallTablet() ? 200 : 50,
+            right: responsive.isSmallTablet()
+                ? 50
+                : (MediaQuery.of(context).size.width * .5) * .65,
+            child: RotatedBox(
+              quarterTurns: responsive.isSmallTablet() ? 1 : 0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      right: 25,
+                      bottom: 0,
+                    ),
+                    child: FloatingActionButton(
+                      backgroundColor: Colors.black,
+                      onPressed: () {
+                        widget.pageController.animateToPage(
+                          currentPage > 0
+                              ? currentPage = currentPage - 1
+                              : currentPage,
+                          duration: duration,
+                          curve: Curves.easeInOutCirc,
+                        );
+                      },
+                      child: Icon(Icons.keyboard_arrow_left_outlined),
+                    ),
+                  ),
+                  FloatingActionButton(
+                    backgroundColor: Colors.black,
+                    onPressed: () {
+                      widget.pageController.animateToPage(
+                        currentPage < projects.length
+                            ? currentPage = currentPage + 1
+                            : currentPage,
+                        duration: duration,
+                        curve: Curves.easeInOutCirc,
+                      );
+                    },
+                    child: Icon(Icons.keyboard_arrow_right_outlined),
+                  ),
+                ],
+              ),
+            ),
+          ),
       ],
     );
   }

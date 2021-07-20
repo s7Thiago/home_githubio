@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_githubio/core/utils/responsive.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/title_section_variation.dart';
 
 class IntroSectionVariation extends StatelessWidget {
@@ -14,8 +15,13 @@ class IntroSectionVariation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final responsive = AppResponsively(context);
+    final size = MediaQuery.of(context).size;
+
     return Container(
-      width: MediaQuery.of(context).size.width * .33,
+      width: responsive.isMobile()
+          ? (size.width * .85)
+          : size.width * (responsive.isTablet() ? .6 : .33),
       child: Column(
         children: [
           TitleSectionVariation(

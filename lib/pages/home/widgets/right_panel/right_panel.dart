@@ -38,8 +38,8 @@ class RightPanel extends StatelessWidget {
         width: responsive.isMobile()
             ? double.maxFinite
             : (provider.selectedTab == AppBarItems.PROJECT
-                ? size.width * .8
-                : size.width * .5),
+                ? size.width * (responsive.isTablet() ? 1 : .8)
+                : size.width * (responsive.isTablet() ? .65 : .5)),
         child: _BodyRight(_appBarItems),
       ),
       bottomNavigationBar: responsive.isMobile()
@@ -91,7 +91,7 @@ class _BodyRight extends StatelessWidget {
           ),
         ),
         // Gradient
-        if (provider.selectedTab == 'About')
+        if (provider.selectedTab == AppBarItems.ABOUT)
           Container(
             height: 60,
             decoration: BoxDecoration(

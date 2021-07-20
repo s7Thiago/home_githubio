@@ -115,7 +115,10 @@ class _TabItem extends StatelessWidget {
           ),
           child: Container(
             // the width adapts automatically based on quantity of itens on anonimTabBarItems map
-            width: ((size.width * (responsive.isMobile() ? 1 : .5)) /
+            width: ((size.width *
+                    (responsive.isMobile()
+                        ? 1
+                        : (responsive.isTablet() ? .65 : .5))) /
                 itemsCountBaseSize),
             height: 30,
             // margin: const EdgeInsets.only(right: 15),
