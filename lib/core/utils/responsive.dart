@@ -4,7 +4,7 @@ class AppResponsively {
   final BuildContext context;
   late Size _size;
 
-  get size => size;
+  get size => _size;
 
   // Constructor
   AppResponsively(this.context) {

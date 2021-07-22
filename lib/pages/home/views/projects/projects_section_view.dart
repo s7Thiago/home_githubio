@@ -60,36 +60,6 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Expanded(
-                flex: 1,
-                child: Padding(
-                  padding: EdgeInsets.only(
-                      top: responsive.isDesktop() ? 50 : 25,
-                      left: responsive.isDesktop() ? 150 : 0),
-                  child: Align(
-                    alignment: responsive.isDesktop()
-                        ? Alignment.centerLeft
-                        : Alignment.topCenter,
-                    child: responsive.isDesktop()
-                        ? Text(
-                            'Explore my projects',
-                            style: GoogleFonts.inter(
-                              fontWeight: FontWeight.w800,
-                              fontSize: 45,
-                            ),
-                          )
-                        : FittedBox(
-                            child: Text(
-                              'Explore my projects',
-                              style: GoogleFonts.inter(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 30,
-                              ),
-                            ),
-                          ),
-                  ),
-                ),
-              ),
-              Expanded(
                 flex: 4,
                 child: PageView.builder(
                   itemCount: projects.length,
@@ -127,7 +97,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
             ],
           ),
         ),
-        // ! Floating navigationm buttons
+        // ! Floating navigation buttons
         if (!responsive.isMobile())
           Positioned(
             bottom: responsive.isSmallTablet() ? 30 : 50,
@@ -176,6 +146,56 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
               ),
             ),
           ),
+        // ! Title Explore my projects
+        Positioned(
+          top: 0,
+          left: 50,
+          child: Container(
+            height: 100,
+            width: MediaQuery.of(context).size.width *
+                (responsive.isMobile()
+                    ? 1
+                    : (responsive.isDesktop() ? .4 : .7)),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: [.6, .95],
+                colors: [
+                  Colors.white,
+                  Colors.white.withOpacity(0),
+                ],
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.only(
+                  top: responsive.isDesktop() ? 50 : 25,
+                  left: responsive.isDesktop() ? 150 : 0),
+              child: Align(
+                alignment: responsive.isDesktop()
+                    ? Alignment.centerLeft
+                    : Alignment.topCenter,
+                child: responsive.isDesktop()
+                    ? Text(
+                        'Explore my projects',
+                        style: GoogleFonts.inter(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 45,
+                        ),
+                      )
+                    : FittedBox(
+                        child: Text(
+                          'Explore my projects',
+                          style: GoogleFonts.inter(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
