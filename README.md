@@ -9,8 +9,6 @@ A personal showcase app developed with Flutter framework .
  - [x] State management with provider
  - [x] Custom Animated AppBar
 
-
-
 ## Project Screen Shots
 
 | Project Preview                             |
@@ -24,7 +22,6 @@ A personal showcase app developed with Flutter framework .
 | Home multi screen preview                               |
 | ------------------------------------------------------- |
 | ![](assets/images/screenshots/projects_multiscreen.png) |
-
 
 ## Installation and Setup Instructions
 
