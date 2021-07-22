@@ -62,16 +62,30 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
               Expanded(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 50, left: 150),
+                  padding: EdgeInsets.only(
+                      top: responsive.isDesktop() ? 50 : 25,
+                      left: responsive.isDesktop() ? 150 : 0),
                   child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Explore my projects',
-                      style: GoogleFonts.inter(
-                        fontWeight: FontWeight.w800,
-                        fontSize: 45,
-                      ),
-                    ),
+                    alignment: responsive.isDesktop()
+                        ? Alignment.centerLeft
+                        : Alignment.topCenter,
+                    child: responsive.isDesktop()
+                        ? Text(
+                            'Explore my projects',
+                            style: GoogleFonts.inter(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 45,
+                            ),
+                          )
+                        : FittedBox(
+                            child: Text(
+                              'Explore my projects',
+                              style: GoogleFonts.inter(
+                                fontWeight: FontWeight.w800,
+                                fontSize: 30,
+                              ),
+                            ),
+                          ),
                   ),
                 ),
               ),
