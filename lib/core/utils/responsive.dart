@@ -16,6 +16,11 @@ class AppResponsively {
     return _size.width < 850;
   }
 
+  // checks if the device screen size is a mobile device
+  isSmallMobile() {
+    return isMobile() && _size.height < 880;
+  }
+
   // checks if the device screen size is a tablet device
   isTablet() {
     return _size.width >= 1100 && _size.width < 1600;

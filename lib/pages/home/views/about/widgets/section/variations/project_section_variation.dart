@@ -102,7 +102,7 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
                       ? 160
                       : 230,
                   height: responsive.isMobile() || responsive.isTablet()
-                      ? 240
+                      ? (responsive.isSmallMobile() ? 120 : 240)
                       : 340,
                   margin: const EdgeInsets.only(bottom: 2),
                   duration: duration,
@@ -130,6 +130,7 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
                 ),
               ),
               Material(
+                color: Colors.transparent,
                 elevation: responsive.isMobile() ||
                         responsive.isTablet() ||
                         responsive.isSmallTablet()
@@ -138,7 +139,7 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
                 borderRadius: BorderRadius.circular(10),
                 child: AnimatedContainer(
                   decoration: BoxDecoration(
-                    color: elementColor,
+                    color: elementColor.withOpacity(.2),
                     borderRadius: BorderRadius.circular(10),
                     border: isHovered
                         ? Border.all(color: Colors.grey, width: .06)
