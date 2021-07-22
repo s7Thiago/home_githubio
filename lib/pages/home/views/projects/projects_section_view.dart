@@ -149,7 +149,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
         // ! Title Explore my projects
         Positioned(
           top: 0,
-          left: 50,
+          left: responsive.isDesktop() ? 50 : 0,
           child: Container(
             height: 100,
             width: MediaQuery.of(context).size.width *
