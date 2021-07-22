@@ -40,7 +40,27 @@ class RightPanel extends StatelessWidget {
             : (provider.selectedTab == AppBarItems.PROJECT
                 ? size.width * (responsive.isTablet() ? 1 : .8)
                 : size.width * (responsive.isTablet() ? .65 : .5)),
-        child: _BodyRight(_appBarItems),
+        child: Stack(
+          children: [
+            _BodyRight(_appBarItems),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 40,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [
+                      Colors.white,
+                      Colors.white.withOpacity(0),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: responsive.isMobile()
           ? SizedBox(
