@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_githubio/core/styles/styles.dart';
 import 'package:home_githubio/core/utils/responsive.dart';
 import 'package:home_githubio/core/values.dart';
@@ -59,6 +60,22 @@ class LeftPanel extends StatelessWidget {
                   ),
                 ],
               ),
+              Container(
+                height: 200,
+                alignment: Alignment.bottomCenter,
+                padding: const EdgeInsets.only(bottom: 50),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Image.asset(
+                      'assets/images/skills/main/main_skills.png',
+                      fit: BoxFit.cover,
+                      scale:
+                          provider.selectedTab == AppBarItems.PROJECT ? 8 : 5,
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),

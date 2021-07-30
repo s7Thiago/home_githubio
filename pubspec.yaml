@@ -34,6 +34,7 @@ dependencies:
   google_fonts: ^2.1.0
   url_launcher: ^6.0.9
   font_awesome_flutter: ^9.1.0
+  flutter_svg: ^0.22.0
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,7 @@ flutter:
     - assets/documents/resume_ai.svg
     - assets/images/cursos/
     - assets/images/skills/
+    - assets/images/skills/main/
     - assets/images/trajetoria/
     # - assets/documents/resume2.pdf
     # - assets/documents/resume.pdf
