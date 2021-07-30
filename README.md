@@ -4,9 +4,9 @@ A personal showcase app developed with Flutter framework .
 
 ## Features in this project
 
- - [x] Reactive Animations
  - [x] Mouse events
  - [x] State management with provider
+ - [x] Animations
  - [x] Custom Animated AppBar
 
 ## Project Screen Shots

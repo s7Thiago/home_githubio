@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           ? RightPanel(size: size)
           : Row(
               children: [
-                LeftPanel(size: size),
+                Expanded(child: LeftPanel(size: size)),
                 Expanded(child: RightPanel(size: size)),
               ],
             ),

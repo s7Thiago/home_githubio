@@ -13,4 +13,6 @@ class AppFunctions {
       throw 'Could not launch $url';
     }
   }
+
+  static void sendEmail(String email) => launch("mailto:$email");
 }

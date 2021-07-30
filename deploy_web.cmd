@@ -1,4 +1,5 @@
 echo ======Gerando release para web======\n\n;
+flutter clean;
 flutter build web;
 git status;
 git add .;
