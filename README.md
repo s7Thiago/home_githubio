@@ -2,7 +2,7 @@
 
 A personal showcase app developed with Flutter framework.
 
-*Avaliable on* https://thiago-silva.netlify.app/#/
+*Available on* https://thiago-silva.netlify.app/#/
 
 ## Features in this project
 
