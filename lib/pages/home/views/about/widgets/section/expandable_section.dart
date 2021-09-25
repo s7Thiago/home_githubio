@@ -141,7 +141,7 @@ class _ExpandableSectionState extends State<ExpandableSection>
                       child: AnimatedSize(
                         duration: _duration,
                         curve: Curves.easeInOutQuad,
-                        vsync: this,
+                        // vsync: this,
                         child: FittedBox(
                           fit: BoxFit.fitHeight,
                           child: AnimatedDefaultTextStyle(
