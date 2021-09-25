@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/routes.dart';
+import 'package:home_githubio/app/routes.dart';
 import 'package:home_githubio/pages/home/home_page.dart';
 
 void main() {

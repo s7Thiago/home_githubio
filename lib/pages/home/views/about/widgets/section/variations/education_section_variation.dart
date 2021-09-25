@@ -24,7 +24,7 @@ class EducationSectionVariation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    // final size = MediaQuery.of(context).size;
     return Container(
       width: double.maxFinite,
       child: Row(

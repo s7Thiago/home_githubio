@@ -4,7 +4,7 @@ import 'package:animated_card/animated_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:home_githubio/core/utils/responsive.dart';
+import 'package:home_githubio/app/utils/responsive.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/model/project.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/project_section_variation.dart';

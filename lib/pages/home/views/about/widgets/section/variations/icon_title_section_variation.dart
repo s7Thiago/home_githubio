@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/utils/responsive.dart';
+import 'package:home_githubio/app/utils/responsive.dart';
 
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/title_section_variation.dart';
 

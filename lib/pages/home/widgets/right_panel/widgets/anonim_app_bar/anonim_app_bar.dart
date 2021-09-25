@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
-import 'package:home_githubio/core/styles/app_colors.dart';
-import 'package:home_githubio/core/styles/styles.dart';
-import 'package:home_githubio/core/utils/responsive.dart';
+import 'package:home_githubio/app/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/app/styles/app_colors.dart';
+import 'package:home_githubio/app/styles/styles.dart';
+import 'package:home_githubio/app/utils/responsive.dart';
 
 class AnonimAppBar extends PreferredSize {
   AnonimAppBar(

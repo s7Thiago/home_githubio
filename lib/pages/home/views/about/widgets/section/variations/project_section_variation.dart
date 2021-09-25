@@ -1,15 +1,15 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/utils/functions.dart';
-import 'package:home_githubio/core/utils/responsive.dart';
+import 'package:home_githubio/app/utils/functions.dart';
+import 'package:home_githubio/app/utils/responsive.dart';
 import 'package:home_githubio/model/project.dart';
 
-import '../../../../../../../core/utils/extensions.dart';
+import '../../../../../../../app/utils/extensions.dart';
 
 class ProjectSectionVariation extends StatefulWidget {
   final Project data;
-  int index;
-  Function(int)? updateCurrentPage;
+  final int index;
+  final Function(int)? updateCurrentPage;
 
   ProjectSectionVariation({
     Key? key,

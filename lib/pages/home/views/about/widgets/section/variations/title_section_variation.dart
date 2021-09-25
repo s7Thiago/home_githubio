@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_githubio/core/styles/styles.dart';
+import 'package:home_githubio/app/styles/styles.dart';
 
 class TitleSectionVariation extends StatelessWidget {
   final String titleText;

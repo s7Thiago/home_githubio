@@ -4,10 +4,10 @@ import 'package:animated_card/animated_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:home_githubio/core/styles/app_colors.dart';
-import 'package:home_githubio/core/utils/responsive.dart';
+import 'package:home_githubio/app/styles/app_colors.dart';
+import 'package:home_githubio/app/utils/responsive.dart';
 
-import '../../../../../../core/styles/styles.dart' as styles;
+import '../../../../../../app/styles/styles.dart' as styles;
 
 class ExpandableSection extends StatefulWidget {
   final String? title;
