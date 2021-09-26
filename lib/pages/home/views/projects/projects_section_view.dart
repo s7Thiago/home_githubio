@@ -75,6 +75,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {
                       projects = snapshot.data!;
+
                       return PageView.builder(
                         itemCount: projects.length,
                         controller: widget.pageController,
@@ -113,13 +114,21 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(
-                          width: 200,
-                          height: 5,
-                          child: LinearProgressIndicator(
-                            color: Colors.black,
-                            backgroundColor: Colors.white,
-                          ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                                'Reading github repositories. Please, Wait...'),
+                            SizedBox(height: 10),
+                            SizedBox(
+                              width: 200,
+                              height: 5,
+                              child: LinearProgressIndicator(
+                                color: Colors.black,
+                                backgroundColor: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     );
