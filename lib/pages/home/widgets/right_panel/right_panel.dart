@@ -1,13 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:home_githubio/app/github_rest_client.dart';
 import 'package:home_githubio/app/providers/anonim_app_bar_provider.dart';
 import 'package:home_githubio/app/styles/app_colors.dart';
 import 'package:home_githubio/app/utils/responsive.dart';
-import 'package:home_githubio/model/project.dart';
-import 'package:home_githubio/repositories/projects_repository_impl.dart';
-import 'package:home_githubio/services/projects_service.dart';
-import 'package:home_githubio/services/projects_service_impl.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/anonim_app_bar/anonim_app_bar.dart';
@@ -24,11 +18,6 @@ class RightPanel extends StatelessWidget {
     final provider = Provider.of<AnonimAppBarProvider>(context, listen: true);
     final responsive = AppResponsively(context);
     final appBarItems = AppBarItems(context: context);
-    final ProjectsService projectsService = ProjectsServiceImpl(
-      repository: ProjectsRepositoryImpl(
-        githubRestClient: GithubRestClient(),
-      ),
-    );
 
     Map<String, Widget> _appBarItems = appBarItems.items;
 
