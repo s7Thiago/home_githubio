@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:home_githubio/core/styles/app_colors.dart';
+import 'package:home_githubio/app/styles/app_colors.dart';
 
 class AppStyles {
   //! Texts

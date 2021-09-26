@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:home_githubio/core/styles/styles.dart';
-import 'package:home_githubio/core/utils/responsive.dart';
-import 'package:home_githubio/core/values.dart';
-import 'package:home_githubio/core/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/app/providers/anonim_app_bar_provider.dart';
+import 'package:home_githubio/app/styles/styles.dart';
+import 'package:home_githubio/app/utils/responsive.dart';
+import 'package:home_githubio/app/values.dart';
 import 'package:home_githubio/pages/home/widgets/right_panel/widgets/anonim_app_bar/app_bar_items.dart';
 import 'package:provider/provider.dart';
 

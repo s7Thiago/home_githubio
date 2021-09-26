@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:home_githubio/core/utils/responsive.dart';
+import 'package:home_githubio/app/utils/responsive.dart';
 import 'package:home_githubio/pages/home/views/about/about_section_view.dart';
 import 'package:home_githubio/pages/home/views/contact/contact_section_view.dart';
 import 'package:home_githubio/pages/home/views/projects/projects_section_view.dart';

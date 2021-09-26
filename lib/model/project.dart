@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Project {
   final String heading;
   final String title;
@@ -13,4 +15,28 @@ class Project {
     this.footer = 'see on github',
     required this.url,
   });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'heading': heading,
+      'title': title,
+      'description': description,
+      'footer': footer,
+      'url': url,
+    };
+  }
+
+  factory Project.fromMap(Map<String, dynamic> map) {
+    return Project(
+      heading: map['heading'],
+      title: map['title'],
+      description: map['description'],
+      footer: map['footer'],
+      url: map['url'],
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Project.fromJson(String source) => Project.fromMap(json.decode(source));
 }

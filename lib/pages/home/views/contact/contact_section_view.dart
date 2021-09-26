@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:home_githubio/core/styles/styles.dart';
-import 'package:home_githubio/core/utils/functions.dart';
+import 'package:home_githubio/app/styles/styles.dart';
+import 'package:home_githubio/app/utils/functions.dart';
 
 class ContactSectionView extends StatelessWidget {
   _openSquareQrCode(BuildContext context) {
