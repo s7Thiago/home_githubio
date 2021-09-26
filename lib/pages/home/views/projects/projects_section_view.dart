@@ -4,10 +4,14 @@ import 'package:animated_card/animated_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:home_githubio/app/github_rest_client.dart';
 import 'package:home_githubio/app/utils/responsive.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/model/project.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/project_section_variation.dart';
+import 'package:home_githubio/repositories/projects_repository_impl.dart';
+import 'package:home_githubio/services/projects_service.dart';
+import 'package:home_githubio/services/projects_service_impl.dart';
 
 class ProjectsSectionView extends StatefulWidget {
   final PageController pageController;
@@ -49,8 +53,13 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
   @override
   Widget build(BuildContext context) {
     final Map<String, Object> _data = Contents.texts;
-    final projects = _data['projects'] as List<Project>;
+    var projects = _data['projects'] as List<Project>;
     final responsive = AppResponsively(context);
+    final ProjectsService projectsService = ProjectsServiceImpl(
+      repository: ProjectsRepositoryImpl(
+        githubRestClient: GithubRestClient(),
+      ),
+    );
 
     return Stack(
       alignment: Alignment.topCenter,
@@ -61,35 +70,58 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
             children: [
               Expanded(
                 flex: 4,
-                child: PageView.builder(
-                  itemCount: projects.length,
-                  controller: widget.pageController,
-                  scrollDirection: responsive.isMobile()
-                      ? Axis.vertical
-                      : responsive.isSmallTablet()
-                          ? Axis.vertical
-                          : Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    return AnimatedCard(
-                      curve: Curves.easeOutCirc,
-                      duration: Duration(
-                        milliseconds: Random().nextInt(900).clamp(300, 900),
-                      ),
-                      direction: currentPage > index
-                          ? AnimatedCardDirection.left
-                          : AnimatedCardDirection.right,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 25,
-                          vertical: 30,
+                child: FutureBuilder<List<Project>>(
+                  future: projectsService.getAllProjects(),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      projects = snapshot.data!;
+                      return PageView.builder(
+                        itemCount: projects.length,
+                        controller: widget.pageController,
+                        scrollDirection: responsive.isMobile()
+                            ? Axis.vertical
+                            : responsive.isSmallTablet()
+                                ? Axis.vertical
+                                : Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        itemBuilder: (context, index) {
+                          return AnimatedCard(
+                            curve: Curves.easeOutCirc,
+                            duration: Duration(
+                              milliseconds:
+                                  Random().nextInt(900).clamp(300, 900),
+                            ),
+                            direction: currentPage > index
+                                ? AnimatedCardDirection.left
+                                : AnimatedCardDirection.right,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 25,
+                                vertical: 30,
+                              ),
+                              child: ProjectSectionVariation(
+                                data: projects[index],
+                                index: index,
+                                updateCurrentPage: updateCurrentPage,
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    }
+
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 200,
+                          height: 5,
+                          child: LinearProgressIndicator(
+                            color: Colors.black,
+                            backgroundColor: Colors.white,
+                          ),
                         ),
-                        child: ProjectSectionVariation(
-                          data: projects[index],
-                          index: index,
-                          updateCurrentPage: updateCurrentPage,
-                        ),
-                      ),
+                      ],
                     );
                   },
                 ),
