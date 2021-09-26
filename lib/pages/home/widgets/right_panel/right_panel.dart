@@ -82,28 +82,6 @@ class RightPanel extends StatelessWidget {
               ),
             )
           : null,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          // FirebaseFirestore.instance.collection('teste').add({'teste': '123'});
-          try {
-            List<Project> allProjects =
-                await projectsService.getAllProjects().then(
-              (list) {
-                for (var item in list) {
-                  print(item.toJson());
-                }
-
-                return list;
-              },
-            );
-
-            print('\nok\n');
-          } catch (e) {
-            print('Erro ao trazer os dados dos projetos:\n $e');
-          }
-        },
-        child: Icon(Icons.add),
-      ),
     );
   }
 }
