@@ -118,15 +118,17 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                                'Reading github repositories. Please, Wait...'),
+                              'Reading github repositories. \nPlease, Wait...',
+                              textAlign: TextAlign.center,
+                            ),
                             SizedBox(height: 10),
                             SizedBox(
                               width: 200,
                               height: 5,
-                              child: LinearProgressIndicator(
-                                color: Colors.black,
-                                backgroundColor: Colors.white,
-                              ),
+                              // child: LinearProgressIndicator(
+                              //   color: Colors.black,
+                              //   backgroundColor: Colors.white,
+                              // ),
                             ),
                           ],
                         ),
