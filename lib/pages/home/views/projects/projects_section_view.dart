@@ -113,10 +113,10 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                             SizedBox(
                               width: 200,
                               height: 5,
-                              // child: LinearProgressIndicator(
-                              //   color: Colors.black,
-                              //   backgroundColor: Colors.white,
-                              // ),
+                              child: LinearProgressIndicator(
+                                color: Colors.black,
+                                backgroundColor: Colors.white,
+                              ),
                             ),
                           ],
                         ),

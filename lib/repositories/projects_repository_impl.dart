@@ -27,9 +27,6 @@ class ProjectsRepositoryImpl implements ProjectsRepository {
           // Convertendo os objetos da API para o modelo Project
           var project = Project.fromMap(info);
 
-          // Removendo o marcador da descrição que será exibida na interface
-          // var newDesc = project.description.replaceAll('[x]', '');
-
           // * Não adiciona, se já existe um projeto com o mesmo nome
           int qtdeSameTitle =
               result.where((p) => p.title == project.title).length;
@@ -60,19 +57,6 @@ class ProjectsRepositoryImpl implements ProjectsRepository {
             .inDays;
       },
     );
-
-    // print('Size before clean: ${result.length}');
-
-    // ! Removendo todos os elementos que já existem
-    // for (Project project in result) {
-    //   // var qtdeSameId = 0;
-    //   for (Project b in result) {
-    //     result.removeWhere((p) => (b.id == project.id) && p.id == b.id);
-    //   }
-    //   print('pId: ${project.id}');
-    // }
-
-    // print('Size after clean: ${result.length}');
 
     return Future.value(result.reversed.toList());
   }
