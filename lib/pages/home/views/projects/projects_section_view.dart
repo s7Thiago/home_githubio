@@ -4,14 +4,12 @@ import 'package:animated_card/animated_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:home_githubio/app/github_rest_client.dart';
 import 'package:home_githubio/app/utils/responsive.dart';
+import 'package:home_githubio/controllers/projects_controller.dart';
 import 'package:home_githubio/model/data/contents.dart';
 import 'package:home_githubio/model/project.dart';
 import 'package:home_githubio/pages/home/views/about/widgets/section/variations/project_section_variation.dart';
-import 'package:home_githubio/repositories/projects_repository_impl.dart';
-import 'package:home_githubio/services/projects_service.dart';
-import 'package:home_githubio/services/projects_service_impl.dart';
+import 'package:provider/provider.dart';
 
 class ProjectsSectionView extends StatefulWidget {
   final PageController pageController;
@@ -26,11 +24,6 @@ class ProjectsSectionView extends StatefulWidget {
 }
 
 class _ProjectsSectionViewState extends State<ProjectsSectionView> {
-  // final pageController = PageController(
-  //   initialPage: 1,
-  //   viewportFraction: .25,
-  // );
-
   final Duration duration = new Duration(milliseconds: 500);
 
   int currentPage = 1;
@@ -55,11 +48,6 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
     final Map<String, Object> _data = Contents.texts;
     var projects = _data['projects'] as List<Project>;
     final responsive = AppResponsively(context);
-    final ProjectsService projectsService = ProjectsServiceImpl(
-      repository: ProjectsRepositoryImpl(
-        githubRestClient: GithubRestClient(),
-      ),
-    );
 
     return Stack(
       alignment: Alignment.topCenter,
@@ -71,7 +59,7 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
               Expanded(
                 flex: 4,
                 child: FutureBuilder<List<Project>>(
-                  future: projectsService.getAllProjects(),
+                  future: Provider.of<ProjectsController>(context).projects,
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {
                       projects = snapshot.data!;
