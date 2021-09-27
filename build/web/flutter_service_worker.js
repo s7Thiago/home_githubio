@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "15291035c0838d14ee7e211163c9864b",
+  "assets/AssetManifest.json": "b0dd423f8a78c18f13b6954debbe4302",
 "assets/assets/documents/resume.png": "2e3753cb4a5d25c9676cd1b5349ef552",
 "assets/assets/documents/resume.svg": "55ad936be344e7d5644b5e74b4bb0a07",
 "assets/assets/documents/resume_ai.svg": "db70eb29f39e29593906c17b0be21e37",
@@ -12,6 +12,7 @@ const RESOURCES = {
 "assets/assets/images/cursos/ifb.png": "02ada713259d0697fc412410a6f9919b",
 "assets/assets/images/cursos/rocketseat.png": "95a902eead062d66f95c0c460ce7cf98",
 "assets/assets/images/cursos/udemy.png": "60d799b5c3355ae25a5dce1f9a3f3e7c",
+"assets/assets/images/Infinity_loading.gif": "0db8d38f6a8fdac49a6ca6b89eb448ae",
 "assets/assets/images/profile-photo-front-art-thiago.png": "531f9412ec2a20e8675b23140cb07253",
 "assets/assets/images/qr-code-contact-square.png": "d57047fbdbc134e1eb2d095d1d57a010",
 "assets/assets/images/qr-code-contact.png": "6d9a067479723f85214a4080baea743c",
@@ -57,9 +58,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "2926017266e8d24ce37e3a6e9437cdcd",
-"/": "2926017266e8d24ce37e3a6e9437cdcd",
-"main.dart.js": "e2762f2bc9cb2227d23b2ba883768d35",
+"index.html": "8d657c82c1bbb7326bb4508f02651abd",
+"/": "8d657c82c1bbb7326bb4508f02651abd",
+"main.dart.js": "26d5721d2434b2681aff2f9936354c30",
 "manifest.json": "b490d2174b5a5707c700307d41390f1e",
 "version.json": "3338f154daa9f0f9d89d0f23981ff19c"
 };

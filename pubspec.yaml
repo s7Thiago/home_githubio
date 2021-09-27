@@ -64,6 +64,7 @@ flutter:
     - assets/images/skills/
     - assets/images/skills/main/
     - assets/images/trajetoria/
+    - assets/images/Infinity_loading.gif
     # - assets/documents/resume2.pdf
     # - assets/documents/resume.pdf
   #   - images/a_dot_ham.jpeg

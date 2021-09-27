@@ -109,15 +109,13 @@ class _ProjectsSectionViewState extends State<ProjectsSectionView> {
                               'Reading github repositories. \nPlease, Wait...',
                               textAlign: TextAlign.center,
                             ),
-                            SizedBox(height: 10),
-                            SizedBox(
-                              width: 200,
-                              height: 5,
-                              child: LinearProgressIndicator(
-                                color: Colors.black,
-                                backgroundColor: Colors.white,
-                              ),
-                            ),
+                            // SizedBox(height: 10),
+                            // SizedBox(
+                            //   width: 200,
+                            //   height: 200,
+                            //   child: Image.asset(
+                            //       'assets/images/Infinity_loading.gif'),
+                            // ),
                           ],
                         ),
                       ],

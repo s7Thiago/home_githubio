@@ -152,7 +152,7 @@ class _ProjectSectionVariationState extends State<ProjectSectionVariation> {
                     isHovered: isHovered,
                     heading: widget.data.heading,
                     title: widget.data.title,
-                    description: widget.data.description,
+                    description: widget.data.description.replaceAll('[x]', ''),
                     footer: widget.data.footer,
                   ),
                 ),
