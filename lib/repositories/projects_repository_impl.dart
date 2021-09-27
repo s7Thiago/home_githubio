@@ -17,7 +17,7 @@ class ProjectsRepositoryImpl implements ProjectsRepository {
 
     // ? Estratégia para pegar os dados de outras páginas e unir
     var pagesCount = (userInfo.data['public_repos'] / 30).ceil();
-    print('\n\npages count: ${pagesCount}');
+    // print('\n\npages count: ${pagesCount}');
 
     for (int i = 0; i < pagesCount; i++) {
       var response = await _githubRestClient.getResponse('/repos?page=${i}');
@@ -47,7 +47,7 @@ class ProjectsRepositoryImpl implements ProjectsRepository {
 
     // ? mapeando os projetos de modo que o id de cada um seja a chave
     projects = {for (var p in result) p.id: p};
-    print('Projects: ${projects.entries.length}');
+    // print('Projects: ${projects.entries.length}');
 
     // ? atribuindo os projetos mapeados ao resultado
     result = projects.values.toList();

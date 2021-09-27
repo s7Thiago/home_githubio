@@ -14,17 +14,17 @@ class ProjectsController extends ChangeNotifier {
     // Verifica se a lista de projetos já foi carregada
     if (_projects != null) {
       if (!_projects!.isEmpty) {
-        print('projetos do já carregados: $_projects');
+        // print('projetos do já carregados: $_projects');
         return Future.value(_projects!);
       } else {
         // a lista não é nula mas está vazia. Nesse caso, aciona o serviço para
         // carregar os dados
-        print('sem projetos. Carregando: $_projects');
+        // print('sem projetos. Carregando: $_projects');
         _projects = await _projectsService.getAllProjects();
         return _projects!;
       }
     } else {
-      print('lista nula. inserindo projetos  projetos: $_projects');
+      // print('lista nula. inserindo projetos  projetos: $_projects');
       _projects = await _projectsService.getAllProjects();
       return _projects!;
     }
